@@ -79,35 +79,29 @@ const Home = () => (
         </Paragraph>
         <Paragraph>
           <Subsection>屋内での位置特定</Subsection>
-          <div style="text-align: center">
-            <img
-              src="https://laplaciancpp.github.io/images/vps.png"
-              alt="VPS"
-              align="center"
-            />
-          </div>
+          <img
+            src="https://laplaciancpp.github.io/images/vps.png"
+            alt="VPS"
+            align="center"
+          />
           スマートフォンのみでGPSの使えない屋内空間での位置特定を行うVPS（画像位置認識システム）を提供します。
         </Paragraph>
         <Paragraph>
           <Subsection>アイテム位置情報の登録や連携</Subsection>
-          <div style="text-align: center">
-            <img
-              src="https://laplaciancpp.github.io/images/reg.png"
-              alt="register item"
-              align="center"
-            />
-          </div>
+          <img
+            src="https://laplaciancpp.github.io/images/reg.png"
+            alt="register item"
+            align="center"
+          />
           屋内空間に商品やARコンテンツの位置を設定できます。API連携でリアルタイムの更新も可能です。
         </Paragraph>
         <Paragraph>
           <Subsection>誘導やARコンテンツの表示</Subsection>
-          <div style="text-align: center">
-            <img
-              src="https://laplaciancpp.github.io/images/navigate.png"
-              alt="navigation"
-              align="center"
-            />
-          </div>
+          <img
+            src="https://laplaciancpp.github.io/images/navigate.png"
+            alt="navigation"
+            align="center"
+          />
           特定した位置やアイテムの登録位置に基づき誘導を行います。また、ARコンテンツの表示も行えます。
         </Paragraph>
       </Section>
