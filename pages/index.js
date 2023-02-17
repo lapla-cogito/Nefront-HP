@@ -75,7 +75,7 @@ const Home = () => (
         <Paragraph>
           <Subsection>屋内での位置特定</Subsection>
           <Image
-            src={dir + "/images/vps.png"}
+            src="https://laplaciancpp.github.io/images/vps.png"
             alt="VPS"
             placeholder="blur"
             loading="lazy"
@@ -86,7 +86,7 @@ const Home = () => (
         <Paragraph>
           <Subsection>アイテム位置情報の登録や連携</Subsection>
           <Image
-            src={dir + "/images/reg.png"}
+            src="https://laplaciancpp.github.io/images/reg.png"
             alt="register item"
             placeholder="blur"
             loading="lazy"
@@ -97,7 +97,7 @@ const Home = () => (
         <Paragraph>
           <Subsection>誘導やARコンテンツの表示</Subsection>
           <Image
-            src={dir + "/images/navigate.png"}
+            src="https://laplaciancpp.github.io/images/navigate.png"
             alt="navigation"
             placeholder="blur"
             loading="lazy"
@@ -120,7 +120,7 @@ const Home = () => (
         <Paragraph>
           <Subsection>小売店</Subsection>
           <Image
-            src={dir + "/images/mall.jpg"}
+            src="https://laplaciancpp.github.io/images/mall.jpg"
             alt="小売店"
             placeholder="blur"
             loading="lazy"
@@ -140,7 +140,7 @@ const Home = () => (
         <Paragraph>
           <Subsection>都市施設</Subsection>
           <Image
-            src={dir + "/images/underground.jpg"}
+            src="https://laplaciancpp.github.io/images/underground.jpg"
             alt="都市施設"
             placeholder="blur"
             loading="lazy"
@@ -160,7 +160,7 @@ const Home = () => (
         <Paragraph>
           <Subsection>倉庫</Subsection>
           <Image
-            src={dir + "/images/repos.jpg"}
+            src="https://laplaciancpp.github.io/images/repos.jpg"
             alt="倉庫"
             placeholder="blur"
             loading="lazy"
@@ -187,7 +187,7 @@ const Home = () => (
           <GridItem
             title="今村翔太"
             nefposition="代表取締役"
-            thumbnail={dir + "/images/imamura.jpg"}
+            thumbnail="https://laplaciancpp.github.io/images/imamura.jpg"
           >
             <br />
             筑波大学情報科学類4年
@@ -198,7 +198,7 @@ const Home = () => (
           <GridItem
             title="逸見一喜"
             nefposition="機械学習エンジニア"
-            thumbnail={dir + "/images/hemmi.jpg"}
+            thumbnail="https://laplaciancpp.github.io/images/hemmi.jpg"
           >
             <br />
             筑波大学大学院 博士前期課程2年
@@ -211,7 +211,7 @@ const Home = () => (
           <GridItem
             title="秋山馨"
             nefposition="インフラ・機械学習エンジニア"
-            thumbnail={dir + "/images/akiyama.jpg"}
+            thumbnail="https://laplaciancpp.github.io/images/akiyama.jpg"
           >
             <br />
             筑波大学情報科学類2年
@@ -220,7 +220,7 @@ const Home = () => (
           <GridItem
             title="渡邉蒼太"
             nefposition="フロントエンドエンジニア"
-            thumbnail={dir + "/images/watanabe.jpg"}
+            thumbnail="https://laplaciancpp.github.io/images/watanabe.jpg"
           >
             <br />
             筑波大学情報科学類2年
