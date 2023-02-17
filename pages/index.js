@@ -28,6 +28,8 @@ import TypeNefront from "../components/typeNefront";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
+import imamura from "https://laplaciancpp.github.io/images/imamura.jpg";
+
 const dir = "/Nefront-HP";
 
 const Home = () => (
@@ -187,7 +189,7 @@ const Home = () => (
           <GridItem
             title="今村翔太"
             nefposition="代表取締役"
-            thumbnail="https://laplaciancpp.github.io/images/imamura.jpg"
+            thumbnail={imamura}
           >
             <br />
             筑波大学情報科学類4年
