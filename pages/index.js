@@ -28,7 +28,7 @@ import TypeNefront from "../components/typeNefront";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-const dir = "/Nefront-HP"
+const dir = "/Nefront-HP";
 
 const Home = () => (
   <Layout>
@@ -37,33 +37,36 @@ const Home = () => (
         id="hoge"
         style={{
           width: "100%",
-          height: "calc(100vw * 111 / 148)",
+          height: "20%",
         }}
-      >
-        <Image src={dir + "/images/background.jpg"} />
-      </div>
-      {/* {isClient() && <script src="../particles.min.js"></script>}
-      {isClient() && <script src="../config.js"></script>} */}
-      {/* <Particles />
-      <Config />*/}
+      ></div>
 
-      <script src="../particles.min.js"></script>
-      <script src="../config.js"></script>
       <TypeNefront />
 
+      <div id="about"></div>
+      <div
+        style={{
+          width: "100%",
+          height: "20%",
+        }}
+      ></div>
       <Section delay={0.1}>
         <Heading as="h1" variant="section-title">
-          <div id="about"></div>
           About
         </Heading>
         <Paragraph>
           現実空間に情報を重ね合わせる拡張現実（AR）のアプリケーションを、今までにない場所や使い方で提供できるソリューションを開発しています。
         </Paragraph>
       </Section>
-
+      <div id="product"></div>
+      <div
+        style={{
+          width: "100%",
+          height: "20%",
+        }}
+      ></div>
       <Section delay={0.2}>
         <Heading as="h1" variant="section-title">
-          <div id="product"></div>
           Product
         </Heading>
         <Paragraph>
@@ -94,7 +97,7 @@ const Home = () => (
         <Paragraph>
           <Subsection>誘導やARコンテンツの表示</Subsection>
           <Image
-            src={dir + "/images//navigate.png"}
+            src={dir + "/images/navigate.png"}
             alt="navigation"
             placeholder="blur"
             loading="lazy"
@@ -103,10 +106,15 @@ const Home = () => (
           特定した位置やアイテムの登録位置に基づき誘導を行います。また、ARコンテンツの表示も行えます。
         </Paragraph>
       </Section>
-
+      <div id="usecase"></div>
+      <div
+        style={{
+          width: "100%",
+          height: "20%",
+        }}
+      ></div>
       <Section delay={0.3}>
         <Heading as="h1" variant="section-title">
-          <div id="usecase"></div>
           Usecase
         </Heading>
         <Paragraph>
@@ -123,6 +131,12 @@ const Home = () => (
           欲しい商品への誘導や売り場に合わせたARプロモーションを表示。キャラクターと買い物も！？
           <br />
         </Paragraph>
+        <div
+          style={{
+            width: "100%",
+            height: "20%",
+          }}
+        ></div>
         <Paragraph>
           <Subsection>都市施設</Subsection>
           <Image
@@ -137,6 +151,12 @@ const Home = () => (
           施設内の誘導やおすすめ情報の提示。ショップやレストランのクーポン、ARコンテンツによる体験型展示も。
           <br />
         </Paragraph>
+        <div
+          style={{
+            width: "100%",
+            height: "20%",
+          }}
+        ></div>
         <Paragraph>
           <Subsection>倉庫</Subsection>
           <Image
@@ -152,17 +172,22 @@ const Home = () => (
           <br />
         </Paragraph>
       </Section>
-
+      <div id="members"></div>
+      <div
+        style={{
+          width: "100%",
+          height: "20%",
+        }}
+      ></div>
       <Section delay={0.4}>
         <Heading as="h1" variant="section-title">
-          <div id="members"></div>
           Members
         </Heading>
         <SimpleGrid columns={1} gap={6}>
           <GridItem
             title="今村翔太"
             nefposition="代表取締役"
-            thumbnail={dir+"/images/imamura.jpg"}
+            thumbnail={dir + "/images/imamura.jpg"}
           >
             <br />
             筑波大学情報科学類4年
@@ -173,7 +198,7 @@ const Home = () => (
           <GridItem
             title="逸見一喜"
             nefposition="機械学習エンジニア"
-            thumbnail={dir+"/images/hemmi.jpg"}
+            thumbnail={dir + "/images/hemmi.jpg"}
           >
             <br />
             筑波大学大学院 博士前期課程2年
@@ -186,7 +211,7 @@ const Home = () => (
           <GridItem
             title="秋山馨"
             nefposition="インフラ・機械学習エンジニア"
-            thumbnail={dir+"/images/curiousahiru.png"}
+            thumbnail={dir + "/images/curiousahiru.png"}
           >
             <br />
             筑波大学情報科学類2年
@@ -195,7 +220,7 @@ const Home = () => (
           <GridItem
             title="渡邉蒼太"
             nefposition="フロントエンドエンジニア"
-            thumbnail={dir+"/images/watanabe.jpg"}
+            thumbnail={dir + "/images/watanabe.jpg"}
           >
             <br />
             筑波大学情報科学類2年
@@ -208,9 +233,15 @@ const Home = () => (
         </SimpleGrid>
       </Section>
 
+      <div id="contact"></div>
+      <div
+        style={{
+          width: "100%",
+          height: "20%",
+        }}
+      ></div>
       <Section delay={0.5}>
         <Heading as="h1" variant="section-title">
-          <div id="contact"></div>
           Contact
         </Heading>
         <Box textAlign="center">
