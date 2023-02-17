@@ -28,7 +28,7 @@ import TypeNefront from "../components/typeNefront";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-const dir = "/Nefront-HP";
+const dir = "";
 
 const Home = () => (
   <Layout>
@@ -37,7 +37,7 @@ const Home = () => (
         id="hoge"
         style={{
           width: "100%",
-          height: "20%",
+          height: "25vh",
         }}
       ></div>
 
@@ -47,7 +47,7 @@ const Home = () => (
       <div
         style={{
           width: "100%",
-          height: "20%",
+          height: "20vh",
         }}
       ></div>
       <Section delay={0.1}>
@@ -62,7 +62,7 @@ const Home = () => (
       <div
         style={{
           width: "100%",
-          height: "20%",
+          height: "20vh",
         }}
       ></div>
       <Section delay={0.2}>
@@ -110,7 +110,7 @@ const Home = () => (
       <div
         style={{
           width: "100%",
-          height: "20%",
+          height: "20vh",
         }}
       ></div>
       <Section delay={0.3}>
@@ -134,7 +134,7 @@ const Home = () => (
         <div
           style={{
             width: "100%",
-            height: "20%",
+            height: "20vh",
           }}
         ></div>
         <Paragraph>
@@ -154,7 +154,7 @@ const Home = () => (
         <div
           style={{
             width: "100%",
-            height: "20%",
+            height: "20vh",
           }}
         ></div>
         <Paragraph>
@@ -176,7 +176,7 @@ const Home = () => (
       <div
         style={{
           width: "100%",
-          height: "20%",
+          height: "20vh",
         }}
       ></div>
       <Section delay={0.4}>
@@ -237,7 +237,7 @@ const Home = () => (
       <div
         style={{
           width: "100%",
-          height: "20%",
+          height: "20vh",
         }}
       ></div>
       <Section delay={0.5}>
