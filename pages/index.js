@@ -28,7 +28,7 @@ import TypeNefront from "../components/typeNefront";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-const dir = "/Nefront-HP"
+const dir = "/Nefront-HP";
 
 const Home = () => (
   <Layout>
@@ -37,18 +37,9 @@ const Home = () => (
         id="hoge"
         style={{
           width: "100%",
-          height: "calc(100vw * 111 / 148)",
+          height: "20%",
         }}
-      >
-        <Image src={dir + "/images/background.jpg"} />
-      </div>
-      {/* {isClient() && <script src="../particles.min.js"></script>}
-      {isClient() && <script src="../config.js"></script>} */}
-      {/* <Particles />
-      <Config />*/}
-
-      <script src="../particles.min.js"></script>
-      <script src="../config.js"></script>
+      ></div>
       <TypeNefront />
 
       <Section delay={0.1}>
@@ -162,7 +153,7 @@ const Home = () => (
           <GridItem
             title="今村翔太"
             nefposition="代表取締役"
-            thumbnail={dir+"/images/imamura.jpg"}
+            thumbnail={dir + "/images/imamura.jpg"}
           >
             <br />
             筑波大学情報科学類4年
@@ -173,7 +164,7 @@ const Home = () => (
           <GridItem
             title="逸見一喜"
             nefposition="機械学習エンジニア"
-            thumbnail={dir+"/images/hemmi.jpg"}
+            thumbnail={dir + "/images/hemmi.jpg"}
           >
             <br />
             筑波大学大学院 博士前期課程2年
@@ -186,7 +177,7 @@ const Home = () => (
           <GridItem
             title="秋山馨"
             nefposition="インフラ・機械学習エンジニア"
-            thumbnail={dir+"/images/curiousahiru.png"}
+            thumbnail={dir + "/images/curiousahiru.png"}
           >
             <br />
             筑波大学情報科学類2年
@@ -195,7 +186,7 @@ const Home = () => (
           <GridItem
             title="渡邉蒼太"
             nefposition="フロントエンドエンジニア"
-            thumbnail={dir+"/images/watanabe.jpg"}
+            thumbnail={dir + "/images/watanabe.jpg"}
           >
             <br />
             筑波大学情報科学類2年
