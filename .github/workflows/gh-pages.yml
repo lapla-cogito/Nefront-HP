@@ -37,7 +37,7 @@ jobs:
       - name: add nojekyll
         run: touch ./out/.nojekyll
       - name: add CNAME
-        run: cp ./CNAME
+        run: cp CNAME ./out/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
