@@ -28,7 +28,10 @@ import TypeNefront from "../components/typeNefront";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-const imamura ="https://laplaciancpp.github.io/images/imamura.jpg";
+const imamuu = "https://laplaciancpp.github.io/images/imamura.jpg";
+const hemmi = "https://laplaciancpp.github.io/images/hemmi.jpg";
+const lapla = "https://laplaciancpp.github.io/images/akiyama.jpg";
+const asuto = "https://laplaciancpp.github.io/images/watanabe.jpg";
 
 const dir = "/Nefront-HP";
 
@@ -189,7 +192,7 @@ const Home = () => (
           <GridItem
             title="今村翔太"
             nefposition="代表取締役"
-            thumbnail={imamura}
+            thumbnail="https://laplaciancpp.github.io/images/imamura.jpg"
           >
             <br />
             筑波大学情報科学類4年
@@ -200,7 +203,7 @@ const Home = () => (
           <GridItem
             title="逸見一喜"
             nefposition="機械学習エンジニア"
-            thumbnail="https://laplaciancpp.github.io/images/hemmi.jpg"
+            thumbnail={hemmi}
           >
             <br />
             筑波大学大学院 博士前期課程2年
@@ -213,7 +216,7 @@ const Home = () => (
           <GridItem
             title="秋山馨"
             nefposition="インフラ・機械学習エンジニア"
-            thumbnail="https://laplaciancpp.github.io/images/akiyama.jpg"
+            thumbnail={lapla}
           >
             <br />
             筑波大学情報科学類2年
@@ -222,7 +225,7 @@ const Home = () => (
           <GridItem
             title="渡邉蒼太"
             nefposition="フロントエンドエンジニア"
-            thumbnail="https://laplaciancpp.github.io/images/watanabe.jpg"
+            thumbnail={asuto}
           >
             <br />
             筑波大学情報科学類2年
