@@ -8,6 +8,6 @@ module.exports = {
     loader: "akamai",
     path: "",
   },
-  assetPrefix: process.env.NODE_ENV === "production" ? "/Nefront-HP" : "",
+  // assetPrefix: process.env.NODE_ENV === "production" ? "/Nefront-HP" : "",
   "process.env.BACKEND_URL": prod ? "/Nefront-HP" : "",
 };
