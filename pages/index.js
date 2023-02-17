@@ -28,7 +28,7 @@ import TypeNefront from "../components/typeNefront";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-import imamura from "https://laplaciancpp.github.io/images/imamura.jpg";
+import imamura from "laplaciancpp.github.io/images/imamura.jpg";
 
 const dir = "/Nefront-HP";
 
