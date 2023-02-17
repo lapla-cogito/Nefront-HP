@@ -79,33 +79,27 @@ const Home = () => (
         </Paragraph>
         <Paragraph>
           <Subsection>屋内での位置特定</Subsection>
-          <Image
+          <img
             src="https://laplaciancpp.github.io/images/vps.png"
             alt="VPS"
-            placeholder="blur"
-            loading="lazy"
             align="center"
           />
           スマートフォンのみでGPSの使えない屋内空間での位置特定を行うVPS（画像位置認識システム）を提供します。
         </Paragraph>
         <Paragraph>
           <Subsection>アイテム位置情報の登録や連携</Subsection>
-          <Image
+          <img
             src="https://laplaciancpp.github.io/images/reg.png"
             alt="register item"
-            placeholder="blur"
-            loading="lazy"
             align="center"
           />
           屋内空間に商品やARコンテンツの位置を設定できます。API連携でリアルタイムの更新も可能です。
         </Paragraph>
         <Paragraph>
           <Subsection>誘導やARコンテンツの表示</Subsection>
-          <Image
+          <img
             src="https://laplaciancpp.github.io/images/navigate.png"
             alt="navigation"
-            placeholder="blur"
-            loading="lazy"
             align="center"
           />
           特定した位置やアイテムの登録位置に基づき誘導を行います。また、ARコンテンツの表示も行えます。
@@ -124,11 +118,9 @@ const Home = () => (
         </Heading>
         <Paragraph>
           <Subsection>小売店</Subsection>
-          <Image
+          <img
             src="https://laplaciancpp.github.io/images/mall.jpg"
             alt="小売店"
-            placeholder="blur"
-            loading="lazy"
             align="center"
             className="usecases"
           />
@@ -144,11 +136,9 @@ const Home = () => (
         ></div>
         <Paragraph>
           <Subsection>都市施設</Subsection>
-          <Image
+          <img
             src="https://laplaciancpp.github.io/images/underground.jpg"
             alt="都市施設"
-            placeholder="blur"
-            loading="lazy"
             align="center"
             className="usecases"
           />
@@ -164,11 +154,9 @@ const Home = () => (
         ></div>
         <Paragraph>
           <Subsection>倉庫</Subsection>
-          <Image
+          <img
             src="https://laplaciancpp.github.io/images/repos.jpg"
             alt="倉庫"
-            placeholder="blur"
-            loading="lazy"
             align="center"
             className="usecases"
           />
