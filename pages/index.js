@@ -27,6 +27,7 @@ import TypeNefront from "../components/typeNefront";
 // import configjs from "../config.js";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import ReactGA from "react-ga4";
 
 const imamuu = "https://laplaciancpp.github.io/images/imamura.jpg";
 const hemmi = "https://laplaciancpp.github.io/images/hemmi.jpg";
@@ -34,6 +35,9 @@ const lapla = "https://laplaciancpp.github.io/images/akiyama.jpg";
 const asuto = "https://laplaciancpp.github.io/images/watanabe.jpg";
 
 const dir = "/Nefront-HP";
+
+ReactGA.initialize("G-FBQ0WYNGEZ");
+ReactGA.send("pageview");
 
 const Home = () => (
   <Layout>
@@ -180,7 +184,7 @@ const Home = () => (
           <GridItem
             title="今村翔太"
             nefposition="代表取締役"
-            thumbnail="https://laplaciancpp.github.io/images/imamura.jpg"
+            thumbnail={imamuu}
           >
             <br />
             筑波大学情報科学類4年
