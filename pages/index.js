@@ -192,7 +192,7 @@ const Home = () => (
           <GridItem
             title="今村翔太"
             nefposition="代表取締役"
-            thumbnail="https://laplaciancpp.github.io/images/imamura.jpg"
+            thumbnail="https://drive.google.com/file/d/11VXk9c8AGMNU7OMYv3l5dJXHyCZACny8"
           >
             <br />
             筑波大学情報科学類4年
