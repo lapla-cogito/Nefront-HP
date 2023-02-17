@@ -6,12 +6,10 @@ import { Global } from "@emotion/react";
 export const GridItem = ({ children, title, nefposition, thumbnail }) => (
   <Box w="100%">
     <LinkBox>
-      <Image
+      <img
         src={thumbnail}
         alt={title}
         className="grid-item-thumbnail"
-        placeholder="blur"
-        loading="lazy"
         align="center"
       />
       <Text fontSize={25} textAlign="center">
