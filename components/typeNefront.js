@@ -6,7 +6,7 @@ function TypeNefront() {
   return (
     <Box w="100%">
       <Center h="100%">
-        <Box alignItems="center" fontSize={45}>
+        <Box alignItems="center" fontSize={60}>
           {" "}
           <TypeWriter
             onInit={(TypeWriter) => {

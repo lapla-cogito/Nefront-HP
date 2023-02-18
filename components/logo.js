@@ -17,7 +17,7 @@ const LogoBox = styled.span`
 
 const Logo = () => {
   return (
-    <Link href="/Nefront-HP" scroll={false}>
+    <Link href="/" scroll={false}>
       <LogoBox>
         <NefrontIcon />
       </LogoBox>
