@@ -20,11 +20,6 @@ import Section from "../components/section";
 import Subsection from "../components/subsection";
 import Paragraph from "../components/paragraph";
 import TypeNefront from "../components/typeNefront";
-// import imageVideo from "../public/images/imageVideo.mp4";
-// import nefrontlogo from "../public/images/nefrontlogo.jpg";
-// import background from "../public/images/background.jpg";
-// import particle from "../particles.min.js";
-// import configjs from "../config.js";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import ReactGA from "react-ga4";
@@ -84,27 +79,30 @@ const Home = () => (
         <Paragraph>
           <Subsection>屋内での位置特定</Subsection>
           <img
-            src="https://laplaciancpp.github.io/images/vps.png"
+            src="images/vps.svg"
+            style={{ display: "block", margin: "auto" }}
             alt="VPS"
-            align="center"
+            width="150"
           />
           スマートフォンのみでGPSの使えない屋内空間での位置特定を行うVPS（画像位置認識システム）を提供します。
         </Paragraph>
         <Paragraph>
           <Subsection>アイテム位置情報の登録や連携</Subsection>
           <img
-            src="https://laplaciancpp.github.io/images/reg.png"
-            alt="register item"
-            align="center"
+            src="images/reg.svg"
+            style={{ display: "block", margin: "auto" }}
+            alt="Register items"
+            width="150"
           />
           屋内空間に商品やARコンテンツの位置を設定できます。API連携でリアルタイムの更新も可能です。
         </Paragraph>
         <Paragraph>
           <Subsection>誘導やARコンテンツの表示</Subsection>
           <img
-            src="https://laplaciancpp.github.io/images/navigate.png"
-            alt="navigation"
-            align="center"
+            src="images/navigate.svg"
+            style={{ display: "block", margin: "auto" }}
+            alt="Navigation"
+            width="150"
           />
           特定した位置やアイテムの登録位置に基づき誘導を行います。また、ARコンテンツの表示も行えます。
         </Paragraph>
@@ -147,7 +145,7 @@ const Home = () => (
             className="usecases"
           />
           <br />
-          施設内の誘導やおすすめ情報の提示。ショップやレストランのクーポン、ARコンテンツによる体験型展示も。
+          施設内の誘導やおすすめ情報の提示が可能です。ショップやレストランのクーポン、ARコンテンツによる体験型展示も！
           <br />
         </Paragraph>
         <div
@@ -165,11 +163,12 @@ const Home = () => (
             className="usecases"
           />
           <br />
-          商品や部品の棚入れ、ピッキングを効率化。初心者でも作業にかかる時間やミスを削減へ。
+          商品や部品の棚入れ、ピッキングを効率化できます。初心者でも作業にかかる時間やミスを削減へ！
           <br />
         </Paragraph>
       </Section>
-      <div id="members"></div>
+
+      <div id="news"></div>
       <div
         style={{
           width: "100%",
@@ -177,6 +176,19 @@ const Home = () => (
         }}
       ></div>
       <Section delay={0.4}>
+        <Heading as="h1" variant="section-title">
+          News
+        </Heading>
+      </Section>
+
+      <div id="members"></div>
+      <div
+        style={{
+          width: "100%",
+          height: "60px",
+        }}
+      ></div>
+      <Section delay={0.5}>
         <Heading as="h1" variant="section-title">
           Members
         </Heading>
@@ -239,7 +251,7 @@ const Home = () => (
           height: "60px",
         }}
       ></div>
-      <Section delay={0.5}>
+      <Section delay={0.6}>
         <Heading as="h1" variant="section-title">
           Contact
         </Heading>

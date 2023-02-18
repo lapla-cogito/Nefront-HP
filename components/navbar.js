@@ -102,6 +102,9 @@ const Navbar = (props) => {
           <LinkItem href="#usecase" path={path}>
             Usecase
           </LinkItem>
+          <LinkItem href="#news" path={path}>
+            News
+          </LinkItem>
           <LinkItem href="#members" path={path}>
             Members
           </LinkItem>
@@ -136,6 +139,9 @@ const Navbar = (props) => {
                 </MenuItem>
                 <MenuItem as={MenuLink} href="#usecase">
                   Usecase
+                </MenuItem>
+                <MenuItem as={MenuLink} href="#news">
+                  News
                 </MenuItem>
                 <MenuItem as={MenuLink} href="#members">
                   Members
