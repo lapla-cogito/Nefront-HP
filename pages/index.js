@@ -19,10 +19,13 @@ import { GridItem } from "../components/grid-item";
 import Section from "../components/section";
 import Subsection from "../components/subsection";
 import Paragraph from "../components/paragraph";
+import News from "../components/news";
 import TypeNefront from "../components/typeNefront";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import ReactGA from "react-ga4";
+
+import Particles from "react-particles-js";
 
 const imamuu = "https://laplaciancpp.github.io/images/imamura.jpg";
 const hemmi = "https://laplaciancpp.github.io/images/hemmi.jpg";
@@ -37,6 +40,19 @@ ReactGA.send("pageview");
 const Home = () => (
   <Layout>
     <Container>
+      <Particles
+        params={{
+          particles: {
+            line_linked: {
+              shadow: {
+                enable: true,
+                color: "#3CA9D1",
+                blur: 5,
+              },
+            },
+          },
+        }}
+      />
       <div
         id="hoge"
         style={{
@@ -179,6 +195,57 @@ const Home = () => (
         <Heading as="h1" variant="section-title">
           News
         </Heading>
+        <News>
+          〇令和4年度
+          「学生ビジネスプランコンテスト」でアイデア賞を受賞しました。
+          2022年12月20日
+          <br />
+          <Link
+            isExternal={true}
+            href="http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223"
+          >
+            http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223
+          </Link>
+          <br />
+          〇キャンパスベンチャーグランプリ東京大会で日刊工業新聞賞を受賞しました。
+          2022年12月1日
+          <br />
+          <Link
+            isExternal={true}
+            href="https://cvg.nikkan.co.jp/tokyo_backnumber/2022/"
+          >
+            https://cvg.nikkan.co.jp/tokyo_backnumber/2022/
+          </Link>
+          <br />
+          〇総務省主催の2022年度異能vation
+          ジェネレーションアワード部門にノミネートされました。 2022年11月30日
+          <br />
+          <Link
+            isExternal={true}
+            href="https://www.inno.go.jp/result/2022/generation/nominate/"
+          >
+            https://www.inno.go.jp/result/2022/generation/nominate/
+          </Link>
+          <br />
+          〇茨城県学生ビジネスプランコンテストでサザコーヒー賞と常陽銀行賞を受賞しました。
+          2022年11月27日
+          <br />
+          <Link
+            isExternal={true}
+            href="https://www.scc.ibaraki.ac.jp/contest2022final/"
+          >
+            https://www.scc.ibaraki.ac.jp/contest2022final/
+          </Link>
+          <br />
+          〇技育展2022に登壇しました。 2022年9月10日
+          <br />
+          <Link
+            isExternal={true}
+            href="https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4"
+          >
+            https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4
+          </Link>
+        </News>
       </Section>
 
       <div id="members"></div>
@@ -225,7 +292,7 @@ const Home = () => (
             <br />
             筑波大学情報科学類2年
             <br />
-            海城高等学校在学中に競技プログラミングに出会いプログラミングの道に入る。筑波大学進学後は株式会社AVILENの長期インターンとしてAI系の事業やAutoMLツールのバックエンド実装に関わったり、文章を打ち込むとそれに合わせた効果音を生成するモデルの研究開発を行っている。
+            私立海城高等学校在学中に競技プログラミングに出会いプログラミングの道に入る。筑波大学進学後は株式会社AVILENの長期インターンとしてAI系の事業やAutoMLツールのバックエンド実装に関わったり、文章を打ち込むとそれに合わせた効果音を生成するモデルの研究開発を行っている。
             <br />
           </GridItem>
           <GridItem
@@ -261,6 +328,7 @@ const Home = () => (
             as="a"
             href="https://forms.gle/HJXsrsk5myVrmEqC6"
             target="_blank"
+            rel="noopener"
             m="auto"
           >
             お問い合わせはこちら

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const Subsection = styled.p`
+const Subsection = styled.span`
   text-align: center;
   text-indent: 1em;
   hyphens: auto;
