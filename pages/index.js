@@ -20,6 +20,7 @@ import Section from "../components/section";
 import Subsection from "../components/subsection";
 import Paragraph from "../components/paragraph";
 import News from "../components/news";
+import NewsHeading from "../components/newsheading";
 import TypeNefront from "../components/typeNefront";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -27,10 +28,10 @@ import ReactGA from "react-ga4";
 
 import Particles from "react-particles-js";
 
-const imamuu = "https://laplaciancpp.github.io/images/imamura.jpg";
-const hemmi = "https://laplaciancpp.github.io/images/hemmi.jpg";
-const lapla = "https://laplaciancpp.github.io/images/akiyama.jpg";
-const asuto = "https://laplaciancpp.github.io/images/watanabe.jpg";
+const imamuu = "https://www.nefront.com/images/imamura.jpg";
+const hemmi = "https://www.nefront.com/images/hemmi.jpg";
+const lapla = "https://www.nefront.com/images/akiyama.jpg";
+const asuto = "https://www.nefront.com/images/watanabe.jpg";
 
 const dir = "/Nefront-HP";
 
@@ -39,15 +40,26 @@ ReactGA.send("pageview");
 
 const Home = () => (
   <Layout>
-    <Container>
+    <Container maxW="99999999px">
       <Particles
         params={{
           particles: {
+            number: {
+              value: 50,
+            },
+            color: "#000000",
             line_linked: {
+              color: "#FFF",
               shadow: {
+                enable: false,
+              },
+            },
+          },
+          interactivity: {
+            events: {
+              onhover: {
                 enable: true,
-                color: "#3CA9D1",
-                blur: 5,
+                mode: "repulse",
               },
             },
           },
@@ -137,10 +149,12 @@ const Home = () => (
         <Paragraph>
           <Subsection>小売店</Subsection>
           <img
-            src="https://laplaciancpp.github.io/images/mall.jpg"
+            src="https://laplaciancpp.github.io/images/super.jpg"
             alt="小売店"
             align="center"
             className="usecases"
+            height="300"
+            width="auto"
           />
           <br />
           欲しい商品への誘導や売り場に合わせたARプロモーションを表示。キャラクターと買い物も！？
@@ -159,6 +173,8 @@ const Home = () => (
             alt="都市施設"
             align="center"
             className="usecases"
+            height="300"
+            width="auto"
           />
           <br />
           施設内の誘導やおすすめ情報の提示が可能です。ショップやレストランのクーポン、ARコンテンツによる体験型展示も！
@@ -177,6 +193,8 @@ const Home = () => (
             alt="倉庫"
             align="center"
             className="usecases"
+            height="300"
+            width="auto"
           />
           <br />
           商品や部品の棚入れ、ピッキングを効率化できます。初心者でも作業にかかる時間やミスを削減へ！
@@ -196,55 +214,62 @@ const Home = () => (
           News
         </Heading>
         <News>
-          〇令和4年度
-          「学生ビジネスプランコンテスト」でアイデア賞を受賞しました。
-          2022年12月20日
-          <br />
-          <Link
-            isExternal={true}
-            href="http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223"
+          <NewsHeading
+            title="令和4年度学生ビジネスプランコンテストでアイデア賞を受賞しました"
+            date="2022年12月20日"
           >
-            http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223
-          </Link>
-          <br />
-          〇キャンパスベンチャーグランプリ東京大会で日刊工業新聞賞を受賞しました。
-          2022年12月1日
-          <br />
-          <Link
-            isExternal={true}
-            href="https://cvg.nikkan.co.jp/tokyo_backnumber/2022/"
+            <Link
+              isExternal={true}
+              href="http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223"
+            >
+              http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223
+            </Link>
+          </NewsHeading>
+
+          <NewsHeading
+            title="キャンパスベンチャーグランプリ東京大会で日刊工業新聞賞を受賞しました"
+            date="2022年12月1日"
           >
-            https://cvg.nikkan.co.jp/tokyo_backnumber/2022/
-          </Link>
-          <br />
-          〇総務省主催の2022年度異能vation
-          ジェネレーションアワード部門にノミネートされました。 2022年11月30日
-          <br />
-          <Link
-            isExternal={true}
-            href="https://www.inno.go.jp/result/2022/generation/nominate/"
+            <Link
+              isExternal={true}
+              href="https://cvg.nikkan.co.jp/tokyo_backnumber/2022/"
+            >
+              https://cvg.nikkan.co.jp/tokyo_backnumber/2022/
+            </Link>
+          </NewsHeading>
+
+          <NewsHeading
+            title="総務省主催の2022年度異能vationジェネレーションアワード部門にノミネートされました"
+            date="2022年11月30日"
           >
-            https://www.inno.go.jp/result/2022/generation/nominate/
-          </Link>
-          <br />
-          〇茨城県学生ビジネスプランコンテストでサザコーヒー賞と常陽銀行賞を受賞しました。
-          2022年11月27日
-          <br />
-          <Link
-            isExternal={true}
-            href="https://www.scc.ibaraki.ac.jp/contest2022final/"
+            <Link
+              isExternal={true}
+              href="https://www.inno.go.jp/result/2022/generation/nominate/"
+            >
+              https://www.inno.go.jp/result/2022/generation/nominate/
+            </Link>
+          </NewsHeading>
+
+          <NewsHeading
+            title="茨城県学生ビジネスプランコンテストでサザコーヒー賞と常陽銀行賞を受賞しました"
+            date="2022年11月27日"
           >
-            https://www.scc.ibaraki.ac.jp/contest2022final/
-          </Link>
-          <br />
-          〇技育展2022に登壇しました。 2022年9月10日
-          <br />
-          <Link
-            isExternal={true}
-            href="https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4"
-          >
-            https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4
-          </Link>
+            <Link
+              isExternal={true}
+              href="https://www.scc.ibaraki.ac.jp/contest2022final/"
+            >
+              https://www.scc.ibaraki.ac.jp/contest2022final/
+            </Link>
+          </NewsHeading>
+
+          <NewsHeading title="技育展2022に登壇しました" date="2022年9月10日">
+            <Link
+              isExternal={true}
+              href="https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4"
+            >
+              https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4
+            </Link>
+          </NewsHeading>
         </News>
       </Section>
 
@@ -305,7 +330,7 @@ const Home = () => (
             <br />
             静岡県立富士高校では電子工作を趣味で行い、筑波大学進学後はスマートフォンアプリのフロントエンド開発やロボットコンテストのソフトウェア開発を担当。
             <br />
-            現在、株式会社Techouseの開発インターンでRailsでのバックエンド開発を務める。
+            株式会社Techouseの開発インターンでRailsでのバックエンド開発も務める。
             <br />
           </GridItem>
         </SimpleGrid>

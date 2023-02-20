@@ -35,22 +35,11 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   );
 };
 
-const ContactLinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href;
-  const inactiveColor = "gray.800";
+const ContactLinkItem = ({ href, path, target, children }) => {
   return (
-    <Link
-      as={NextLink}
-      href={href}
-      scroll={false}
-      p={2}
-      bg={"#3182CE"}
-      color={active ? "#202023" : inactiveColor}
-      target={target}
-      {...props}
-    >
+    <a className="hovernefro" href={href} target="_blank" rel="noopener">
       {children}
-    </Link>
+    </a>
   );
 };
 

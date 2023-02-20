@@ -2,6 +2,7 @@ import Layout from "../components/layouts/main";
 // import Fonts from '../components/fonts'
 import { AnimatePresence } from "framer-motion";
 import Chakra from "../components/chakra";
+import styles from '../components/css/navbar.css'
 
 if (typeof window !== "undefined") {
   window.history.scrollRestoration = "manual";
@@ -28,13 +29,3 @@ function Website({ Component, pageProps, router }) {
 }
 
 export default Website;
-
-// const Website = ({ Component, pageProps }: AppProps) => {
-//   return (
-//     <CSR>
-//       <Component {...pageProps} />
-//     </CSR>
-//   );
-// };
-
-// export default Website;
