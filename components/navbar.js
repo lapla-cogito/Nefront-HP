@@ -37,7 +37,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 
 const ContactLinkItem = ({ href, path, target, children }) => {
   return (
-    <a className="hovernefro" href={href} target="_blank" rel="noopener">
+    <a className="hovernefro" href={href} target="_blank" rel="noreferrer noopener">
       {children}
     </a>
   );
