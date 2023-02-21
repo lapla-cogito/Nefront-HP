@@ -1,19 +1,4 @@
-import NextLink from "next/link";
-import {
-  Link,
-  Container,
-  Heading,
-  Box,
-  SimpleGrid,
-  Button,
-  List,
-  ListItem,
-  LinkOverlay,
-  useColorModeValue,
-  chakra,
-} from "@chakra-ui/react";
-import { ChevronRightIcon } from "@chakra-ui/icons";
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from "react-icons/io5";
+import { Link, Container, Heading, Box, SimpleGrid } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import { GridItem } from "../components/grid-item";
 import Section from "../components/section";
@@ -22,11 +7,9 @@ import Paragraph from "../components/paragraph";
 import News from "../components/news";
 import NewsHeading from "../components/newsheading";
 import TypeNefront from "../components/typeNefront";
-import Image from "next/image";
-import dynamic from "next/dynamic";
 import ReactGA from "react-ga4";
+import dynamic from "next/dynamic";
 
-import Particles from "react-particles-js";
 
 const imamuu = "https://www.nefront.com/images/imamura.jpg";
 const hemmi = "https://www.nefront.com/images/hemmi.jpg";
@@ -38,10 +21,15 @@ const dir = "/Nefront-HP";
 ReactGA.initialize("G-FBQ0WYNGEZ");
 ReactGA.send("pageview");
 
+const Particles = dynamic(() => import("../components/particles"), {
+  ssr: false,
+  // loading: () => <ParticlesLoader />
+});
+
 const Home = () => (
   <Layout>
     <Container maxW="99999999px">
-      <Particles
+      {/* <Particles
         params={{
           particles: {
             number: {
@@ -64,9 +52,12 @@ const Home = () => (
             },
           },
         }}
-      />
+      /> */}
+      <div id="hoge" className="ushi"></div>
+
+      <Particles />
+
       <div
-        id="hoge"
         style={{
           width: "100%",
           height: "60px",
@@ -87,7 +78,9 @@ const Home = () => (
           About
         </Heading>
         <Paragraph>
-          現実空間に情報を重ね合わせる拡張現実（AR）のアプリケーションを、今までにない場所や使い方で提供できるソリューションを開発しています。
+          <span className="aboutsentence">
+            現実空間に情報を重ね合わせる拡張現実（AR）のアプリケーションを、今までにない場所や使い方で提供できるソリューションを開発しています。
+          </span>
         </Paragraph>
       </Section>
 
@@ -116,6 +109,7 @@ const Home = () => (
                 className="svgs"
               />
               <Subsection>屋内での位置特定</Subsection>
+              <br />
               スマートフォンのみでGPSの使えない屋内空間での位置特定を行うVPS（画像位置認識システム）を提供します。
             </Paragraph>
           </div>
@@ -128,6 +122,7 @@ const Home = () => (
                 className="svgs"
               />
               <Subsection>アイテム位置情報の登録や連携</Subsection>
+              <br />
               屋内空間に商品やARコンテンツの位置を設定できます。API連携でリアルタイムの更新も可能です。
             </Paragraph>
           </div>
@@ -140,6 +135,7 @@ const Home = () => (
                 className="svgs"
               />
               <Subsection>誘導やARコンテンツの表示</Subsection>
+              <br />
               特定した位置やアイテムの登録位置に基づき誘導を行います。また、ARコンテンツの表示も行えます。
             </Paragraph>
           </div>
@@ -174,6 +170,7 @@ const Home = () => (
               <br />
             </Paragraph>
           </div>
+
           <div className="flexdiv">
             <Paragraph>
               <img
@@ -188,6 +185,7 @@ const Home = () => (
               <br />
             </Paragraph>
           </div>
+
           <div className="flexdiv">
             <Paragraph>
               <img
@@ -230,7 +228,7 @@ const Home = () => (
           </NewsHeading>
 
           <NewsHeading
-            title="キャンパスベンチャーグランプリ東京大会で日刊工業新聞賞を受賞しました"
+            title="第19回キャンパスベンチャーグランプリ東京大会で日刊工業新聞賞を受賞しました"
             date="2022年12月1日"
           >
             <Link
@@ -254,7 +252,7 @@ const Home = () => (
           </NewsHeading>
 
           <NewsHeading
-            title="茨城県学生ビジネスプランコンテストでサザコーヒー賞と常陽銀行賞を受賞しました"
+            title="茨城県学生ビジネスプランコンテスト2022でサザコーヒー賞と常陽銀行賞を受賞しました"
             date="2022年11月27日"
           >
             <Link
@@ -351,17 +349,6 @@ const Home = () => (
           Contact
         </Heading>
         <Box textAlign="center">
-          {/* <Button
-            colorScheme="blue"
-            as="a"
-            href="https://forms.gle/HJXsrsk5myVrmEqC6"
-            target="_blank"
-            rel="noopener"
-            m="auto"
-          >
-            お問い合わせはこちら
-          </Button> */}
-
           <a
             className="contactform"
             href="https://forms.gle/HJXsrsk5myVrmEqC6"

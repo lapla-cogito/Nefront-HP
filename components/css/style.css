@@ -1,3 +1,7 @@
+.aboutsentence {
+    font-size: 30px;
+}
+
 .hovernefro {
     color: #fff;
     display: inline-block;
@@ -47,6 +51,7 @@
     transition: 0.3s;
     border-radius: 1000px;
     width: 192px;
+    height: 50px;
 }
 
 .contactform>span {
@@ -71,4 +76,11 @@
 .svgs {
     height: 200px;
     width: auto;
+}
+
+.ushi {
+    width: 100%;
+    height: 500px;
+    /* margin: 0 auto; */
+    background-color: #000
 }

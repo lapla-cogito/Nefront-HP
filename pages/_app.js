@@ -1,8 +1,6 @@
 import Layout from "../components/layouts/main";
-// import Fonts from '../components/fonts'
 import { AnimatePresence } from "framer-motion";
 import Chakra from "../components/chakra";
-import styles from '../components/css/style.css'
 
 if (typeof window !== "undefined") {
   window.history.scrollRestoration = "manual";
@@ -11,6 +9,7 @@ if (typeof window !== "undefined") {
 function Website({ Component, pageProps, router }) {
   return (
     <Chakra cookies={pageProps.cookies}>
+      <style>{`@import url(https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700);`}</style>
       <Layout router={router}>
         <AnimatePresence
           mode="wait"
