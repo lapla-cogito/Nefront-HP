@@ -1,0 +1,74 @@
+.hovernefro {
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    background: #3054D6;
+    border: solid 2px #3054D6;
+    transition: 0.3s;
+    border-radius: 1000px;
+    width: 100px;
+}
+
+.hovernefro>span {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hovernefro:hover {
+    color: #000;
+    background: #fff;
+}
+
+.flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flexdiv {
+    flex: 1 0 300px;
+}
+
+.contactform {
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    background: #3054D6;
+    border: solid 2px #3054D6;
+    transition: 0.3s;
+    border-radius: 1000px;
+    width: 192px;
+}
+
+.contactform>span {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.contactform:hover {
+    color: #000;
+    background: #fff;
+}
+
+.imgs {
+    height: 300px;
+    width: auto;
+}
+
+.svgs {
+    height: 200px;
+    width: auto;
+}

@@ -90,6 +90,7 @@ const Home = () => (
           現実空間に情報を重ね合わせる拡張現実（AR）のアプリケーションを、今までにない場所や使い方で提供できるソリューションを開発しています。
         </Paragraph>
       </Section>
+
       <div id="product"></div>
       <div
         style={{
@@ -97,6 +98,7 @@ const Home = () => (
           height: "60px",
         }}
       ></div>
+
       <Section delay={0.2}>
         <Heading as="h1" variant="section-title">
           Product
@@ -104,37 +106,46 @@ const Home = () => (
         <Paragraph>
           屋内空間に情報を紐づけて、誘導アプリケーションやARコンテンツを提供します。
         </Paragraph>
-        <Paragraph>
-          <Subsection>屋内での位置特定</Subsection>
-          <img
-            src="images/vps.svg"
-            style={{ display: "block", margin: "auto" }}
-            alt="VPS"
-            width="150"
-          />
-          スマートフォンのみでGPSの使えない屋内空間での位置特定を行うVPS（画像位置認識システム）を提供します。
-        </Paragraph>
-        <Paragraph>
-          <Subsection>アイテム位置情報の登録や連携</Subsection>
-          <img
-            src="images/reg.svg"
-            style={{ display: "block", margin: "auto" }}
-            alt="Register items"
-            width="150"
-          />
-          屋内空間に商品やARコンテンツの位置を設定できます。API連携でリアルタイムの更新も可能です。
-        </Paragraph>
-        <Paragraph>
-          <Subsection>誘導やARコンテンツの表示</Subsection>
-          <img
-            src="images/navigate.svg"
-            style={{ display: "block", margin: "auto" }}
-            alt="Navigation"
-            width="150"
-          />
-          特定した位置やアイテムの登録位置に基づき誘導を行います。また、ARコンテンツの表示も行えます。
-        </Paragraph>
+        <div className="flex">
+          <div className="flexdiv">
+            <Paragraph>
+              <img
+                src="images/vps.svg"
+                style={{ display: "block", margin: "auto" }}
+                alt="VPS"
+                className="svgs"
+              />
+              <Subsection>屋内での位置特定</Subsection>
+              スマートフォンのみでGPSの使えない屋内空間での位置特定を行うVPS（画像位置認識システム）を提供します。
+            </Paragraph>
+          </div>
+          <div className="flexdiv">
+            <Paragraph>
+              <img
+                src="images/reg.svg"
+                style={{ display: "block", margin: "auto" }}
+                alt="Register items"
+                className="svgs"
+              />
+              <Subsection>アイテム位置情報の登録や連携</Subsection>
+              屋内空間に商品やARコンテンツの位置を設定できます。API連携でリアルタイムの更新も可能です。
+            </Paragraph>
+          </div>
+          <div className="flexdiv">
+            <Paragraph>
+              <img
+                src="images/navigate.svg"
+                style={{ display: "block", margin: "auto" }}
+                alt="Navigation"
+                className="svgs"
+              />
+              <Subsection>誘導やARコンテンツの表示</Subsection>
+              特定した位置やアイテムの登録位置に基づき誘導を行います。また、ARコンテンツの表示も行えます。
+            </Paragraph>
+          </div>
+        </div>
       </Section>
+
       <div id="usecase"></div>
       <div
         style={{
@@ -142,64 +153,56 @@ const Home = () => (
           height: "60px",
         }}
       ></div>
+
       <Section delay={0.3}>
         <Heading as="h1" variant="section-title">
           Usecase
         </Heading>
-        <Paragraph>
-          <Subsection>小売店</Subsection>
-          <img
-            src="https://laplaciancpp.github.io/images/super.jpg"
-            alt="小売店"
-            align="center"
-            className="usecases"
-            height="300"
-            width="auto"
-          />
-          <br />
-          欲しい商品への誘導や売り場に合わせたARプロモーションを表示。キャラクターと買い物も！？
-          <br />
-        </Paragraph>
-        <div
-          style={{
-            width: "100%",
-            height: "60px",
-          }}
-        ></div>
-        <Paragraph>
-          <Subsection>都市施設</Subsection>
-          <img
-            src="https://laplaciancpp.github.io/images/underground.jpg"
-            alt="都市施設"
-            align="center"
-            className="usecases"
-            height="300"
-            width="auto"
-          />
-          <br />
-          施設内の誘導やおすすめ情報の提示が可能です。ショップやレストランのクーポン、ARコンテンツによる体験型展示も！
-          <br />
-        </Paragraph>
-        <div
-          style={{
-            width: "100%",
-            height: "60px",
-          }}
-        ></div>
-        <Paragraph>
-          <Subsection>倉庫</Subsection>
-          <img
-            src="https://laplaciancpp.github.io/images/repos.jpg"
-            alt="倉庫"
-            align="center"
-            className="usecases"
-            height="300"
-            width="auto"
-          />
-          <br />
-          商品や部品の棚入れ、ピッキングを効率化できます。初心者でも作業にかかる時間やミスを削減へ！
-          <br />
-        </Paragraph>
+
+        <div className="flex">
+          <div className="flexdiv">
+            <Paragraph>
+              <img
+                src="https://www.nefront.com/images/super.jpg"
+                alt="小売店"
+                align="center"
+                className="imgs"
+              />
+              <Subsection>小売店</Subsection>
+              <br />
+              欲しい商品への誘導や売り場に合わせたARプロモーションを表示。キャラクターと買い物も！？
+              <br />
+            </Paragraph>
+          </div>
+          <div className="flexdiv">
+            <Paragraph>
+              <img
+                src="https://www.nefront.com/images/underground.jpg"
+                alt="都市施設"
+                align="center"
+                className="imgs"
+              />
+              <Subsection>都市施設</Subsection>
+              <br />
+              施設内の誘導やおすすめ情報の提示が可能です。ショップやレストランのクーポン、ARコンテンツによる体験型展示も！
+              <br />
+            </Paragraph>
+          </div>
+          <div className="flexdiv">
+            <Paragraph>
+              <img
+                src="https://www.nefront.com/images/repos.jpg"
+                alt="倉庫"
+                align="center"
+                className="imgs"
+              />
+              <Subsection>倉庫</Subsection>
+              <br />
+              商品や部品の棚入れ、ピッキングを効率化できます。初心者でも作業にかかる時間やミスを削減へ！
+              <br />
+            </Paragraph>
+          </div>
+        </div>
       </Section>
 
       <div id="news"></div>
@@ -348,7 +351,7 @@ const Home = () => (
           Contact
         </Heading>
         <Box textAlign="center">
-          <Button
+          {/* <Button
             colorScheme="blue"
             as="a"
             href="https://forms.gle/HJXsrsk5myVrmEqC6"
@@ -357,7 +360,16 @@ const Home = () => (
             m="auto"
           >
             お問い合わせはこちら
-          </Button>
+          </Button> */}
+
+          <a
+            className="contactform"
+            href="https://forms.gle/HJXsrsk5myVrmEqC6"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            お問い合わせはこちら
+          </a>
         </Box>
       </Section>
     </Container>

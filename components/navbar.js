@@ -5,7 +5,7 @@ import {
   Container,
   Box,
   Link,
-  Stack,
+  HStack,
   Heading,
   Flex,
   Menu,
@@ -37,7 +37,12 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 
 const ContactLinkItem = ({ href, path, target, children }) => {
   return (
-    <a className="hovernefro" href={href} target="_blank" rel="noreferrer noopener">
+    <a
+      className="hovernefro"
+      href={href}
+      target="_blank"
+      rel="noreferrer noopener"
+    >
       {children}
     </a>
   );
@@ -63,7 +68,7 @@ const Navbar = (props) => {
       <Container
         display="flex"
         p={2}
-        maxW="container.md"
+        maxW="9999px"
         wrap="wrap"
         align="center"
         justify="space-between"
@@ -73,14 +78,14 @@ const Navbar = (props) => {
             <Logo />
           </Heading>
         </Flex>
-
-        <Stack
+        <HStack
           direction={{ base: "column", md: "row" }}
           display={{ base: "none", md: "flex" }}
           width={{ base: "full", md: "auto" }}
           alignItems="center"
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
+          justify="right"
         >
           <LinkItem href="#about" path={path}>
             About
@@ -107,7 +112,7 @@ const Navbar = (props) => {
           >
             Contact
           </ContactLinkItem>
-        </Stack>
+        </HStack>
 
         <Box flex={1} align="right">
           <Box ml={2} display={{ base: "inline-block", md: "none" }}>
