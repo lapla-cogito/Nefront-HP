@@ -1,5 +1,7 @@
 .aboutsentence {
     font-size: 30px;
+    display: block;
+    text-align: center;
 }
 
 .hovernefro {
@@ -40,11 +42,12 @@
 
 .flexdiv {
     flex: 1 0 300px;
+    margin: 20px;
 }
 
 .contactform {
     color: #fff;
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
     background: #3054D6;
     border: solid 2px #3054D6;
@@ -52,6 +55,9 @@
     border-radius: 1000px;
     width: 192px;
     height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .contactform>span {
@@ -71,11 +77,14 @@
 .imgs {
     height: 300px;
     width: auto;
+    display: block;
+    margin: auto;
 }
 
 .svgs {
-    height: 200px;
+    height: 140px;
     width: auto;
+    padding: 30px;
 }
 
 .ushi {
@@ -83,4 +92,26 @@
     height: 500px;
     /* margin: 0 auto; */
     background-color: #000
+}
+
+.table {
+    display: table;
+    margin: 40px auto;
+}
+
+.date {
+    border-radius: 1000px;
+    color: gray;
+    font-size: 14px;
+    margin: 0 40px 0 0;
+    background-color: #ad98ad;
+}
+
+.title {
+    font-size: 25px;
+    margin: 0 40px 0 0;
+}
+
+.ext {
+    height: 25px;
 }

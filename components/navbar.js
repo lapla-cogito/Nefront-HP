@@ -5,7 +5,7 @@ import {
   Container,
   Box,
   Link,
-  HStack,
+  Stack,
   Heading,
   Flex,
   Menu,
@@ -24,7 +24,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       as={NextLink}
       href={href}
       scroll={false}
-      p={2}
+      p={4}
       bg={active ? "grassTeal" : undefined}
       color={active ? "#202023" : inactiveColor}
       target={target}
@@ -60,7 +60,7 @@ const Navbar = (props) => {
       position="fixed"
       as="nav"
       w="100%"
-      h="50px"
+      h="80px"
       bg="#ffffff40"
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={2}
@@ -79,14 +79,14 @@ const Navbar = (props) => {
             <Logo />
           </Heading>
         </Flex>
-        <HStack
+        <Stack
           direction={{ base: "column", md: "row" }}
           display={{ base: "none", md: "flex" }}
           width={{ base: "full", md: "auto" }}
           alignItems="center"
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
-          justify="right"
+          justify="center"
         >
           <LinkItem href="#about" path={path}>
             About
@@ -113,7 +113,7 @@ const Navbar = (props) => {
           >
             Contact
           </ContactLinkItem>
-        </HStack>
+        </Stack>
 
         <Box flex={1} align="right">
           <Box ml={2} display={{ base: "inline-block", md: "none" }}>

@@ -10,7 +10,6 @@ import TypeNefront from "../components/typeNefront";
 import ReactGA from "react-ga4";
 import dynamic from "next/dynamic";
 
-
 const imamuu = "https://www.nefront.com/images/imamura.jpg";
 const hemmi = "https://www.nefront.com/images/hemmi.jpg";
 const lapla = "https://www.nefront.com/images/akiyama.jpg";
@@ -21,10 +20,15 @@ const dir = "/Nefront-HP";
 ReactGA.initialize("G-FBQ0WYNGEZ");
 ReactGA.send("pageview");
 
-const Particles = dynamic(() => import("../components/particles"), {
-  ssr: false,
-  // loading: () => <ParticlesLoader />
-});
+// const Particles = dynamic(() => import("../components/particles"), {
+//   ssr: false,
+//   // loading: () => <ParticlesLoader />
+// });
+
+// const ParticlesConfig = dynamic(() => import("../components/config"), {
+//   ssr: false,
+//   // loading: () => <ParticlesLoader />
+// });
 
 const Home = () => (
   <Layout>
@@ -53,9 +57,16 @@ const Home = () => (
           },
         }}
       /> */}
-      <div id="hoge" className="ushi"></div>
+      <div
+        id="hoge"
+        style={{
+          width: "100%",
+          height: "300px",
+        }}
+      ></div>
 
-      <Particles />
+      {/* <Particles />
+      <ParticlesConfig /> */}
 
       <div
         style={{
@@ -97,7 +108,9 @@ const Home = () => (
           Product
         </Heading>
         <Paragraph>
-          屋内空間に情報を紐づけて、誘導アプリケーションやARコンテンツを提供します。
+          <span className="aboutsentence">
+            屋内空間に情報を紐づけて、誘導アプリケーションやARコンテンツを提供します。
+          </span>
         </Paragraph>
         <div className="flex">
           <div className="flexdiv">
@@ -161,7 +174,6 @@ const Home = () => (
               <img
                 src="https://www.nefront.com/images/super.jpg"
                 alt="小売店"
-                align="center"
                 className="imgs"
               />
               <Subsection>小売店</Subsection>
@@ -176,7 +188,6 @@ const Home = () => (
               <img
                 src="https://www.nefront.com/images/underground.jpg"
                 alt="都市施設"
-                align="center"
                 className="imgs"
               />
               <Subsection>都市施設</Subsection>
@@ -191,7 +202,6 @@ const Home = () => (
               <img
                 src="https://www.nefront.com/images/repos.jpg"
                 alt="倉庫"
-                align="center"
                 className="imgs"
               />
               <Subsection>倉庫</Subsection>
@@ -218,59 +228,32 @@ const Home = () => (
           <NewsHeading
             title="令和4年度学生ビジネスプランコンテストでアイデア賞を受賞しました"
             date="2022年12月20日"
-          >
-            <Link
-              isExternal={true}
-              href="http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223"
-            >
-              http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223
-            </Link>
-          </NewsHeading>
+            link="http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223"
+          ></NewsHeading>
 
           <NewsHeading
             title="第19回キャンパスベンチャーグランプリ東京大会で日刊工業新聞賞を受賞しました"
             date="2022年12月1日"
-          >
-            <Link
-              isExternal={true}
-              href="https://cvg.nikkan.co.jp/tokyo_backnumber/2022/"
-            >
-              https://cvg.nikkan.co.jp/tokyo_backnumber/2022/
-            </Link>
-          </NewsHeading>
+            link="https://cvg.nikkan.co.jp/tokyo_backnumber/2022/"
+          ></NewsHeading>
 
           <NewsHeading
             title="総務省主催の2022年度異能vationジェネレーションアワード部門にノミネートされました"
             date="2022年11月30日"
-          >
-            <Link
-              isExternal={true}
-              href="https://www.inno.go.jp/result/2022/generation/nominate/"
-            >
-              https://www.inno.go.jp/result/2022/generation/nominate/
-            </Link>
-          </NewsHeading>
+            link="https://www.inno.go.jp/result/2022/generation/nominate/"
+          ></NewsHeading>
 
           <NewsHeading
             title="茨城県学生ビジネスプランコンテスト2022でサザコーヒー賞と常陽銀行賞を受賞しました"
             date="2022年11月27日"
-          >
-            <Link
-              isExternal={true}
-              href="https://www.scc.ibaraki.ac.jp/contest2022final/"
-            >
-              https://www.scc.ibaraki.ac.jp/contest2022final/
-            </Link>
-          </NewsHeading>
+            link="https://www.scc.ibaraki.ac.jp/contest2022final/"
+          ></NewsHeading>
 
-          <NewsHeading title="技育展2022に登壇しました" date="2022年9月10日">
-            <Link
-              isExternal={true}
-              href="https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4"
-            >
-              https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4
-            </Link>
-          </NewsHeading>
+          <NewsHeading
+            title="技育展2022に登壇しました"
+            date="2022年9月10日"
+            link="https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4"
+          ></NewsHeading>
         </News>
       </Section>
 
@@ -348,7 +331,7 @@ const Home = () => (
         <Heading as="h1" variant="section-title">
           Contact
         </Heading>
-        <Box textAlign="center">
+        <Box className="table">
           <a
             className="contactform"
             href="https://forms.gle/HJXsrsk5myVrmEqC6"

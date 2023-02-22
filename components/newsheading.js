@@ -1,18 +1,17 @@
-import NextLink from "next/link";
-import Image from "next/image";
-import { Box, Text, LinkBox, LinkOverlay } from "@chakra-ui/react";
-import { Global } from "@emotion/react";
+import { Box, Text } from "@chakra-ui/react";
 
-const NewsHeading = ({ children, title, date }) => (
+const NewsHeading = ({ children, title, date, link }) => (
   <Box w="100%">
-      <Text fontSize={25}>
-        {title}
-      </Text>
-      <Text fontSize={14} color="gray">
-        {date}
-      </Text>
-      <Text fontSize={14}>{children}</Text>
+    <span className="date">{date}</span>
+    <a className="title" href={link} target="_blank" rel="noopener noreferrer">
+      {title}{" "}
+      <img
+        src="images/external.svg"
+        style={{ display: "block", margin: "auto" }}
+        className="ext"
+      />
+    </a>
   </Box>
 );
 
-export default NewsHeading
+export default NewsHeading;
