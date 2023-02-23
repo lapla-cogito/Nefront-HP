@@ -1,9 +1,11 @@
 import styled from "@emotion/styled";
 
-const NewsDiv = styled.div`
-  overflow: auto;
-  height: 300px;
-  width: 100%;
+const NewsDiv = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding: 50px 0;
+  // background: #FFF7EA;
 `;
 
 const News = ({ children }) => <NewsDiv>{children}</NewsDiv>;

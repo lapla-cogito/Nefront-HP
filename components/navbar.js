@@ -4,7 +4,7 @@ import NextLink from "next/link";
 import {
   Container,
   Box,
-  Link,
+  // Link,
   Stack,
   Heading,
   Flex,
@@ -15,22 +15,21 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { Link } from "react-scroll";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href;
-  const inactiveColor = "gray.800";
   return (
     <Link
-      as={NextLink}
-      href={href}
-      scroll={false}
-      p={4}
-      bg={active ? "grassTeal" : undefined}
-      color={active ? "#202023" : inactiveColor}
-      target={target}
-      {...props}
+      activeClass="active"
+      to={href}
+      spy={true}
+      smooth={true}
+      // offset={-70}
+      duration={800}
     >
-      {children}
+      <p className="textWrapper">
+        <span className="pseudoElement pseudoElement__scale">{children}</span>
+      </p>
     </Link>
   );
 };
@@ -49,8 +48,27 @@ const ContactLinkItem = ({ href, path, target, children }) => {
 };
 
 const MenuLink = forwardRef((props, ref) => (
-  <Link ref={ref} as={NextLink} {...props} />
+  <a href={ref} target="_blank" rel="noreferrer noopener" {...props} />
 ));
+
+const HambItem = ({ href, path, target, children, ...props }) => {
+  return (
+    <Link
+      activeClass="active"
+      to={href}
+      spy={true}
+      smooth={true}
+      // offset={-70}
+      duration={800}
+      {...props}
+    >
+      {/* <p className="textWrapper">
+        <span className="pseudoElement pseudoElement__scale">{children}</span>
+      </p> */}
+      {children}
+    </Link>
+  );
+};
 
 const Navbar = (props) => {
   const { path } = props;
@@ -86,21 +104,21 @@ const Navbar = (props) => {
           alignItems="center"
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
-          justify="center"
+          className="navi"
         >
-          <LinkItem href="#about" path={path}>
+          <LinkItem href="about" path={path}>
             About
           </LinkItem>
-          <LinkItem href="#product" path={path}>
+          <LinkItem href="product" path={path}>
             Product
           </LinkItem>
-          <LinkItem href="#usecase" path={path}>
+          <LinkItem href="usecase" path={path}>
             Usecase
           </LinkItem>
-          <LinkItem href="#news" path={path}>
+          <LinkItem href="news" path={path}>
             News
           </LinkItem>
-          <LinkItem href="#members" path={path}>
+          <LinkItem href="members" path={path}>
             Members
           </LinkItem>
           <ContactLinkItem
@@ -126,25 +144,24 @@ const Navbar = (props) => {
                 colorScheme="black"
               />
               <MenuList>
-                <MenuItem as={MenuLink} href="#about">
+                <MenuItem as={HambItem} href="about">
                   About
                 </MenuItem>
-                <MenuItem as={MenuLink} href="#product">
+                <MenuItem as={HambItem} href="product">
                   Product
                 </MenuItem>
-                <MenuItem as={MenuLink} href="#usecase">
+                <MenuItem as={HambItem} href="usecase">
                   Usecase
                 </MenuItem>
-                <MenuItem as={MenuLink} href="#news">
+                <MenuItem as={HambItem} href="news">
                   News
                 </MenuItem>
-                <MenuItem as={MenuLink} href="#members">
+                <MenuItem as={HambItem} href="members">
                   Members
                 </MenuItem>
                 <MenuItem
                   as={MenuLink}
                   href="https://forms.gle/HJXsrsk5myVrmEqC6"
-                  isExternal={true}
                 >
                   Contact
                 </MenuItem>

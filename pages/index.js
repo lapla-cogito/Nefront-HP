@@ -22,41 +22,15 @@ ReactGA.send("pageview");
 
 // const Particles = dynamic(() => import("../components/particles"), {
 //   ssr: false,
-//   // loading: () => <ParticlesLoader />
 // });
 
 // const ParticlesConfig = dynamic(() => import("../components/config"), {
 //   ssr: false,
-//   // loading: () => <ParticlesLoader />
 // });
 
 const Home = () => (
   <Layout>
     <Container maxW="99999999px">
-      {/* <Particles
-        params={{
-          particles: {
-            number: {
-              value: 50,
-            },
-            color: "#000000",
-            line_linked: {
-              color: "#FFF",
-              shadow: {
-                enable: false,
-              },
-            },
-          },
-          interactivity: {
-            events: {
-              onhover: {
-                enable: true,
-                mode: "repulse",
-              },
-            },
-          },
-        }}
-      /> */}
       <div
         id="hoge"
         style={{
@@ -64,9 +38,6 @@ const Home = () => (
           height: "300px",
         }}
       ></div>
-
-      {/* <Particles />
-      <ParticlesConfig /> */}
 
       <div
         style={{
@@ -89,7 +60,7 @@ const Home = () => (
           About
         </Heading>
         <Paragraph>
-          <span className="aboutsentence">
+          <span className="exagsentence">
             現実空間に情報を重ね合わせる拡張現実（AR）のアプリケーションを、今までにない場所や使い方で提供できるソリューションを開発しています。
           </span>
         </Paragraph>
@@ -108,7 +79,7 @@ const Home = () => (
           Product
         </Heading>
         <Paragraph>
-          <span className="aboutsentence">
+          <span className="exagsentence">
             屋内空間に情報を紐づけて、誘導アプリケーションやARコンテンツを提供します。
           </span>
         </Paragraph>
@@ -136,7 +107,7 @@ const Home = () => (
               />
               <Subsection>アイテム位置情報の登録や連携</Subsection>
               <br />
-              屋内空間に商品やARコンテンツの位置を設定できます。API連携でリアルタイムの更新も可能です。
+              屋内空間に商品やARコンテンツの位置を設定できます。API連携により、リアルタイムの更新も可能です。
             </Paragraph>
           </div>
           <div className="flexdiv">
@@ -301,7 +272,7 @@ const Home = () => (
             <br />
             筑波大学情報科学類2年
             <br />
-            私立海城高等学校在学中に競技プログラミングに出会いプログラミングの道に入る。筑波大学進学後は株式会社AVILENの長期インターンとしてAI系の事業やAutoMLツールのバックエンド実装に関わったり、文章を打ち込むとそれに合わせた効果音を生成するモデルの研究開発を行っている。
+            私立海城高等学校在学中に競技プログラミングに出会いプログラミングの道に入る。筑波大学進学後は株式会社AVILENの長期インターンとしてAI系の事業やAutoMLツールのバックエンド実装に関わったり、個人として文章を打ち込むとそれに合わせた効果音を生成するモデルの研究開発を行っている。
             <br />
           </GridItem>
           <GridItem
@@ -312,7 +283,7 @@ const Home = () => (
             <br />
             筑波大学情報科学類2年
             <br />
-            静岡県立富士高校では電子工作を趣味で行い、筑波大学進学後はスマートフォンアプリのフロントエンド開発やロボットコンテストのソフトウェア開発を担当。
+            静岡県立富士高校では電子工作を趣味で行い、筑波大学進学後はスマートフォンアプリのフロントエンド開発やロボットコンテストでソフトウェア開発を担当。
             <br />
             株式会社Techouseの開発インターンでRailsでのバックエンド開発も務める。
             <br />

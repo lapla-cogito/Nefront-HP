@@ -1,117 +1,297 @@
-.aboutsentence {
+        .body {
+            font-family: "Noto Sans JP"
+        }
+        
+        .exagsentence {
+            font-size: 30px;
+            display: block;
+            text-align: center;
+            font-weight: Bold!important
+        }
+        
+        .hovernefro {
+            color: #fff;
+            display: inline-block;
+            position: relative;
+            background: #3054D6;
+            border: solid 2px #3054D6;
+            transition: 0.3s;
+            border-radius: 1000px;
+            width: 100px;
+            text-align: center;
+        }
+        
+        .hovernefro>span {
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+        
+        .hovernefro:hover {
+            color: #000;
+            background: #fff
+        }
+        
+        .flex {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-content: center;
+            flex-direction: row;
+            flex-wrap: wrap
+        }
+        
+        .flexdiv {
+            flex: 1 0 300px;
+            margin: 20px
+        }
+        
+        .contactform {
+            color: #fff;
+            /* display: inline-block; */
+            position: relative;
+            background: #3054D6;
+            border: solid 2px #3054D6;
+            transition: 0.3s;
+            border-radius: 1000px;
+            width: 192px;
+            height: 50px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center
+        }
+        
+        .contactform>span {
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+        
+        .contactform:hover {
+            color: #000;
+            background: #fff
+        }
+        
+        .imgs {
+            height: 300px;
+            width: auto;
+            display: block;
+            margin: auto
+        }
+        
+        .svgs {
+            height: 140px;
+            width: auto;
+            padding: 30px
+        }
+        
+        .ushi {
+            width: 100%;
+            height: 500px;
+            /* margin: 0 auto; */
+            background-color: #000
+        }
+        
+        .table {
+            display: table;
+            margin: 40px auto
+        }
+        
+        .date {
+            border-radius: 1000px;
+            color: #4d4d4d;
+            font-size: 14px;
+            margin: 0 40px 0 0;
+            background-color: #cccccc;
+            width: 250px;
+            height: 40px
+        }
+        
+        .title {
+            font-size: 25px;
+            margin: 0 40px 0 0
+        }
+        
+        .ext {
+            height: 25px
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        /* .news {
+    padding: 50px 0;
+    background: #FFF7EA;
+}
+
+.inner {
+    width: 80%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 65px 0 100px;
+}
+
+.sub_ttl {
     font-size: 30px;
-    display: block;
     text-align: center;
-}
-
-.hovernefro {
-    color: #fff;
-    display: inline-block;
-    position: relative;
-    background: #3054D6;
-    border: solid 2px #3054D6;
-    transition: 0.3s;
-    border-radius: 1000px;
-    width: 100px;
-}
-
-.hovernefro>span {
-    display: inline-block;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.hovernefro:hover {
-    color: #000;
-    background: #fff;
-}
-
-.flex {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    align-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.flexdiv {
-    flex: 1 0 300px;
-    margin: 20px;
-}
-
-.contactform {
-    color: #fff;
-    /* display: inline-block; */
-    position: relative;
-    background: #3054D6;
-    border: solid 2px #3054D6;
-    transition: 0.3s;
-    border-radius: 1000px;
-    width: 192px;
-    height: 50px;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.contactform>span {
-    display: inline-block;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.contactform:hover {
-    color: #000;
-    background: #fff;
-}
-
-.imgs {
-    height: 300px;
-    width: auto;
-    display: block;
-    margin: auto;
-}
-
-.svgs {
-    height: 140px;
-    width: auto;
-    padding: 30px;
-}
-
-.ushi {
-    width: 100%;
-    height: 500px;
-    /* margin: 0 auto; */
-    background-color: #000
-}
-
-.table {
-    display: table;
-    margin: 40px auto;
-}
-
-.date {
-    border-radius: 1000px;
-    color: gray;
-    font-size: 14px;
-    margin: 0 40px 0 0;
-    background-color: #ad98ad;
-}
-
-.title {
-    font-size: 25px;
-    margin: 0 40px 0 0;
-}
-
-.ext {
-    height: 25px;
-}
+    margin-bottom: 40px;
+} */
+        /* ここからがニュース記事のCSS */
+        
+        .news_list {
+            margin: 0 5%;
+        }
+        
+        .news_list_item {
+            padding: 25px 0;
+            border-bottom: 1px solid #E6E6E6;
+        }
+        
+        .news_list_item:first-child {
+            border-top: 1px solid #E6E6E6;
+        }
+        
+        .news_list_item a {
+            position: relative;
+            display: flex;
+            padding-right: 30px;
+        }
+        
+        .news_list_date {
+            font-size: 15px;
+            display: flex;
+            margin-right: 15px;
+            align-items: center;
+            display: table;
+        }
+        
+        .news_item {
+            border-radius: 1000px;
+            color: #4d4d4d;
+            font-size: 16px;
+            margin: 0 40px 0 0;
+            background-color: #cccccc;
+            width: 130px;
+            height: 25px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        
+        .arrow {
+            width: 25px;
+            height: 1px;
+            background: #707070;
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+        
+        .arrow::after {
+            content: "";
+            display: block;
+            width: 6px;
+            height: 1px;
+            background: #707070;
+            transform: rotate(45deg);
+            position: absolute;
+            right: 0px;
+            bottom: 2px;
+        }
+        
+        @media screen and (max-width: 1024px) {
+            .news_list_item a {
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 769px) {
+            .news_list_item a {
+                font-size: 14px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .arrow {
+                display: none;
+            }
+            .news_list_item a {
+                padding-right: 0;
+            }
+        }
+        
+        .navi {
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .pseudoElement {
+            position: relative;
+        }
+        
+        .pseudoElement::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            /* 文字の長さに合わせる */
+            height: 1px;
+            /* 線の太さ */
+            bottom: -5px;
+            /* オフセット */
+            left: 0;
+            background-color: #4d4d4d;
+        }
+        /* -　回転とスケールが変化するアニメーション　- */
+        
+        .pseudoElement__rotate::after {
+            transform: rotate(15deg) scaleX(0);
+            transform-origin: center;
+            transition: transform 0.2s ease-out;
+            will-change: transform;
+            /* Safariのアニメーション表示バグ対策 */
+        }
+        
+        .textWrapper:hover .pseudoElement__rotate::after {
+            transform: rotate(0deg) scaleX(1);
+        }
+        /* -　移動とスケールが変化するアニメーション　- */
+        
+        .pseudoElement__translate::after {
+            transform: translateY(10px) scaleX(0);
+            transform-origin: center;
+            transition: transform 0.2s ease-out;
+            will-change: transform;
+            /* Safariのアニメーション表示バグ対策 */
+        }
+        
+        .textWrapper:hover .pseudoElement__translate::after {
+            transform: translateY(0) scaleX(1);
+        }
+        /* -　スケールが変化するアニメーション　- */
+        
+        .pseudoElement__scale::after {
+            transform: scaleX(0);
+            transform-origin: right top;
+            transition: transform 0.2s ease-out;
+            will-change: transform;
+            /* Safariのアニメーション表示バグ対策 */
+        }
+        
+        .textWrapper:hover .pseudoElement__scale::after {
+            transform: scaleX(1);
+            transform-origin: left top;
+        }
+        
+        .textWrapper {
+            cursor: pointer
+        }

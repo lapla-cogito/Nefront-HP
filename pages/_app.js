@@ -10,7 +10,13 @@ if (typeof window !== "undefined") {
 function Website({ Component, pageProps, router }) {
   return (
     <Chakra cookies={pageProps.cookies}>
-      <style>{`@import url(https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700);`}</style>
+      <style>
+        {`
+        @import url(https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700);
+        @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700);
+        @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP);
+        `}
+      </style>
       <Layout router={router}>
         <AnimatePresence
           mode="wait"
