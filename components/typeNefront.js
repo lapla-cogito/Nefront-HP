@@ -29,6 +29,7 @@ function TypeNefront() {
                 .deleteChars(3)
                 .start();
             }}
+            wrapperClassName="typeclass"
           />
         </Box>
       </Center>

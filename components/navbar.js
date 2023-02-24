@@ -25,7 +25,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       spy={true}
       smooth={true}
       // offset={-70}
-      duration={800}
+      duration={500}
     >
       <p className="textWrapper">
         <span className="pseudoElement pseudoElement__scale">{children}</span>
@@ -59,12 +59,9 @@ const HambItem = ({ href, path, target, children, ...props }) => {
       spy={true}
       smooth={true}
       // offset={-70}
-      duration={800}
+      duration={500}
       {...props}
     >
-      {/* <p className="textWrapper">
-        <span className="pseudoElement pseudoElement__scale">{children}</span>
-      </p> */}
       {children}
     </Link>
   );
@@ -78,7 +75,7 @@ const Navbar = (props) => {
       position="fixed"
       as="nav"
       w="100%"
-      h="80px"
+      h="50px"
       bg="#ffffff40"
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={2}

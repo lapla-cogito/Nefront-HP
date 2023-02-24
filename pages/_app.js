@@ -9,7 +9,7 @@ if (typeof window !== "undefined") {
 
 function Website({ Component, pageProps, router }) {
   return (
-    <Chakra cookies={pageProps.cookies}>
+    <Chakra>
       <style>
         {`
         @import url(https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700);
