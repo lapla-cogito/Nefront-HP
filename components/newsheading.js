@@ -1,4 +1,4 @@
-const NewsHeading = ({ children, title, date, link }) => (
+const NewsHeading = ({ title, date, link }) => (
   <li className="news_list_item">
     <a href={link}>
       <div className="news_list_date">

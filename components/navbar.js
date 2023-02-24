@@ -1,10 +1,8 @@
 import { forwardRef } from "react";
 import Logo from "./logo";
-import NextLink from "next/link";
 import {
   Container,
   Box,
-  // Link,
   Stack,
   Heading,
   Flex,
@@ -17,14 +15,13 @@ import {
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-scroll";
 
-const LinkItem = ({ href, path, target, children, ...props }) => {
+const LinkItem = ({ href, path, target, children }) => {
   return (
     <Link
       activeClass="active"
       to={href}
       spy={true}
       smooth={true}
-      // offset={-70}
       duration={500}
     >
       <p className="textWrapper">
@@ -34,7 +31,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   );
 };
 
-const ContactLinkItem = ({ href, path, target, children }) => {
+const ContactLinkItem = ({ href, children }) => {
   return (
     <a
       className="hovernefro"
@@ -58,7 +55,6 @@ const HambItem = ({ href, path, target, children, ...props }) => {
       to={href}
       spy={true}
       smooth={true}
-      // offset={-70}
       duration={500}
       {...props}
     >
@@ -102,7 +98,7 @@ const Navbar = (props) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
           className="navi"
-          spacing={20}
+          spacing={10}
         >
           <LinkItem href="about" path={path}>
             About

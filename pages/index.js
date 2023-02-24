@@ -1,4 +1,4 @@
-import { Link, Container, Heading, Box, SimpleGrid } from "@chakra-ui/react";
+import { Container, Heading, Box, SimpleGrid } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import { GridItem } from "../components/grid-item";
 import Section from "../components/section";
@@ -31,7 +31,11 @@ const ParticlesConfig = dynamic(() => import("../components/config"), {
 const Home = () => (
   <Layout>
     <Container maxW="99999999px">
-      <div id="hoge" />
+      <div id="parent">
+        <div id="hoge" />
+        <TypeNefront />
+      </div>
+
       <Particles />
       <ParticlesConfig />
 
@@ -41,8 +45,6 @@ const Home = () => (
           height: "60px",
         }}
       />
-
-      <TypeNefront />
 
       <div id="about" />
       <div
