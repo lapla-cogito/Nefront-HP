@@ -1,10 +1,8 @@
 import { forwardRef } from "react";
 import Logo from "./logo";
-import NextLink from "next/link";
 import {
   Container,
   Box,
-  Link,
   Stack,
   Heading,
   Flex,
@@ -15,29 +13,55 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { Link } from "react-scroll";
 
-const LinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href;
-  const inactiveColor = "gray.800";
+const LinkItem = ({ href, path, target, children }) => {
   return (
     <Link
-      as={NextLink}
+      activeClass="active"
+      to={href}
+      spy={true}
+      smooth={true}
+      duration={500}
+    >
+      <p className="textWrapper">
+        <span className="pseudoElement pseudoElement__scale">{children}</span>
+      </p>
+    </Link>
+  );
+};
+
+const ContactLinkItem = ({ href, children }) => {
+  return (
+    <a
+      className="hovernefro"
       href={href}
-      scroll={false}
-      p={2}
-      bg={active ? "grassTeal" : undefined}
-      color={active ? "#202023" : inactiveColor}
-      target={target}
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      {children}
+    </a>
+  );
+};
+
+const MenuLink = forwardRef((props, ref) => (
+  <a href={ref} target="_blank" rel="noreferrer noopener" {...props} />
+));
+
+const HambItem = ({ href, path, target, children, ...props }) => {
+  return (
+    <Link
+      activeClass="active"
+      to={href}
+      spy={true}
+      smooth={true}
+      duration={500}
       {...props}
     >
       {children}
     </Link>
   );
 };
-
-const MenuLink = forwardRef((props, ref) => (
-  <Link ref={ref} as={NextLink} {...props} />
-));
 
 const Navbar = (props) => {
   const { path } = props;
@@ -47,6 +71,7 @@ const Navbar = (props) => {
       position="fixed"
       as="nav"
       w="100%"
+      h="50px"
       bg="#ffffff40"
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={2}
@@ -55,7 +80,7 @@ const Navbar = (props) => {
       <Container
         display="flex"
         p={2}
-        maxW="container.md"
+        maxW="9999px"
         wrap="wrap"
         align="center"
         justify="space-between"
@@ -65,7 +90,6 @@ const Navbar = (props) => {
             <Logo />
           </Heading>
         </Flex>
-
         <Stack
           direction={{ base: "column", md: "row" }}
           display={{ base: "none", md: "flex" }}
@@ -73,26 +97,34 @@ const Navbar = (props) => {
           alignItems="center"
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
+          className="navi"
+          spacing={10}
         >
-          <LinkItem href="#about" path={path}>
+          <LinkItem href="about" path={path}>
             About
           </LinkItem>
-          <LinkItem href="#product" path={path}>
+          <LinkItem href="product" path={path}>
             Product
           </LinkItem>
-          <LinkItem href="#usecase" path={path}>
+          <LinkItem href="usecase" path={path}>
             Usecase
           </LinkItem>
-          <LinkItem href="#members" path={path}>
+          <LinkItem href="news" path={path}>
+            News
+          </LinkItem>
+          <LinkItem href="members" path={path}>
             Members
           </LinkItem>
-          <LinkItem
+          <ContactLinkItem
             href="https://forms.gle/HJXsrsk5myVrmEqC6"
-            target="_blank"
+            isExternal={true}
             path={path}
+            style={{
+              borderRadius: "10px",
+            }}
           >
             Contact
-          </LinkItem>
+          </ContactLinkItem>
         </Stack>
 
         <Box flex={1} align="right">
@@ -106,22 +138,24 @@ const Navbar = (props) => {
                 colorScheme="black"
               />
               <MenuList>
-                <MenuItem as={MenuLink} href="#about">
+                <MenuItem as={HambItem} href="about">
                   About
                 </MenuItem>
-                <MenuItem as={MenuLink} href="#product">
+                <MenuItem as={HambItem} href="product">
                   Product
                 </MenuItem>
-                <MenuItem as={MenuLink} href="#usecase">
+                <MenuItem as={HambItem} href="usecase">
                   Usecase
                 </MenuItem>
-                <MenuItem as={MenuLink} href="#members">
+                <MenuItem as={HambItem} href="news">
+                  News
+                </MenuItem>
+                <MenuItem as={HambItem} href="members">
                   Members
                 </MenuItem>
                 <MenuItem
                   as={MenuLink}
                   href="https://forms.gle/HJXsrsk5myVrmEqC6"
-                  target="_blank"
                 >
                   Contact
                 </MenuItem>

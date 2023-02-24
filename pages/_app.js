@@ -1,7 +1,7 @@
 import Layout from "../components/layouts/main";
-// import Fonts from '../components/fonts'
 import { AnimatePresence } from "framer-motion";
 import Chakra from "../components/chakra";
+import styles from '../components/css/style.css'
 
 if (typeof window !== "undefined") {
   window.history.scrollRestoration = "manual";
@@ -9,7 +9,14 @@ if (typeof window !== "undefined") {
 
 function Website({ Component, pageProps, router }) {
   return (
-    <Chakra cookies={pageProps.cookies}>
+    <Chakra>
+      <style>
+        {`
+        @import url(https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700);
+        @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700);
+        @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP);
+        `}
+      </style>
       <Layout router={router}>
         <AnimatePresence
           mode="wait"
@@ -28,13 +35,3 @@ function Website({ Component, pageProps, router }) {
 }
 
 export default Website;
-
-// const Website = ({ Component, pageProps }: AppProps) => {
-//   return (
-//     <CSR>
-//       <Component {...pageProps} />
-//     </CSR>
-//   );
-// };
-
-// export default Website;

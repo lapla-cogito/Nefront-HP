@@ -1,5 +1,4 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
 import NavBar from "../navbar";
 import { Box, Container } from "@chakra-ui/react";
 import Footer from "../footer";
@@ -20,16 +19,15 @@ const Main = ({ children, router }) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://www.nefront.com/nefrontlogo.png"
+          content="https://www.nefront.com/images/nefrontlogo.png"
         />
         <title>株式会社Nefront</title>
       </Head>
 
       <NavBar path={router.asPath} />
 
-      <Container maxW="container.md" pt={14}>
+      <Container maxW="99999999px" pt={14}>
         {children}
-
         <Footer />
       </Container>
     </Box>
