@@ -1,0 +1,16 @@
+<svg width="564" height="316" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xml:space="preserve" overflow="hidden">
+    <defs>
+        <clipPath id="clip0">
+            <rect x="623" y="357" width="564" height="316" />
+        </clipPath>
+    </defs>
+    <g clip-path="url(#clip0)" transform="translate(-623 -357)">
+        <path d="M625 673 771.416 454 1186 454 1039.58 673Z" fill="#4472C4" fill-rule="evenodd"
+            fill-opacity="0.27451" />
+        <path
+            d="M984.5 461.647C967.779 461.647 954.402 448.294 954.402 431.603 954.402 414.912 967.779 401.559 984.5 401.559 1001.22 401.559 1014.6 414.912 1014.6 431.603 1014.6 448.294 1001.22 461.647 984.5 461.647ZM984.5 361.5C961.425 361.5 939.687 372.85 926.645 392.212 913.602 411.24 910.927 435.609 919.287 457.307L951.058 527.411 978.481 584.828C979.484 587.165 981.825 588.5 984.5 588.5 987.176 588.5 989.517 587.165 990.52 584.828L1017.94 527.411 1049.71 457.307C1058.07 435.609 1055.4 411.24 1042.36 392.212 1029.31 372.85 1007.58 361.5 984.5 361.5Z"
+            stroke="#3054D6" stroke-width="3.32995" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="8"
+            stroke-opacity="1" fill="#3054D6" fill-rule="evenodd" fill-opacity="1" />
+    </g>
+</svg>
