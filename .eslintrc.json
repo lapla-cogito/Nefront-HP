@@ -22,9 +22,10 @@
         "no-unused-vars": "off",
         "react/prop-types": "off",
         "react/display-name": "off",
-        "no-undef":"off",
-        "no-inner-declarations":"off",
-        "no-redeclare":"off"
+        "no-undef": "off",
+        "no-inner-declarations": "off",
+        "no-redeclare": "off",
+        "no-case-declarations": "off"
     },
     "globals": {
         "window": true,
