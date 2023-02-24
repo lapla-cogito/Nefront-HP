@@ -91,12 +91,12 @@ const Navbar = (props) => {
           </Heading>
         </Flex>
         <Stack
-          direction={{ base: "column", md: "row" }}
-          display={{ base: "none", md: "flex" }}
-          width={{ base: "full", md: "auto" }}
+          direction={{ base: "column", lg: "row" }}
+          display={{ base: "none", lg: "flex" }}
+          width={{ base: "full", lg: "auto" }}
           alignItems="center"
           flexGrow={1}
-          mt={{ base: 4, md: 0 }}
+          mt={{ base: 4, lg: 0 }}
           className="navi"
           spacing={10}
         >
@@ -128,7 +128,7 @@ const Navbar = (props) => {
         </Stack>
 
         <Box flex={1} align="right">
-          <Box ml={2} display={{ base: "inline-block", md: "none" }}>
+          <Box ml={2} display={{ base: "inline-block", lg: "none" }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
