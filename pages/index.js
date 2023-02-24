@@ -9,7 +9,6 @@ import NewsHeading from "../components/newsheading";
 import TypeNefront from "../components/typeNefront";
 import ReactGA from "react-ga4";
 import dynamic from "next/dynamic";
-import Particles from "react-tsparticles";
 
 const imamuu = "https://www.nefront.com/images/imamura.jpg";
 const hemmi = "https://www.nefront.com/images/hemmi.jpg";
@@ -21,139 +20,37 @@ const dir = "/Nefront-HP";
 ReactGA.initialize("G-FBQ0WYNGEZ");
 ReactGA.send("pageview");
 
+const Particles = dynamic(() => import("../components/particles"), {
+  ssr: false,
+});
+
+const ParticlesConfig = dynamic(() => import("../components/config"), {
+  ssr: false,
+});
+
 const Home = () => (
   <Layout>
     <Container maxW="99999999px">
-      <Particles
-        options={{
-          particles: {
-            number: {
-              value: 80,
-              density: {
-                enable: true,
-                value_area: 800,
-              },
-            },
-            color: {
-              // value: "#ffffff",
-              value: "#000000",
-            },
-            shape: {
-              type: "circle",
-              stroke: {
-                width: 0,
-                color: "#000000",
-              },
-              polygon: {
-                nb_sides: 5,
-              },
-              image: {
-                src: "img/github.svg",
-                width: 100,
-                height: 100,
-              },
-            },
-            opacity: {
-              value: 0.5,
-              random: false,
-              anim: {
-                enable: false,
-                speed: 1,
-                opacity_min: 0.1,
-                sync: false,
-              },
-            },
-            size: {
-              value: 4,
-              random: true,
-              anim: {
-                enable: false,
-                speed: 40,
-                size_min: 0.1,
-                sync: false,
-              },
-            },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: "#ffffff",
-              opacity: 0.4,
-              width: 1,
-            },
-            move: {
-              enable: true,
-              speed: 6,
-              direction: "none",
-              random: false,
-              straight: false,
-              out_mode: "out",
-              bounce: false,
-              attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200,
-              },
-            },
-          },
-          interactivity: {
-            detect_on: "canvas",
-            events: {
-              onhover: {
-                enable: true,
-                mode: "repulse",
-              },
-              onclick: {
-                enable: true,
-                mode: "push",
-              },
-              resize: true,
-            },
-            modes: {
-              grab: {
-                distance: 400,
-                line_linked: {
-                  opacity: 1,
-                },
-              },
-              bubble: {
-                distance: 400,
-                size: 40,
-                duration: 2,
-                opacity: 8,
-                speed: 3,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
-              push: {
-                particles_nb: 4,
-              },
-              remove: {
-                particles_nb: 2,
-              },
-            },
-          },
-          retina_detect: true,
+      <div id="hoge" />
+      <Particles />
+      <ParticlesConfig />
+
+      <div
+        style={{
+          width: "100%",
+          height: "60px",
         }}
       />
 
-      <div
-        style={{
-          width: "100%",
-          height: "60px",
-        }}
-      ></div>
-
       <TypeNefront />
 
-      <div id="about"></div>
+      <div id="about" />
       <div
         style={{
           width: "100%",
           height: "60px",
         }}
-      ></div>
+      />
       <Section delay={0.1}>
         <Heading as="h1" variant="section-title">
           About
@@ -165,13 +62,13 @@ const Home = () => (
         </Paragraph>
       </Section>
 
-      <div id="product"></div>
+      <div id="product" />
       <div
         style={{
           width: "100%",
           height: "60px",
         }}
-      ></div>
+      />
 
       <Section delay={0.2}>
         <Heading as="h1" variant="section-title">
@@ -225,13 +122,13 @@ const Home = () => (
         </div>
       </Section>
 
-      <div id="usecase"></div>
+      <div id="usecase" />
       <div
         style={{
           width: "100%",
           height: "60px",
         }}
-      ></div>
+      />
 
       <Section delay={0.3}>
         <Heading as="h1" variant="section-title">
@@ -283,13 +180,13 @@ const Home = () => (
         </div>
       </Section>
 
-      <div id="news"></div>
+      <div id="news" />
       <div
         style={{
           width: "100%",
           height: "60px",
         }}
-      ></div>
+      />
       <Section delay={0.4}>
         <Heading as="h1" variant="section-title">
           News
@@ -327,13 +224,13 @@ const Home = () => (
         </News>
       </Section>
 
-      <div id="members"></div>
+      <div id="members" />
       <div
         style={{
           width: "100%",
           height: "60px",
         }}
-      ></div>
+      />
       <Section delay={0.5}>
         <Heading as="h1" variant="section-title">
           Members
@@ -352,7 +249,7 @@ const Home = () => (
           </GridItem>
           <GridItem
             title="逸見一喜"
-            nefposition="機械学習エンジニア"
+            nefposition="ソフトウェアエンジニア"
             thumbnail={hemmi}
           >
             <br />
@@ -365,7 +262,7 @@ const Home = () => (
           </GridItem>
           <GridItem
             title="秋山馨"
-            nefposition="インフラ・機械学習エンジニア"
+            nefposition="ソフトウェアエンジニア"
             thumbnail={lapla}
           >
             <br />
@@ -376,7 +273,7 @@ const Home = () => (
           </GridItem>
           <GridItem
             title="渡邉蒼太"
-            nefposition="フロントエンドエンジニア"
+            nefposition="ソフトウェアエンジニア"
             thumbnail={asuto}
           >
             <br />
@@ -390,13 +287,13 @@ const Home = () => (
         </SimpleGrid>
       </Section>
 
-      <div id="contact"></div>
+      <div id="contact" />
       <div
         style={{
           width: "100%",
           height: "60px",
         }}
-      ></div>
+      />
       <Section delay={0.6}>
         <Heading as="h1" variant="section-title">
           Contact

@@ -2,13 +2,13 @@
     font-family: "Noto Sans JP"
 }
 
-#tsparticles {
+#hoge {
     width: 100%;
     height: 70vh;
-    /* background-image: url("https://nefront.com/images/background.jpg");
+    background-image: url("https://nefront.com/images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; */
+    background-position: center;
 }
 
 .exagsentence {
@@ -256,4 +256,12 @@ ul {
 
 .textWrapper {
     cursor: pointer
+}
+
+h1 {
+    padding: 0 0 30px 0;
+}
+
+canvas {
+    display: block;
 }

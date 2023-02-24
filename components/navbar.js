@@ -102,6 +102,7 @@ const Navbar = (props) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
           className="navi"
+          spacing={20}
         >
           <LinkItem href="about" path={path}>
             About
