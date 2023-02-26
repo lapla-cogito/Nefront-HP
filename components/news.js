@@ -5,7 +5,6 @@ const NewsDiv = styled.ul`
   padding: 0;
   margin: 0;
   padding: 50px 0;
-  // background: #FFF7EA;
 `;
 
 const News = ({ children }) => <NewsDiv>{children}</NewsDiv>;
