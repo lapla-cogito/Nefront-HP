@@ -14,6 +14,7 @@ const Main = ({ children, router }) => {
         />
         <meta name="author" content="Nefront Inc." />
         <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
         <meta property="og:site_name" content="Nefront Inc." />
         <meta name="og:title" content="Nefront Inc." />
         <meta property="og:type" content="website" />
