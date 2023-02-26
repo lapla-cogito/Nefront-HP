@@ -36,9 +36,6 @@ const Home = () => (
         <TypeNefront />
       </div>
 
-      <Particles />
-      <ParticlesConfig />
-
       <div
         style={{
           width: "100%",
@@ -313,6 +310,9 @@ const Home = () => (
           </a>
         </Box>
       </Section>
+
+      <Particles />
+      <ParticlesConfig />
     </Container>
   </Layout>
 );

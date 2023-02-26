@@ -267,7 +267,9 @@ canvas {
 }
 
 #parent {
-    position: relative
+    position: relative;
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
 }
 
 .typeclass {
