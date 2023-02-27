@@ -56,12 +56,12 @@ body {
     display: flex;
     align-content: center;
     flex-direction: row;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    justify-content: center
 }
 
 .flexdiv {
     flex: 1 0 300px;
-    margin: 20px
 }
 
 .contactform {

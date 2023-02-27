@@ -970,7 +970,7 @@ const Particles = () => {
           dist_mouse = Math.sqrt(dx_mouse * dx_mouse + dy_mouse * dy_mouse);
 
         var normVec = { x: dx_mouse / dist_mouse, y: dy_mouse / dist_mouse },
-          repulseRadius = pJS.interactivity.modes.repulse.distance * 1.2,
+          repulseRadius = pJS.interactivity.modes.repulse.distance,
           velocity = 100,
           repulseFactor = clamp(
             (1 / repulseRadius) *

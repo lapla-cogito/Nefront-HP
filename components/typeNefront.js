@@ -11,7 +11,7 @@ function TypeNefront() {
           <TypeWriter
             onInit={(TypeWriter) => {
               TypeWriter.typeString(
-                "<span style='color:#3054D6;'>Ne</span><span style='color:#3054D6;'>w</span>"
+                "<span style='color:#3054D6;'>Ne</span><span style='color:#FFFFFF;'>w</span>"
               )
                 .pauseFor(500)
                 .deleteChars(1)

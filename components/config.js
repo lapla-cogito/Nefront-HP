@@ -2,7 +2,7 @@ const ParticlesConfig = () => {
     particlesJS("hoge", {
       particles: {
         number: {
-          value: 80,
+          value: 104,
           density: {
             enable: true,
             value_area: 800,
