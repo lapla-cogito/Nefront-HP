@@ -7,7 +7,8 @@
         "dev": "next dev",
         "start": "next start",
         "export": "next export",
-        "build": "env NODE_ENV='production' next build"
+        "build": "env NODE_ENV='production' next build",
+        "build:lhci": "next build"
     },
     "repository": {
         "type": "git",
