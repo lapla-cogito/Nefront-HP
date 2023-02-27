@@ -24,10 +24,6 @@ const Particles = dynamic(() => import("../components/particles"), {
   ssr: false,
 });
 
-const ParticlesConfig = dynamic(() => import("../components/config"), {
-  ssr: false,
-});
-
 const Home = () => (
   <Layout>
     <Container maxW="99999999px">
@@ -311,7 +307,6 @@ const Home = () => (
           </a>
         </Box>
       </Section>
-      <ParticlesConfig />
     </Container>
   </Layout>
 );
