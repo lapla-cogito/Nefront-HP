@@ -877,8 +877,7 @@ const Particles = () => {
           init();
         }
       } else if (
-
-      /* on click event */
+        /* on click event */
         pJS.interactivity.events.onclick.enable &&
         isInArray("bubble", pJS.interactivity.events.onclick.mode)
       ) {
@@ -980,6 +979,14 @@ const Particles = () => {
             0,
             50
           );
+
+        if (pJS.canvas.w / 2 < repulseRadius) {
+          repulseRadius = pJS.canvas.w / 2;
+        }
+
+        if (pJS.canvas.h / 2 < repulseRadius) {
+          repulseRadius = pJS.canvas.h / 2;
+        }
 
         var pos = {
           x: p.x + normVec.x * repulseFactor,
