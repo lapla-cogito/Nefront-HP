@@ -16,8 +16,7 @@ body {
 .exagsentence {
     font-size: 30px;
     display: block;
-    text-align: center;
-    font-weight: Bold!important
+    text-align: center
 }
 
 .hovernefro {
@@ -281,7 +280,8 @@ canvas {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    width: 400px!important
 }
 
 .Typewriter__cursor {
