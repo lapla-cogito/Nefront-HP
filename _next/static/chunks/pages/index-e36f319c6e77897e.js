@@ -9,7 +9,6 @@
     `}),g={hidden:{opacity:0,x:0,y:20},enter:{opacity:1,x:0,y:0},exit:{opacity:0,x:-0,y:20}},u=({children:s,title:e})=>{let i=`${e} - Nefront Inc.`;return(0,o.jsx)(l.E.article,{initial:"hidden",animate:"enter",exit:"exit",variants:g,transition:{duration:.4,type:"easeInOut"},style:{position:"relative"},children:(0,o.jsxs)(o.Fragment,{children:[e&&(0,o.jsxs)(c(),{children:[(0,o.jsx)("title",{children:i}),(0,o.jsx)("meta",{name:"twitter:title",content:i}),(0,o.jsx)("meta",{property:"og:title",content:i})]}),s,(0,o.jsx)(m,{})]})})};var v=i(4579),w=i(4920);let y=(0,v.m)(l.E.div,{shouldForwardProp:s=>(0,w.x)(s)||"transition"===s}),b=({children:s,delay:e=0})=>(0,o.jsx)(y,{initial:{y:10,opacity:0},animate:{y:0,opacity:1},transition:{duration:.8,delay:e},mb:6,children:s});var f=i(166);let N=f.Z.span`
   display: block;
   text-align: center;
-  text-indent: 1em;
   hyphens: auto;
   font-size: 25px;
 `,F=f.Z.p`
