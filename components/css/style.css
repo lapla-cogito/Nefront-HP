@@ -1,15 +1,16 @@
-.body {
-    font-family: "Noto Sans JP"
+body {
+    font-family: Noto Sans JP;
+    overflow-x: hidden
 }
 
 #hoge {
     width: 100%;
     height: 70vh;
-    background-image: url("https://nefront.com/images/background.jpg");
+    background-image: url(https://nefront.com/images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    position: relative;
+    position: relative
 }
 
 .exagsentence {
@@ -21,21 +22,23 @@
 
 .hovernefro {
     color: #fff;
-    display: inline-block;
     position: relative;
-    background: #3054D6;
-    border: solid 2px #3054D6;
-    transition: 0.3s;
-    border-radius: 1000px;
-    width: 100px;
-    text-align: center;
+    background: #3054d6;
+    border: solid 2px #3054d6;
+    transition: .3s;
+    border-radius: 750pt;
+    width: 75pt
+}
+
+.hovernefro,
+.hovernefro>span {
+    display: inline-block;
+    text-align: center
 }
 
 .hovernefro>span {
-    display: inline-block;
     position: absolute;
     width: 100%;
-    text-align: center;
     top: 50%;
     transform: translateY(-50%)
 }
@@ -63,13 +66,12 @@
 
 .contactform {
     color: #fff;
-    /* display: inline-block; */
     position: relative;
-    background: #3054D6;
-    border: solid 2px #3054D6;
-    transition: 0.3s;
-    border-radius: 1000px;
-    width: 192px;
+    background: #3054d6;
+    border: solid 2px #3054d6;
+    transition: .3s;
+    border-radius: 750pt;
+    width: 2in;
     height: 50px;
     display: table-cell;
     vertical-align: middle;
@@ -91,8 +93,8 @@
 }
 
 .imgs {
-    height: 300px;
-    width: auto;
+    height: auto;
+    width: 100%;
     display: block;
     margin: auto
 }
@@ -115,18 +117,21 @@
 }
 
 .date {
-    border-radius: 1000px;
+    border-radius: 750pt;
     color: #4d4d4d;
     font-size: 14px;
-    margin: 0 40px 0 0;
-    background-color: #cccccc;
+    background-color: #ccc;
     width: 250px;
     height: 40px
 }
 
+.date,
 .title {
-    font-size: 25px;
     margin: 0 40px 0 0
+}
+
+.title {
+    font-size: 25px
 }
 
 .ext {
@@ -136,7 +141,7 @@
 ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0
 }
 
 .news_list {
@@ -145,11 +150,11 @@ ul {
 
 .news_list_item {
     padding: 25px 0;
-    border-bottom: 1px solid #E6E6E6
+    border-bottom: 1px solid #e6e6e6
 }
 
 .news_list_item:first-child {
-    border-top: 1px solid #E6E6E6
+    border-top: 1px solid #e6e6e6
 }
 
 .news_list_item a {
@@ -167,11 +172,11 @@ ul {
 }
 
 .news_item {
-    border-radius: 1000px;
+    border-radius: 750pt;
     color: #4d4d4d;
-    font-size: 16px;
+    font-size: 1pc;
     margin: 0 40px 0 0;
-    background-color: #cccccc;
+    background-color: #ccc;
     width: 130px;
     height: 25px;
     display: table-cell;
@@ -181,38 +186,38 @@ ul {
 
 .arrow {
     width: 25px;
+    top: 50%
+}
+
+.arrow,
+.arrow:after {
     height: 1px;
     background: #707070;
     position: absolute;
-    top: 50%;
     right: 0
 }
 
-.arrow::after {
+.arrow:after {
     content: "";
     display: block;
     width: 6px;
-    height: 1px;
-    background: #707070;
     transform: rotate(45deg);
-    position: absolute;
-    right: 0px;
     bottom: 2px
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width:1024px) {
     .news_list_item a {
         display: block
     }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width:769px) {
     .news_list_item a {
         font-size: 14px
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width:480px) {
     .arrow {
         display: none
     }
@@ -232,7 +237,7 @@ ul {
     position: relative
 }
 
-.pseudoElement::after {
+.pseudoElement:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -242,14 +247,14 @@ ul {
     background-color: #4d4d4d
 }
 
-.pseudoElement__scale::after {
+.pseudoElement__scale:after {
     transform: scaleX(0);
     transform-origin: right top;
-    transition: transform 0.2s ease-out;
+    transition: transform .2s ease-out;
     will-change: transform
 }
 
-.textWrapper:hover .pseudoElement__scale::after {
+.textWrapper:hover .pseudoElement__scale:after {
     transform: scaleX(1);
     transform-origin: left top
 }
@@ -259,7 +264,7 @@ ul {
 }
 
 h1 {
-    padding: 0 0 30px 0
+    padding: 0 0 30px
 }
 
 canvas {
@@ -269,7 +274,7 @@ canvas {
 #parent {
     position: relative;
     margin: 0 calc(50% - 50vw);
-    width: 100vw;
+    width: 100vw
 }
 
 .typeclass {
@@ -280,9 +285,10 @@ canvas {
 }
 
 .Typewriter__cursor {
-    color: #fff;
+    color: #fff
 }
 
 .Typewriter {
     font-size: 60px;
+    user-select: none
 }
