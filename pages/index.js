@@ -31,6 +31,7 @@ const ParticlesConfig = dynamic(() => import("../components/config"), {
 const Home = () => (
   <Layout>
     <Container maxW="99999999px">
+      <Particles />
       <div id="parent">
         <div id="hoge" />
         <TypeNefront />
@@ -310,8 +311,6 @@ const Home = () => (
           </a>
         </Box>
       </Section>
-
-      <Particles />
       <ParticlesConfig />
     </Container>
   </Layout>

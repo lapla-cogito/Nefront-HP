@@ -984,10 +984,6 @@ const Particles = () => {
           repulseRadius = pJS.canvas.w / 2;
         }
 
-        if (pJS.canvas.h / 2 < repulseRadius) {
-          repulseRadius = pJS.canvas.h / 2;
-        }
-
         var pos = {
           x: p.x + normVec.x * repulseFactor,
           y: p.y + normVec.y * repulseFactor,
