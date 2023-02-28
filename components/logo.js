@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-scroll";
 import NefrontIcon from "./icons/nefront";
 import styled from "@emotion/styled";
 
@@ -17,7 +17,15 @@ const LogoBox = styled.span`
 
 const Logo = () => {
   return (
-    <Link href="/" scroll={false}>
+    <Link
+      activeClass="active"
+      to="top"
+      spy={true}
+      smooth={true}
+      duration={500}
+      offset={-50}
+      style={{cursor: "pointer"}}
+    >
       <LogoBox>
         <NefrontIcon />
       </LogoBox>

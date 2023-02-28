@@ -24,9 +24,15 @@ const Particles = dynamic(() => import("../components/particles"), {
   ssr: false,
 });
 
+const ParticlesConfig = dynamic(() => import("../components/config"), {
+  ssr: false,
+  loading: () => <Particles />
+});
+
 const Home = () => (
   <Layout>
     <Container maxW="99999999px">
+      <div id="top" />
       <div id="parent">
         <div id="hoge" />
         <TypeNefront />
@@ -71,6 +77,9 @@ const Home = () => (
           Product
         </Heading>
         <Paragraph>
+          <span className="exagsentence" style={{ margin: "0 0 20px 0" }}>
+            - 屋内ARクラウドサービス IndooAR -
+          </span>
           <span className="exagsentence">
             屋内空間に情報を紐づけて、誘導アプリケーションやARコンテンツを提供します。
           </span>
@@ -307,6 +316,7 @@ const Home = () => (
           </a>
         </Box>
       </Section>
+      <ParticlesConfig />
     </Container>
   </Layout>
 );
