@@ -7,7 +7,9 @@
         "dev": "next dev",
         "start": "next start",
         "export": "next export",
-        "build": "env NODE_ENV='production' next build"
+        "build": "env NODE_ENV='production' next build",
+        "format:check": "prettier --check \"**/*.{js,jsx,yml,yaml,json,css,scss,md}\"",
+        "format": "prettier --write \"**/*.{js,jsx,yml,yaml,json,css,scss,md}\""
     },
     "repository": {
         "type": "git",
