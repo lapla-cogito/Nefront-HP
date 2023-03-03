@@ -4,7 +4,6 @@ module.exports = {
     staticPageGenerationTimeout: 1000,
     images: {
         loader: 'akamai',
-        path: '',
         domains: ['laplaciancpp.github.io'],
     },
     // assetPrefix: process.env.NODE_ENV === "production" ? "/Nefront-HP" : "",
