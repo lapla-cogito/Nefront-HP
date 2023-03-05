@@ -1,0 +1,36 @@
+name: Get Preview Repository
+description: Get preview repository info
+runs:
+    using: composite
+    steps:
+        - name: Set repository owner name
+          id: owner
+          run: echo "::set-output name=result::laplaciancpp"
+          shell: bash
+
+        - name: Set repository name
+          uses: actions/github-script@v6
+          id: repo
+          with:
+              script: |
+                  function sanitize(str) {
+                    return str.toString().replace(/[^\w-]/g, "");
+                  }
+                  const repoName = context.repo.repo;
+                  const prNumber = context.payload.number;
+                  const branchName = context.payload.pull_request.head.ref;
+                  return `${sanitize(repoName)}-pr-${sanitize(prNumber)}-${sanitize(branchName)}`;
+              result-encoding: string
+outputs:
+    owner:
+        description: Repository owner name
+        value: ${{ steps.owner.outputs.result }}
+    name:
+        description: Repository name
+        value: ${{ steps.repo.outputs.result }}
+    full_name:
+        description: Repository full name ($owner/$name)
+        value: ${{ steps.owner.outputs.result }}/${{ steps.repo.outputs.result }}
+    gh_page_url:
+        description: GitHub Pages URL
+        value: https://${{ steps.owner.outputs.result }}.github.io/${{ steps.repo.outputs.result }}/
