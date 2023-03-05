@@ -50,7 +50,7 @@ jobs:
               id: new_repo
               run: echo "::set-output name=result::$new_repo"
               env:
-                  new_repo: ${{ github.event.action == 'opened' || github.event.action == 'reopened' || github.event.acton=='synchronize'}}
+                  new_repo: ${{ github.event.action == 'opened' || github.event.action == 'reopened' || github.event.action=='synchronize'}}
 
             - name: Create preview repo
               if: steps.new_repo.outputs.result == 'true'
