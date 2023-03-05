@@ -1,0 +1,40 @@
+name: Delete preview repository
+
+on:
+    pull_request:
+        types: [closed]
+
+jobs:
+    delete-preview:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Get preview repo name
+              uses: ./.github/actions/get_preview_repo
+              id: preview_repo
+
+            - name: Get GitHub token
+              id: get_token
+              uses: getsentry/action-github-app-token@v1
+              with:
+                  app_id: ${{ secrets.PREVIEW_APP_ID }}
+                  private_key: ${{ secrets.PREVIEW_APP_PRIVATE_KEY }}
+
+            - name: Wait for preview GitHub Pages
+              run: >
+                  timeout 60s bash -c '
+                    until curl -I -f --no-progress-meter "$URL"; do
+                      sleep 10;
+                    done
+                  '
+              env:
+                  URL: ${{ steps.preview_repo.outputs.gh_page_url }}
+
+            - name: Delete preview repo
+              uses: octokit/request-action@v2.x
+              with:
+                  route: DELETE /repos/{repo_name}
+                  repo_name: ${{ steps.preview_repo.outputs.full_name }}
+              env:
+                  GITHUB_TOKEN: ${{ steps.get_token.outputs.token }}
