@@ -50,16 +50,16 @@ jobs:
               id: new_repo
               run: echo "::set-output name=result::$new_repo"
               env:
-                  new_repo: ${{ github.event.action == 'opened' || github.event.action == 'reopened' }}
+                  new_repo: ${{ github.event.action == 'opened' || github.event.action == 'reopened' || github.event.acton=='synchronize'}}
 
             - name: Create preview repo
               if: steps.new_repo.outputs.result == 'true'
               uses: octokit/request-action@v2.x
               with:
-                  route: PATCH /repos/{owner}/{name}
+                  route: POST /orgs/{org}/repos
                   owner: ${{ steps.preview_repo.outputs.owner }}
                   name: ${{ steps.preview_repo.outputs.name }}
-                  private: 'true'
+                  private: true
               env:
                   GITHUB_TOKEN: ${{ steps.get_token.outputs.token }}
 
