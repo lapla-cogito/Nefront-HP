@@ -77,6 +77,7 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
             - name: Post preview URL to PR
+              if: github.event.action == 'opened'
               uses: octokit/request-action@v2.x
               with:
                   route: POST /repos/{owner}/{repo}/issues/{pr_number}/comments
