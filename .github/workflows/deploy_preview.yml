@@ -40,13 +40,6 @@ jobs:
             - name: Add nojekyll
               run: touch ./out/.nojekyll
 
-            - name: Get GitHub token
-              id: get_token
-              uses: getsentry/action-github-app-token@v2
-              with:
-                  app_id: ${{ secrets.PREVIEW_APP_ID }}
-                  private_key: ${{ secrets.PREVIEW_APP_PRIVATE_KEY }}
-
             - name: Check if new repository is needed
               id: new_repo
               run: echo "::set-output name=result::$new_repo"
@@ -62,12 +55,12 @@ jobs:
                   name: ${{ steps.preview_repo.outputs.name }}
                   visibility: private
               env:
-                  GITHUB_TOKEN: ${{ steps.get_token.outputs.token }}
+                  GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v3
               with:
-                  personal_token: ${{ steps.get_token.outputs.token }}
+                  personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
                   external_repository: ${{ steps.preview_repo.outputs.full_name }}
                   publish_dir: ./out
 
@@ -79,7 +72,7 @@ jobs:
                   repo_name: ${{ steps.preview_repo.outputs.full_name }}
                   data: '{"source":{"branch":"gh-pages"}}'
               env:
-                  GITHUB_TOKEN: ${{ steps.get_token.outputs.token }}
+                  GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
             - name: Post preview URL to PR
               # if: github.event.action == 'opened'
