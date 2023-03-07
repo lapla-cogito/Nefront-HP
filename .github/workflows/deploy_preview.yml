@@ -56,9 +56,8 @@ jobs:
               if: steps.new_repo.outputs.result == 'true'
               uses: octokit/request-action@v2.x
               with:
-                  route: POST /orgs/{owner}/repos
+                  route: POST /user/repos
                   accept: 'application/vnd.github+json'
-                  owner: ${{ steps.preview_repo.outputs.owner }}
                   name: ${{ steps.preview_repo.outputs.name }}
                   visibility: private
               env:
