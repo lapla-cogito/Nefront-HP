@@ -14,13 +14,6 @@ jobs:
               uses: ./.github/actions/get_preview_repo
               id: preview_repo
 
-            - name: Get GitHub token
-              id: get_token
-              uses: getsentry/action-github-app-token@v1
-              with:
-                  app_id: ${{ secrets.PREVIEW_APP_ID }}
-                  private_key: ${{ secrets.PREVIEW_APP_PRIVATE_KEY }}
-
             - name: Wait for preview GitHub Pages
               run: >
                   timeout 60s bash -c '
@@ -37,4 +30,4 @@ jobs:
                   route: DELETE /repos/{repo_name}
                   repo_name: ${{ steps.preview_repo.outputs.full_name }}
               env:
-                  GITHUB_TOKEN: ${{ steps.get_token.outputs.token }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

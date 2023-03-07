@@ -53,7 +53,7 @@ jobs:
                   route: POST /user/repos
                   accept: 'application/vnd.github+json'
                   name: ${{ steps.preview_repo.outputs.name }}
-                  visibility: private
+                  private: 'true'
               env:
                   GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
