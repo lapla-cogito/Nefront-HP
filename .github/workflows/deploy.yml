@@ -5,6 +5,7 @@ on:
         branches:
             - main
     pull_request:
+        types: [opened, synchronize, reopened]
 
 jobs:
     deploy:
@@ -35,9 +36,9 @@ jobs:
             - run: yarn run format:check
             - run: yarn build
             - run: yarn export
-            - name: add nojekyll
+            - name: Add nojekyll
               run: touch ./out/.nojekyll
-            - name: add CNAME
+            - name: Add CNAME
               run: cp CNAME ./out/
 
             - name: Deploy

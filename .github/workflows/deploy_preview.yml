@@ -1,0 +1,90 @@
+name: Deploy PR to preview repository
+
+on:
+    pull_request:
+        types: [opened, synchronize, reopened]
+
+jobs:
+    deploy-preview:
+        permissions: write-all
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  submodules: true
+
+            - name: Get preview repo name
+              uses: ./.github/actions/get_preview_repo
+              id: preview_repo
+
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '18'
+
+            - name: Get yarn cache
+              id: yarn-cache
+              run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
+            - name: Cache dependencies
+              uses: actions/cache@v3
+              with:
+                  path: ${{ steps.yarn-cache.outputs.dir }}
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-
+
+            - run: yarn install --frozen-lockfile
+            - run: yarn build
+            - name: Delete CNAME
+              run: rm CNAME
+            - run: yarn export
+            - name: Add nojekyll
+              run: touch ./out/.nojekyll
+
+            - name: Check if new repository is needed
+              id: new_repo
+              run: echo "result=$new_repo" >> $GITHUB_OUTPUT
+              env:
+                  new_repo: ${{ github.event.action == 'opened' || github.event.action == 'reopened' }}
+
+            - name: Create preview repo
+              if: steps.new_repo.outputs.result == 'true'
+              uses: octokit/request-action@v2.x
+              with:
+                  route: POST /user/repos
+                  accept: 'application/vnd.github+json'
+                  name: ${{ steps.preview_repo.outputs.name }}
+                  private: 'true'
+              env:
+                  GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+            - name: Deploy
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+                  external_repository: ${{ steps.preview_repo.outputs.full_name }}
+                  publish_dir: ./out
+
+            - name: Enable GitHub Pages
+              if: steps.new_repo.outputs.result == 'true'
+              uses: octokit/request-action@v2.x
+              with:
+                  route: POST /repos/{repo_name}/pages
+                  repo_name: ${{ steps.preview_repo.outputs.full_name }}
+                  data: '{"source":{"branch":"gh-pages"}}'
+              env:
+                  GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+            - name: Post preview URL to PR
+              if: github.event.action == 'opened'
+              uses: octokit/request-action@v2.x
+              with:
+                  route: POST /repos/{owner}/{repo}/issues/{pr_number}/comments
+                  owner: ${{ github.event.repository.owner.login }}
+                  repo: ${{ github.event.repository.name }}
+                  pr_number: ${{ github.event.pull_request.number }}
+                  body: >
+                      "😎 Preview URL: ${{ steps.preview_repo.outputs.gh_page_url }}\n"
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
