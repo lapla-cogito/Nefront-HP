@@ -85,6 +85,6 @@ jobs:
                   repo: ${{ github.event.repository.name }}
                   pr_number: ${{ github.event.pull_request.number }}
                   body: >
-                      "😎 Preview URL: ${{ steps.preview_repo.outputs.gh_page_url }}\n"
+                      "😎 Preview URL: ${{ steps.preview_repo.outputs.gh_page_url }}\nメインコンテンツ部分が表示されない場合などはコミットを追加してみてください(多分短期間に複数コミットするとデプロイが詰まって参照で404起こしてそう)"
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
