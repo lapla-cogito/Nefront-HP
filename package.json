@@ -38,6 +38,7 @@
         "react-ga4": "^2.0.0",
         "react-icons": "^4.7.1",
         "react-native": "^0.71.3",
+        "react-router-dom": "^6.8.2",
         "react-scroll": "^1.8.9",
         "react-simple-typewriter": "^5.0.1",
         "react-tsparticles": "^2.9.3",
