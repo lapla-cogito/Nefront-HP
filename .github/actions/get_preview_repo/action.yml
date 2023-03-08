@@ -5,7 +5,7 @@ runs:
     steps:
         - name: Set repository owner name
           id: owner
-          run: echo "::set-output name=result::laplaciancpp"
+          run: echo "result=laplaciancpp" >> $GITHUB_OUTPUT
           shell: bash
 
         - name: Set repository name
