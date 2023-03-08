@@ -1,6 +1,6 @@
 # Nefront-HP
 
-株式会社 Nefront のホームページ([www.nefront.com](https://www.nefront.com/))のミラーリポジトリです．本体は laplacian の private なリポジトリにあります．詳しくは特記事項の章の管理方針の節を見てください．主に Next.js と ChakraUI を用いて作成されています．
+株式会社 Nefront のホームページ([www.nefront.com](https://www.nefront.com/))のリポジトリです．詳しくは特記事項の章の管理方針の節を見てほしいのですが，デプロイされる本体は laplacian の private なリポジトリにあります．主に Next.js と ChakraUI を用いて作成されています．
 
 # How to run
 
@@ -20,6 +20,10 @@ $ yarn run dev
 
 ```
 .
+├ .github: CI用のymlファイル群
+├ components: Nextのコンポーネント
+├ lib: 各種テーマ設定
+├ pages: サイト内の各ページに対応するファイル群
 ├ public: HP内で用いる静的ファイル群
 └
 ```
@@ -28,7 +32,7 @@ $ yarn run dev
 
 ## 管理方針
 
-本Organization(NefrontInc)はアップグレードされていない為，privateなリポジトリに対してGitHub Pagesが適用できません．そのため，
+本 Organization(NefrontInc)はアップグレードされていない為，private なリポジトリに対して GitHub Pages が適用できません．そのため，GitHub Pages を用いてのデプロイは laplacian の個人リポジトリから行っています．
 
 ## How to contribute
 
