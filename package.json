@@ -30,7 +30,7 @@
         "@emotion/styled": "^11.10.5",
         "@types/react": "^18.0.28",
         "@types/react-dom": "^18.0.11",
-        "framer-motion": "^9.0.2",
+        "framer-motion": "^10.5.0",
         "next": "^13.1.6",
         "react": "^18.2.0",
         "react-anchor-link-smooth-scroll": "^1.0.12",
@@ -51,6 +51,6 @@
         "eslint-plugin-react": "^7.32.2",
         "prettier": "^2.8.4",
         "serve": "^14.2.0",
-        "typescript": "4.9.5"
+        "typescript": "5.0.2"
     }
 }
