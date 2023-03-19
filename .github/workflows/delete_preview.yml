@@ -29,6 +29,6 @@ jobs:
               with:
                   route: DELETE /repos/{owner}/{repo_name}
                   owner: ${{ steps.preview_repo.outputs.owner }}
-                  repo_name: ${{ steps.preview_repo.outputs.full_name }}
+                  repo_name: ${{ steps.preview_repo.outputs.name }}
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
