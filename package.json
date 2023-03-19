@@ -9,7 +9,8 @@
         "export": "next export",
         "build": "env NODE_ENV='production' next build",
         "format:check": "prettier --check \"**/*.{js,jsx,yml,yaml,json,css,scss,md}\"",
-        "format": "prettier --write \"**/*.{js,jsx,yml,yaml,json,css,scss,md}\""
+        "format": "prettier --write \"**/*.{js,jsx,yml,yaml,json,css,scss,md}\"",
+        "analyze": "ANALYZE=true next build"
     },
     "repository": {
         "type": "git",
@@ -28,6 +29,7 @@
         "@chakra-ui/react": "^2.5.0",
         "@emotion/react": "^11.10.5",
         "@emotion/styled": "^11.10.5",
+        "@next/bundle-analyzer": "^13.2.4",
         "@types/react": "^18.0.28",
         "@types/react-dom": "^18.0.11",
         "framer-motion": "^10.5.0",

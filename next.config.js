@@ -1,6 +1,10 @@
 // const prod = process.env.NODE_ENV === "production";
 
-module.exports = {
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+    enabled: process.env.ANALYZE === 'true',
+});
+
+module.exports = withBundleAnalyzer({
     staticPageGenerationTimeout: 1000,
     images: {
         loader: 'custom',
@@ -11,4 +15,4 @@ module.exports = {
     swcMinify: true,
     // assetPrefix: process.env.NODE_ENV === "production" ? "/Nefront-HP" : "",
     // "process.env.BACKEND_URL": prod ? "/Nefront-HP" : "",
-};
+});
