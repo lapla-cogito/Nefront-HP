@@ -53,6 +53,6 @@
         "eslint-plugin-react": "^7.32.2",
         "prettier": "^2.8.4",
         "serve": "^14.2.0",
-        "typescript": "5.0.2"
+        "typescript": "5.0.4"
     }
 }
