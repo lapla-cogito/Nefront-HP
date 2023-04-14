@@ -236,31 +236,24 @@ const Home = () => {
                         Members
                     </Heading>
                     <SimpleGrid columns={1} gap={6}>
-                        <GridItem title="今村翔太" nefposition="代表取締役" thumbnail={imamuu}>
+                        <GridItem title="今村翔太" nefposition="代表取締役 CEO" thumbnail={imamuu}>
                             <br />
-                            筑波大学情報科学類4年
+                            筑波大学情報科学類卒業後、東京大学大学院へ進学。現在1年。
                             <br />
-                            じげんグループの長期インターンにて、PMとして新規事業の立ち上げ等を担った。その後、イベント募集を起点としたSNSの開発・運営を経て、Nefrontの立ち上げへ。
+                            屋内ARクラウドの他、AR/VRヘッドマウントディスプレイ向け視線インタフェースの研究も行っている。
+                            <br />
+                            じげんグループの長期インターンにて、PMとして新規事業の立ち上げ等を担った後、イベント募集を起点としたSNSの開発・運営を経て、Nefrontの立ち上げへ。
+                        </GridItem>
+                        <GridItem title="逸見一喜" nefposition="執行役員 COO" thumbnail={hemmi}>
+                            <br />
+                            筑波大学大学院 博士後期課程1年
+                            <br />
+                            国立東京高専情報工学科卒業後、同専攻科に進学。その後は筑波大学大学院で経営工学を専攻しつつ、産業技術総合研究所人工知能研究センターのリサーチアシスタントとしてAutoML（機械学習の自動化）を研究している。
+                            <br />
+                            新しい技術を触るのがとにかく大好きな生粋のアイデアマン。
                             <br />
                         </GridItem>
-                        <GridItem
-                            title="逸見一喜"
-                            nefposition="ソフトウェアエンジニア"
-                            thumbnail={hemmi}
-                        >
-                            <br />
-                            筑波大学大学院 博士前期課程2年
-                            <br />
-                            国立東京高専情報工学科卒業後、同専攻科に進学。
-                            <br />
-                            その後、筑波大学大学院で経営工学を専攻しつつ、産業技術総合研究所人工知能研究センターのリサーチアシスタントとしてAutoML（機械学習の自動化）を研究している。
-                            <br />
-                        </GridItem>
-                        <GridItem
-                            title="秋山馨"
-                            nefposition="ソフトウェアエンジニア"
-                            thumbnail={lapla}
-                        >
+                        <GridItem title="秋山馨" nefposition="執行役員 CTO" thumbnail={lapla}>
                             <br />
                             筑波大学情報科学類3年
                             <br />
@@ -271,7 +264,7 @@ const Home = () => {
                         </GridItem>
                         <GridItem
                             title="渡邉蒼太"
-                            nefposition="ソフトウェアエンジニア"
+                            nefposition="執行役員 VP of Enginnering"
                             thumbnail={asuto}
                         >
                             <br />
