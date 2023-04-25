@@ -1,6 +1,7 @@
 body {
     font-family: Noto Sans JP;
     overflow-x: hidden;
+    width: 100%;
 }
 
 #hoge {

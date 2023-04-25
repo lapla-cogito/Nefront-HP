@@ -27,7 +27,7 @@ const Particles = dynamic(() => import('../components/particles'), {
 const Home = () => {
     return (
         <Layout>
-            <Container maxW="99999999px">
+            <Box>
                 <div id="top" />
                 <div id="parent">
                     <div id="hoge" />
@@ -302,7 +302,7 @@ const Home = () => {
                     </Box>
                 </Section>
                 <Particles />
-            </Container>
+            </Box>
         </Layout>
     );
 };

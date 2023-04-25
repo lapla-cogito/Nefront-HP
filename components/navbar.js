@@ -15,7 +15,7 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Link } from 'react-scroll';
 
-const LinkItem = ({ href, path, target, children }) => {
+const LinkItem = ({ href, children }) => {
     return (
         <Link activeClass="active" to={href} spy={true} smooth={true} duration={500}>
             <p className="textWrapper">
@@ -82,21 +82,11 @@ const Navbar = (props) => {
                     className="navi"
                     spacing={10}
                 >
-                    <LinkItem href="about" path={path}>
-                        About
-                    </LinkItem>
-                    <LinkItem href="product" path={path}>
-                        Product
-                    </LinkItem>
-                    <LinkItem href="usecase" path={path}>
-                        Usecase
-                    </LinkItem>
-                    <LinkItem href="news" path={path}>
-                        News
-                    </LinkItem>
-                    <LinkItem href="members" path={path}>
-                        Members
-                    </LinkItem>
+                    <LinkItem href="about">About</LinkItem>
+                    <LinkItem href="product">Product</LinkItem>
+                    <LinkItem href="usecase">Usecase</LinkItem>
+                    <LinkItem href="news">News</LinkItem>
+                    <LinkItem href="members">Members</LinkItem>
                     <ContactLinkItem
                         href="https://forms.gle/HJXsrsk5myVrmEqC6"
                         isExternal={true}

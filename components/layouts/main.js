@@ -27,10 +27,10 @@ const Main = ({ children, router }) => {
 
             <NavBar path={router.asPath} />
 
-            <Container maxW="99999999px" pt={14}>
+            <Box maxW="99999999px" pt={14}>
                 {children}
                 <Footer />
-            </Container>
+            </Box>
         </Box>
     );
 };
