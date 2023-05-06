@@ -177,6 +177,20 @@ const Home = () => {
                                 <br />
                             </Paragraph>
                         </div>
+
+                        <div className="flexdiv">
+                            <Paragraph>
+                                <img
+                                    src="https://www.nefront.com/images/exhibi.jpg"
+                                    alt="展示会"
+                                    className="imgs"
+                                />
+                                <Subsection>展示会</Subsection>
+                                <br />
+                                たくさんのブースがあって迷いがちな展示会会場。今いる場所を特定し、目的地までのスムーズな案内を実現します！
+                                <br />
+                            </Paragraph>
+                        </div>
                     </div>
                 </Section>
 
@@ -279,7 +293,7 @@ const Home = () => {
                     </SimpleGrid>
                 </Section>
 
-                <div id="contact" />
+                <div id="company" />
                 <div
                     style={{
                         width: '100%',
@@ -287,6 +301,32 @@ const Home = () => {
                     }}
                 />
                 <Section delay={0.6}>
+                    <Heading as="h1" variant="section-title">
+                        Company
+                    </Heading>
+                    <Box className="table">
+                        <br />
+                        ・会社名：株式会社Nefront
+                        <br />
+                        ・住所：〒150-0043 東京都渋谷区道玄坂1丁目10番8号渋谷道玄坂東急ビル2F−C
+                        <br />
+                        ・代表者氏名：今村翔太
+                        <br />
+                        ・資本金：81万円（資本準備金を含む）※登記手続き中
+                        <br />
+                        ・設立年月：2021年6月
+                        <br />
+                    </Box>
+                </Section>
+
+                <div id="contact" />
+                <div
+                    style={{
+                        width: '100%',
+                        height: '60px',
+                    }}
+                />
+                <Section delay={0.7}>
                     <Heading as="h1" variant="section-title">
                         Contact
                     </Heading>
