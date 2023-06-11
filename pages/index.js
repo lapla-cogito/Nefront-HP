@@ -272,14 +272,19 @@ const Home = () => {
                             <br />
                             私立海城高等学校在学中に競技プログラミングに出会いプログラミングの道に入る。
                             <br />
-                            その後、筑波大学情報科学類へ進学し、株式会社AVILENの長期インターンとしてAI系の事業やAutoMLツールのバックエンド実装に関わったり、個人で文章を打ち込むとそれに合わせた効果音を生成するモデルの研究開発も行っている。
+                            その後、筑波大学情報科学類へ進学し、株式会社AVILENの業務委託ソフトウェアエンジニアとしてAI系の事業やAutoMLツールのバックエンド実装に関わったり、個人で文章を打ち込むとそれに合わせた効果音を生成するモデルの研究開発も行っていた。現在、株式会社クックパッドでSRE業務をしている。
                             <br />
                             OSからWebフロントエンドまで、何でも書く。
+                            <br />
+                            個人サイト：{' '}
+                            <a href="https://lapla.dev/" target="_blank" rel="noopener noreferrer">
+                                lapla.dev
+                            </a>
                             <br />
                         </GridItem>
                         <GridItem
                             title="渡邉蒼太"
-                            nefposition="執行役員 VP of Enginnering"
+                            nefposition="執行役員 VP of Engineering"
                             thumbnail={asuto}
                         >
                             <br />
@@ -308,7 +313,7 @@ const Home = () => {
                         <br />
                         ・会社名：株式会社Nefront
                         <br />
-                        ・住所：〒150-0043 東京都渋谷区道玄坂1丁目10番8号渋谷道玄坂東急ビル2F−C
+                        ・住所： 東京都渋谷区道玄坂1丁目10番8号渋谷道玄坂東急ビル2F−C
                         <br />
                         ・代表者氏名：今村翔太
                         <br />
