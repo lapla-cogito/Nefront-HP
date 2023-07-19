@@ -20,7 +20,7 @@ const dir = '/Nefront-HP';
 ReactGA.initialize('G-FBQ0WYNGEZ');
 ReactGA.send('pageview');
 
-const Particles = dynamic(() => import('../components/particles'), {
+const Particles = dynamic(() => import('../../components/particles'), {
     ssr: false,
 });
 
