@@ -269,9 +269,9 @@ const Home = () => {
                             thumbnail={imamuu}
                         >
                             <br />
-                            After graduating from the University of Tsukuba with a bachelor&apos;s degree
-                            in Information Science, he entered the graduate school of the University
-                            of Tokyo.
+                            After graduating from the University of Tsukuba with a bachelor&apos;s
+                            degree in Information Science, he entered the graduate school of the
+                            University of Tokyo.
                             <br />
                             In addition to developing and commercializing IndooAR, he is also
                             researching eye gaze interfaces for AR/VR head-mounted displays.
@@ -287,15 +287,15 @@ const Home = () => {
                             thumbnail={hemmi}
                         >
                             <br />
-                            Graduated from Tokyo National College of Technology with a associate&apos;s
-                            degree in Information Technology, he entered the department of Computer
-                            Science and Engineering of the college.
+                            Graduated from Tokyo National College of Technology with a
+                            associate&apos;s degree in Information Technology, he entered the
+                            department of Computer Science and Engineering of the college.
                             <br />
-                            Since then, he&apos;s been studying AutoML (Automated Machine Learning) as a
-                            research assistant at the Artificial Intelligence Research Center of the
-                            National Institute of Advanced Industrial Science and Technology (AIST),
-                            while studying management engineering at the University of Tsukuba
-                            Graduate School.
+                            Since then, he&apos;s been studying AutoML (Automated Machine Learning)
+                            as a research assistant at the Artificial Intelligence Research Center
+                            of the National Institute of Advanced Industrial Science and Technology
+                            (AIST), while studying management engineering at the University of
+                            Tsukuba Graduate School.
                             <br />
                             A genuine idea man who just loves to touch new technology.
                             <br />
