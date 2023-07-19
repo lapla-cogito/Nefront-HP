@@ -9,6 +9,7 @@ import NewsHeading from '../../components/newsheading';
 import TypeNefront from '../../components/typeNefront';
 import ReactGA from 'react-ga4';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 
 const imamuu = 'https://www.nefront.com/images/imamura.jpg';
 const hemmi = 'https://www.nefront.com/images/hemmi.jpg';
@@ -27,6 +28,10 @@ const Particles = dynamic(() => import('../../components/particles'), {
 const Home = () => {
     return (
         <Layout>
+            <Head>
+                <meta name="description" content="Nefront Inc. develops indoor AR cloud service" />
+                <title>Nefront Inc.</title>
+            </Head>
             <Container maxW="99999999px">
                 <div id="top" />
                 <div id="parent">
