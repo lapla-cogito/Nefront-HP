@@ -208,7 +208,7 @@ const Home = () => {
                     <News>
                         <NewsHeading
                             title="TechBiz2023 支援対象技術に採択されました"
-                            date="2023年8月11日"
+                            date="2023年8月8日"
                             link="https://dcaj-techbiz.com/news/selected-technologies-for-techbiz2023"
                         ></NewsHeading>
 

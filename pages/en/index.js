@@ -226,7 +226,7 @@ const Home = () => {
                     <News>
                         <NewsHeading
                             title="Nominated for TechBiz2023"
-                            date="2023/8/11"
+                            date="2023/8/8"
                             link="https://dcaj-techbiz.com/news/selected-technologies-for-techbiz2023"
                         ></NewsHeading>
 
