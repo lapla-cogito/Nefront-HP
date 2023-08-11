@@ -207,6 +207,12 @@ const Home = () => {
                     </Heading>
                     <News>
                         <NewsHeading
+                            title="TechBiz2023 支援対象技術に採択されました"
+                            date="2023年8月11日"
+                            link="https://dcaj-techbiz.com/news/selected-technologies-for-techbiz2023"
+                        ></NewsHeading>
+
+                        <NewsHeading
                             title="令和4年度学生ビジネスプランコンテストでアイデア賞を受賞しました"
                             date="2022年12月20日"
                             link="http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223"

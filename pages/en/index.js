@@ -225,6 +225,12 @@ const Home = () => {
                     </Heading>
                     <News>
                         <NewsHeading
+                            title="Nominated for TechBiz2023"
+                            date="2023/8/11"
+                            link="https://dcaj-techbiz.com/news/selected-technologies-for-techbiz2023"
+                        ></NewsHeading>
+
+                        <NewsHeading
                             title="Idea Prize in the 2022 Student Business Plan Contest (Japan)"
                             date="2022/12/20"
                             link="http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223"
