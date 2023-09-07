@@ -273,6 +273,15 @@ const Home = () => {
                             <br />
                             新しい技術を触るのがとにかく大好きな生粋のアイデアマン。
                             <br />
+                            個人サイト：{' '}
+                            <a
+                                href="https://itigo11111.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                itigo11111.com
+                            </a>
+                            <br />
                         </GridItem>
                         <GridItem title="秋山馨" nefposition="執行役員 CTO" thumbnail={lapla}>
                             <br />

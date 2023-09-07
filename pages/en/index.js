@@ -310,6 +310,15 @@ const Home = () => {
                             <br />
                             A genuine idea man who just loves to touch new technology.
                             <br />
+                            Website：{' '}
+                            <a
+                                href="https://itigo11111.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                itigo11111.com
+                            </a>
+                            <br />
                         </GridItem>
                         <GridItem
                             title="Kei Akiyama"
