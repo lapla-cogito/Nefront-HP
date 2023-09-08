@@ -9,6 +9,7 @@ import NewsHeading from '../components/newsheading';
 import TypeNefront from '../components/typeNefront';
 import ReactGA from 'react-ga4';
 import dynamic from 'next/dynamic';
+import React from 'react';
 
 const imamuu = 'https://www.nefront.com/images/imamura.jpg';
 const hemmi = 'https://www.nefront.com/images/hemmi.jpg';
@@ -26,6 +27,7 @@ const Particles = dynamic(() => import('../components/particles'), {
 
 const Home = () => {
     return (
+        // @ts-ignore
         <Layout>
             <Container maxW="99999999px">
                 <div id="top" />

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import React from 'react';
 
 const NewsDiv = styled.ul`
     list-style: none;

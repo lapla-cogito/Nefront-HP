@@ -1,3 +1,5 @@
+import React from 'react';
+
 const NewsHeading = ({ title, date, link }) => (
     <li className="news_list_item">
         <a href={link} target="_blank" rel="noopener noreferrer">
