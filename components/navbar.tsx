@@ -55,8 +55,8 @@ const HambItem = ({ href, path, target, children, ...props }: Props) => {
     );
 };
 
-const Navbar = (props: any) => {
-    const { path } = props;
+const Navbar = ({ props }: any) => {
+    const path = props;
 
     return (
         <Box
