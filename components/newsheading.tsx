@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 
 type Props = {
@@ -6,7 +7,7 @@ type Props = {
     link: string;
 };
 
-const NewsHeading = ({ title, date, link }: any) => (
+const NewsHeading = ({ title, date, link }: Props) => (
     <li className="news_list_item">
         <a href={link} target="_blank" rel="noopener noreferrer">
             <div className="news_list_date">

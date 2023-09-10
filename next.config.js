@@ -1,3 +1,4 @@
+/** @type {import('next').NextConfig} */
 // const prod = process.env.NODE_ENV === "production";
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({

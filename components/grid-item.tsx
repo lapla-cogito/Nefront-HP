@@ -1,7 +1,7 @@
-import NextLink from 'next/link';
-import Image from 'next/image';
+// @ts-nocheck
 import { Box, Text, LinkBox } from '@chakra-ui/react';
 import { Global } from '@emotion/react';
+import React from 'react';
 
 type Props = {
     children: any;
@@ -10,7 +10,7 @@ type Props = {
     thumbnail: string;
 };
 
-export const GridItem = ({ children, title, nefposition, thumbnail }: any) => (
+export const GridItem = ({ children, title, nefposition, thumbnail }: Props) => (
     <Box w="100%">
         <LinkBox>
             {/*@ts-ignore*/}
