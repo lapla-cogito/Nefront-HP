@@ -4,6 +4,7 @@ out
 .DS_Store
 
 .yarn/*
+!.yarn/cache
 !.yarn/patches
 !.yarn/releases
 !.yarn/plugins

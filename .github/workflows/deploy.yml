@@ -20,14 +20,14 @@ jobs:
               with:
                   node-version: '19'
 
-            - run: yarn --immutable
+            - run: yarn --immutable --immutable-cache
             - run: yarn run format:check
             - run: yarn build
             - run: yarn export
             - name: Add nojekyll and CNAME
               run: |
-                touch ./out/.nojekyll
-                cp CNAME ./out/
+                  touch ./out/.nojekyll
+                  cp CNAME ./out/
 
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v3
