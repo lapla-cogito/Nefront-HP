@@ -1,4 +1,12 @@
-const NewsHeading = ({ title, date, link }) => (
+import React from 'react';
+
+type Props = {
+    title: string;
+    date: string;
+    link: string;
+};
+
+const NewsHeading = ({ title, date, link }: any) => (
     <li className="news_list_item">
         <a href={link} target="_blank" rel="noopener noreferrer">
             <div className="news_list_date">

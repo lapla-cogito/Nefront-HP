@@ -1,4 +1,6 @@
-const NefrontIcon = (props) => {
+import React from 'react';
+
+const NefrontIcon = (props: any) => {
     return (
         <svg
             width="133.9346"

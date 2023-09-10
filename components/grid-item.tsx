@@ -3,9 +3,17 @@ import Image from 'next/image';
 import { Box, Text, LinkBox } from '@chakra-ui/react';
 import { Global } from '@emotion/react';
 
-export const GridItem = ({ children, title, nefposition, thumbnail }) => (
+type Props = {
+    children: any;
+    title: string;
+    nefposition: string;
+    thumbnail: string;
+};
+
+export const GridItem = ({ children, title, nefposition, thumbnail }: any) => (
     <Box w="100%">
         <LinkBox>
+            {/*@ts-ignore*/}
             <img src={thumbnail} alt={title} className="grid-item-thumbnail" align="center" />
             <Text fontSize={25} textAlign="center">
                 {title}
