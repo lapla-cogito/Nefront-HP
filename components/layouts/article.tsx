@@ -9,7 +9,12 @@ const variants = {
     exit: { opacity: 0, x: -0, y: 20 },
 };
 
-const Layout = ({ children, title }) => {
+type LayoutProps = {
+    children: any;
+    title?: string;
+};
+
+const Layout = ({ children, title }: LayoutProps) => {
     const t = `${title} - Nefront Inc.`;
     return (
         <motion.article

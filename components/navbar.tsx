@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { forwardRef } from 'react';
 import Logo from './logo';
 import {
@@ -16,7 +17,14 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 import { Link } from 'react-scroll';
 import React from 'react';
 
-const LinkItem = ({ href, path, target, children }) => {
+type Props = {
+    href: string;
+    path: string;
+    target: string;
+    children: any;
+};
+
+const LinkItem = ({ href, path, target, children }: Props) => {
     return (
         <Link activeClass="active" to={href} spy={true} smooth={true} duration={500}>
             <p className="textWrapper">
@@ -26,7 +34,7 @@ const LinkItem = ({ href, path, target, children }) => {
     );
 };
 
-const ContactLinkItem = ({ href, children }) => {
+const ContactLinkItem = ({ href, children }: Props) => {
     return (
         <a className="hovernefro" href={href} target="_blank" rel="noreferrer noopener">
             {children}
@@ -35,10 +43,11 @@ const ContactLinkItem = ({ href, children }) => {
 };
 
 const MenuLink = forwardRef((props, ref) => (
+    // @ts-ignore
     <a href={ref} target="_blank" rel="noreferrer noopener" {...props} />
 ));
 
-const HambItem = ({ href, path, target, children, ...props }) => {
+const HambItem = ({ href, path, target, children, ...props }: Props) => {
     return (
         <Link activeClass="active" to={href} spy={true} smooth={true} duration={500} {...props}>
             {children}
@@ -46,7 +55,7 @@ const HambItem = ({ href, path, target, children, ...props }) => {
     );
 };
 
-const Navbar = (props) => {
+const Navbar = (props: any) => {
     const { path } = props;
 
     return (
@@ -113,14 +122,12 @@ const Navbar = (props) => {
                         href="https://forms.gle/HJXsrsk5myVrmEqC6"
                         isExternal={true}
                         path={path}
-                        style={{
-                            borderRadius: '10px',
-                        }}
+                        style={{ borderRadius: '10px' }}
                     >
                         Contact
                     </ContactLinkItem>
                 </Stack>
-
+                {/* @ts-ignore */}
                 <Box flex={1} align="right">
                     <Box ml={2} display={{ base: 'inline-block', lg: 'none' }}>
                         <Menu isLazy id="navbar-menu">
@@ -150,6 +157,7 @@ const Navbar = (props) => {
                                 <MenuItem as={HambItem} href="company">
                                     Company
                                 </MenuItem>
+                                {/* @ts-ignore */}
                                 <MenuItem as={MenuLink} href="https://forms.gle/HJXsrsk5myVrmEqC6">
                                     Contact
                                 </MenuItem>

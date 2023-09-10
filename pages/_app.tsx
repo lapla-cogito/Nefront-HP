@@ -8,7 +8,7 @@ if (typeof window !== 'undefined') {
     window.history.scrollRestoration = 'manual';
 }
 
-function Website({ Component, pageProps, router }) {
+function Website({ Component, pageProps, router }: any) {
     return (
         <Chakra>
             <style>
