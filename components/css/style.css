@@ -60,7 +60,21 @@ body {
 }
 
 .flexdiv {
-    flex: 1 0 300px;
+    height: 50%;
+}
+
+@media (min-width: 600px) {
+    .flexdiv {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .flexdiv {
+        width: 25%;
+        height: auto;
+    }
 }
 
 .contactform {
@@ -281,7 +295,6 @@ canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px !important;
 }
 
 .Typewriter__cursor {
@@ -291,4 +304,19 @@ canvas {
 .Typewriter {
     font-size: 60px;
     user-select: none;
+}
+
+a:link.sim {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+a:visited.sim {
+    color: #551a8b;
+    text-decoration: underline;
+}
+
+a:active.sim {
+    color: #ff0000;
+    text-decoration: underline;
 }
