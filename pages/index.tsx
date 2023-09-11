@@ -280,6 +280,7 @@ const Home = () => {
                                 href="https://itigo11111.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className="sim"
                             >
                                 itigo11111.com
                             </a>
@@ -294,7 +295,12 @@ const Home = () => {
                             OSからWebフロントエンドまで、何でも書く。
                             <br />
                             個人サイト：{' '}
-                            <a href="https://lapla.dev/" target="_blank" rel="noopener noreferrer">
+                            <a
+                                href="https://lapla.dev/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="sim"
+                            >
                                 lapla.dev
                             </a>
                             <br />
