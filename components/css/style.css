@@ -60,7 +60,23 @@ body {
 }
 
 .flexdiv {
-    flex: 1 0 300px;
+    /* flex: 1 0 300px */
+    /* width:100%; */
+    height: 50%;
+}
+
+@media (min-width: 600px) {
+    .flexdiv {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .flexdiv {
+        width: 25%;
+        height: auto;
+    }
 }
 
 .contactform {
