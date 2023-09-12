@@ -10,7 +10,7 @@ type Props = {
     thumbnail: string;
 };
 
-export const GridItem = ({ children, title, nefposition, thumbnail }: any) => (
+export const GridItem = ({ children, title, nefposition, thumbnail }: Props) => (
     <Box w="100%">
         <LinkBox>
             {/*@ts-ignore*/}

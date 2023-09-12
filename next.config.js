@@ -1,3 +1,5 @@
+/** @type {import('next').NextConfig} */
+
 // const prod = process.env.NODE_ENV === "production";
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -13,6 +15,10 @@ module.exports = withBundleAnalyzer({
     },
     reactStrictMode: true,
     swcMinify: true,
+    webpack: (config) => {
+        config.resolve.fallback = { fs: false };
+        return config;
+    },
     // assetPrefix: process.env.NODE_ENV === "production" ? "/Nefront-HP" : "",
     // "process.env.BACKEND_URL": prod ? "/Nefront-HP" : "",
 });

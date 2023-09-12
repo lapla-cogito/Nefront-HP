@@ -1,15 +1,19 @@
 import { Container, Heading, Box, SimpleGrid } from '@chakra-ui/react';
-import Layout from '../components/layouts/article';
-import { GridItem } from '../components/grid-item';
-import Section from '../components/section';
-import Subsection from '../components/subsection';
-import Paragraph from '../components/paragraph';
-import News from '../components/news';
-import NewsHeading from '../components/newsheading';
-import TypeNefront from '../components/typeNefront';
+import Layout from 'components/layouts/article';
+import { GridItem } from 'components/grid-item';
+import Section from 'components/section';
+import Subsection from 'components/subsection';
+import Paragraph from 'components/paragraph';
+import News from 'components/news';
+import NewsHeading from 'components/newsheading';
+import { getNewPosts } from 'lib/posts';
+import TypeNefront from 'components/typeNefront';
 import ReactGA from 'react-ga4';
 import dynamic from 'next/dynamic';
 import React from 'react';
+import styled from '@emotion/styled';
+import PostsList from 'components/plist';
+import { Post } from 'types/posts';
 
 const imamuu = 'https://www.nefront.com/images/imamura.jpg';
 const hemmi = 'https://www.nefront.com/images/hemmi.jpg';
@@ -21,11 +25,22 @@ const dir = '/Nefront-HP';
 ReactGA.initialize('G-FBQ0WYNGEZ');
 ReactGA.send('pageview');
 
-const Particles = dynamic(() => import('../components/particles'), {
+const Particles = dynamic(() => import('components/particles'), {
     ssr: false,
 });
 
-const Home = () => {
+type Props = {
+    newPosts: Post;
+};
+
+const NewsDiv = styled.ul`
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 50px 0;
+`;
+
+const Home = ({ newPosts }: Props) => {
     return (
         // @ts-ignore
         <Layout>
@@ -207,8 +222,9 @@ const Home = () => {
                     <Heading as="h1" variant="section-title">
                         News
                     </Heading>
-                    <News>
-                        <NewsHeading
+                    {/*@ts-ignore*/}
+                    {/* <News newPosts={newPosts}> */}
+                    {/* <NewsHeading
                             title="TechBiz2023 支援対象技術に採択されました"
                             date="2023年8月8日"
                             link="https://dcaj-techbiz.com/news/selected-technologies-for-techbiz2023"
@@ -242,8 +258,11 @@ const Home = () => {
                             title="技育展2022に登壇しました"
                             date="2022年9月10日"
                             link="https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4"
-                        ></NewsHeading>
-                    </News>
+                        ></NewsHeading> */}
+                    {/* </News> */}
+                    <NewsDiv>
+                        <PostsList isHome post={newPosts}></PostsList>
+                    </NewsDiv>
                 </Section>
 
                 <div id="members" />
@@ -370,3 +389,10 @@ const Home = () => {
 };
 
 export default Home;
+
+export const getStaticProps = async () => {
+    const newPosts = getNewPosts(['title', 'date', 'slug']);
+    return {
+        props: { newPosts },
+    };
+};
