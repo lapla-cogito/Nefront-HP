@@ -222,33 +222,11 @@ const Home = ({ newPosts }: Props) => {
                     <Heading as="h1" variant="section-title">
                         News
                     </Heading>
-                    {/*@ts-ignore*/}
-                    {/* <News newPosts={newPosts}> */}
-                    {/* <NewsHeading
-                            title="TechBiz2023 支援対象技術に採択されました"
-                            date="2023年8月8日"
-                            link="https://dcaj-techbiz.com/news/selected-technologies-for-techbiz2023"
-                        ></NewsHeading>
+                    <NewsDiv>
+                        <PostsList isHome post={newPosts}></PostsList>
+                    </NewsDiv>
 
-                        <NewsHeading
-                            title="令和4年度学生ビジネスプランコンテストでアイデア賞を受賞しました"
-                            date="2022年12月20日"
-                            link="http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223"
-                        ></NewsHeading>
-
-                        <NewsHeading
-                            title="第19回キャンパスベンチャーグランプリ東京大会で日刊工業新聞賞を受賞しました"
-                            date="2022年12月1日"
-                            link="https://cvg.nikkan.co.jp/tokyo_backnumber/2022/"
-                        ></NewsHeading>
-
-                        <NewsHeading
-                            title="総務省主催の2022年度異能vationジェネレーションアワード部門にノミネートされました"
-                            date="2022年11月30日"
-                            link="https://www.inno.go.jp/result/2022/generation/nominate/"
-                        ></NewsHeading>
-
-                        <NewsHeading
+                    <NewsHeading
                             title="茨城県学生ビジネスプランコンテスト2022でサザコーヒー賞と常陽銀行賞を受賞しました"
                             date="2022年11月27日"
                             link="https://www.scc.ibaraki.ac.jp/contest2022final/"
@@ -258,11 +236,7 @@ const Home = ({ newPosts }: Props) => {
                             title="技育展2022に登壇しました"
                             date="2022年9月10日"
                             link="https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4"
-                        ></NewsHeading> */}
-                    {/* </News> */}
-                    <NewsDiv>
-                        <PostsList isHome post={newPosts}></PostsList>
-                    </NewsDiv>
+                        ></NewsHeading>
                 </Section>
 
                 <div id="members" />

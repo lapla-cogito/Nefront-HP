@@ -56,13 +56,12 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 
 export function getAllPosts(fields: string[] = []) {
     const slugs = listDirectoryFiles();
-    console.log(slugs);
     const posts = slugs
         .filter((slug) => slug.match(/\.md$/))
         .map((slug) => getPostBySlug(slug, fields))
         .sort(function (post1, post2) {
-            const post1date: string[] = post1.date?.split('-'),
-                post2date: string[] = post2.date?.split('-');
+            const post1date: string[] = post1.date?.split('/'),
+                post2date: string[] = post2.date?.split('/');
 
             if (typeof post1date === 'undefined' || typeof post2date === 'undefined') {
                 return -1;

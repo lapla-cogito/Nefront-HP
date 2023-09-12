@@ -38,23 +38,24 @@ const PostsList = ({ isHome, post }: Props) => {
             </h2>
             <div className="my-8 bg-sky-50 bg-cover pt-10 pb-14">
                 {showPosts.map(({ date, title, slug }) => (
-                    <div
-                        className="scale-75 rounded-lg bg-white p-8 text-2xl font-semibold shadow hover:shadow-xl"
-                        key={slug}
-                    >
-                        <Link as={`/posts/${slug}`} href="/posts/[...slug]" scroll={false}>
-                            {/* <p className="pb-2">{icon}</p> */}
+                    <li className="news_list_item">
+                        <Link as={`/news/${slug}`} href="/news/[...slug]" scroll={false}>
+                            <div className="news_list_date">
+                                <p className="news_item">
+                                    <time>{date}</time>
+                                </p>
+                            </div>
                             <p>{title}</p>
-                            <p className="mt-2 text-gray-400">{date}</p>
+                            <span className="arrow"></span>
                         </Link>
-                    </div>
+                    </li>
                 ))}
                 {isHome ? (
                     <>
                         {post.postsLength > 5 && (
                             <div className="mt-10">
                                 <Link
-                                    href="/posts"
+                                    href="/news"
                                     className="cursor-pointer rounded-lg bg-gray-500 px-10 py-2 text-2xl font-semibold text-white shadow-lg shadow-gray-600 hover:bg-white hover:text-gray-700 hover:shadow-none hover:ring-2 hover:ring-gray-500"
                                     scroll={false}
                                 >
