@@ -2,7 +2,6 @@ import Layout from '../../components/layouts/article';
 import { getAllPosts } from 'lib/posts';
 import { Post } from 'types/posts';
 import PostsList from 'components/plist';
-// import Meta from 'components/meta';
 
 type Props = {
     allPosts: Post;
@@ -11,7 +10,6 @@ type Props = {
 const Blog = ({ allPosts }: Props) => {
     return (
         <Layout>
-            {/* <Meta title="starrysky" type="posts" root="blog"></Meta> */}
             <div className="h-16"></div>
             <PostsList isHome={false} post={allPosts}></PostsList>
         </Layout>
