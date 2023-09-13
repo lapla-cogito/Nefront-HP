@@ -322,17 +322,17 @@ a:active.sim {
     text-decoration: underline;
 }
 
-.markdown p a {
+.markdown p a:link {
     color: #0000ee;
     text-decoration: underline;
 }
 
-.markdown p a {
+.markdown p a:visited {
     color: #551a8b;
     text-decoration: underline;
 }
 
-.markdown p a {
+.markdown p a:active {
     color: #ff0000;
     text-decoration: underline;
 }
