@@ -19,6 +19,6 @@
         },
         "lib": ["dom", "dom.iterable", "esnext"]
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/particles.jsx"],
     "exclude": ["node_modules"]
 }
