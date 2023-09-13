@@ -4,7 +4,7 @@ import { marked } from 'marked';
 import { PostType } from 'types/posts';
 import PostHeader from 'components/pheader';
 import PostBody from 'components/pbody';
-// import Meta from 'components/meta';
+import Meta from 'components/meta';
 
 type Props = {
     post: PostType;
@@ -13,11 +13,7 @@ type Props = {
 const Post = ({ post }: Props) => {
     return (
         <Layout>
-            {/* <Meta
-                title={post.title + ' - starrysky'}
-                type="post"
-                root={`posts/${post.slug}`}
-            ></Meta> */}
+            <Meta />
             <div className="h-16"></div>
             <PostHeader post={post}></PostHeader>
             <PostBody content={post.content}></PostBody>
@@ -36,8 +32,6 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
     const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'content', 'icon', 'topics']);
     const content = marked(post.content || '');
-
-    console.log(content);
 
     return {
         props: {

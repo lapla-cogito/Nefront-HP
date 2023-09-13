@@ -17,18 +17,18 @@ const PostHeader = ({ post }: Props) => {
     return (
         <section className="mt-14 mb-8">
             <PostTitle title={post.title} date={post.date}></PostTitle>
-            <div className="mt-4">
+            <div className="shr">
                 <TwitterShareButton
                     title={post.title}
-                    url={urlOrigin + '/posts/' + post.slug}
-                    via="lapla_cogito"
+                    url={urlOrigin + '/news/' + post.slug}
+                    via="NefrontInc"
                     className="mx-2"
                 >
                     <TwitterIcon size={40} round></TwitterIcon>
                 </TwitterShareButton>
                 <LineShareButton
                     title={post.title}
-                    url={urlOrigin + '/posts/' + post.slug}
+                    url={urlOrigin + '/news/' + post.slug}
                     className="mx-2"
                 >
                     <LineIcon size={40} round></LineIcon>

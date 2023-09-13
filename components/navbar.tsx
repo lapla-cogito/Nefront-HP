@@ -18,6 +18,7 @@ import { Link } from 'react-scroll';
 import React from 'react';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import NextLink from 'next/link';
 
 const isRootPage = () => {
     const router = useRouter();
@@ -83,7 +84,11 @@ const HambItem = ({ href, path, target, children, ...props }: Props) => {
             </Link>
         );
     } else {
-        return <a href={`https://www.nefront.com#${href}`}>{children}</a>;
+        return (
+            <NextLink href={`https://nefront.com#${href}`} {...props}>
+                {children}
+            </NextLink>
+        );
     }
 };
 

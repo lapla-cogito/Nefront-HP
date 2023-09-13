@@ -32,33 +32,28 @@ const PostsList = ({ isHome, post }: Props) => {
     }, []);
 
     return (
-        <section className="mt-12">
-            <h2 className="text-3xl font-semibold text-gray-500 underline decoration-1 underline-offset-8">
-                {isHome ? '' : 'All Posts'}
-            </h2>
-            <div className="my-8 bg-sky-50 bg-cover pt-10 pb-14">
+        <section>
+            <div>
                 {showPosts.map(({ date, title, slug }) => (
-                    <li className="news_list_item">
-                        <Link as={`/news/${slug}`} href="/news/[...slug]" scroll={false}>
-                            <div className="news_list_date">
-                                <p className="news_item">
-                                    <time>{date}</time>
-                                </p>
-                            </div>
-                            <p>{title}</p>
-                            <span className="arrow"></span>
-                        </Link>
-                    </li>
+                    <div key={slug}>
+                        <li className="news_list_item">
+                            <Link as={`/news/${slug}`} href="/news/[...slug]" scroll={false}>
+                                <div className="news_list_date">
+                                    <p className="news_item">
+                                        <time>{date}</time>
+                                    </p>
+                                </div>
+                                <p>{title}</p>
+                                <span className="arrow"></span>
+                            </Link>
+                        </li>
+                    </div>
                 ))}
                 {isHome ? (
                     <>
                         {post.postsLength > 5 && (
                             <div className="mt-10">
-                                <Link
-                                    href="/news"
-                                    className="cursor-pointer rounded-lg bg-gray-500 px-10 py-2 text-2xl font-semibold text-white shadow-lg shadow-gray-600 hover:bg-white hover:text-gray-700 hover:shadow-none hover:ring-2 hover:ring-gray-500"
-                                    scroll={false}
-                                >
+                                <Link href="/news" className="curp" scroll={false}>
                                     More
                                 </Link>
                             </div>
@@ -67,10 +62,7 @@ const PostsList = ({ isHome, post }: Props) => {
                 ) : (
                     <>
                         {!isEnd && (
-                            <button
-                                onClick={displayMore}
-                                className="cursor-pointer rounded-lg bg-gray-500 px-10 py-2 text-2xl font-semibold text-white shadow-lg shadow-gray-600 hover:bg-white hover:text-gray-700 hover:shadow-none hover:ring-2 hover:ring-gray-500"
-                            >
+                            <button onClick={displayMore} className="curp">
                                 もっとみる
                             </button>
                         )}
