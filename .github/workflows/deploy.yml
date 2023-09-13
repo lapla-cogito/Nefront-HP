@@ -22,7 +22,6 @@ jobs:
 
             - run: yarn --immutable --immutable-cache
             - run: yarn run format:check
-            - run: yarn build
             - run: yarn export
             - name: Add nojekyll and CNAME
               run: |
