@@ -4,12 +4,11 @@ import React from 'react';
 
 const NotFound = () => {
     return (
-        <Container>
+        <Container className="ce">
             <Heading as="h1">Not found</Heading>
             <Text>The page you&apos;re looking for was not found.</Text>
             <Divider my={6} />
-            {/* @ts-ignore */}
-            <Box my={6} align="center">
+            <Box my={6}>
                 <Button as={NextLink} href="/" colorScheme="teal">
                     Return to home
                 </Button>
