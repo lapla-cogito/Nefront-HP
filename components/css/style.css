@@ -307,17 +307,32 @@ canvas {
     user-select: none;
 }
 
-a:link.sim a:markdown {
+a:link.sim {
     color: #0000ee;
     text-decoration: underline;
 }
 
-a:visited.sim a:markdown {
+a:visited.sim {
     color: #551a8b;
     text-decoration: underline;
 }
 
-a:active.sim a:markdown {
+a:active.sim {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.markdown p a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+.markdown p a {
+    color: #551a8b;
+    text-decoration: underline;
+}
+
+.markdown p a {
     color: #ff0000;
     text-decoration: underline;
 }
