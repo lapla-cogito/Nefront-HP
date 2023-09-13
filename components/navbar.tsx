@@ -16,6 +16,25 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Link } from 'react-scroll';
 import React from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+
+const isRootPage = () => {
+    const router = useRouter();
+    const [isRoot, setIsRoot] = useState(false);
+
+    useEffect(() => {
+        if (router.isReady) {
+            const currentPath = router.asPath;
+            if (currentPath === '/') {
+                setIsRoot(true);
+            } else {
+                setIsRoot(false);
+            }
+        }
+    }, [router.isReady, router.asPath]);
+    return isRoot;
+};
 
 type Props = {
     href: string;
@@ -24,14 +43,24 @@ type Props = {
     children: any;
 };
 
-const LinkItem = ({ href, path, target, children }: Props) => {
-    return (
-        <Link activeClass="active" to={href} spy={true} smooth={true} duration={500}>
-            <p className="textWrapper">
-                <span className="pseudoElement pseudoElement__scale">{children}</span>
-            </p>
-        </Link>
-    );
+const LinkItem = ({ href, children }: Props) => {
+    if (isRootPage() === true) {
+        return (
+            <Link activeClass="active" to={href} spy={true} smooth={true} duration={500}>
+                <p className="textWrapper">
+                    <span className="pseudoElement pseudoElement__scale">{children}</span>
+                </p>
+            </Link>
+        );
+    } else {
+        return (
+            <a href={`https://www.nefront.com#${href}`}>
+                <p className="textWrapper">
+                    <span className="pseudoElement pseudoElement__scale">{children}</span>
+                </p>
+            </a>
+        );
+    }
 };
 
 const ContactLinkItem = ({ href, children }: Props) => {
@@ -43,16 +72,19 @@ const ContactLinkItem = ({ href, children }: Props) => {
 };
 
 const MenuLink = forwardRef((props, ref) => (
-    // @ts-ignore
     <a href={ref} target="_blank" rel="noreferrer noopener" {...props} />
 ));
 
 const HambItem = ({ href, path, target, children, ...props }: Props) => {
-    return (
-        <Link activeClass="active" to={href} spy={true} smooth={true} duration={500} {...props}>
-            {children}
-        </Link>
-    );
+    if (isRootPage() === true) {
+        return (
+            <Link activeClass="active" to={href} spy={true} smooth={true} duration={500} {...props}>
+                {children}
+            </Link>
+        );
+    } else {
+        return <a href={`https://www.nefront.com#${href}`}>{children}</a>;
+    }
 };
 
 const Navbar = (props: any) => {
@@ -69,7 +101,6 @@ const Navbar = (props: any) => {
             zIndex={2}
             {...props}
         >
-            {/* @ts-ignore */}
             <Container
                 display="flex"
                 p={2}
@@ -93,31 +124,24 @@ const Navbar = (props: any) => {
                     className="navi"
                     spacing={10}
                 >
-                    {/* @ts-ignore */}
                     <LinkItem href="about" path={path}>
                         About
                     </LinkItem>
-                    {/* @ts-ignore */}
                     <LinkItem href="product" path={path}>
                         Product
                     </LinkItem>
-                    {/* @ts-ignore */}
                     <LinkItem href="usecase" path={path}>
                         Usecase
                     </LinkItem>
-                    {/* @ts-ignore */}
                     <LinkItem href="news" path={path}>
                         News
                     </LinkItem>
-                    {/* @ts-ignore */}
                     <LinkItem href="members" path={path}>
                         Members
                     </LinkItem>
-                    {/* @ts-ignore */}
                     <LinkItem href="company" path={path}>
                         Company
                     </LinkItem>
-                    {/* @ts-ignore */}
                     <ContactLinkItem
                         href="https://forms.gle/HJXsrsk5myVrmEqC6"
                         isExternal={true}
@@ -127,7 +151,6 @@ const Navbar = (props: any) => {
                         Contact
                     </ContactLinkItem>
                 </Stack>
-                {/* @ts-ignore */}
                 <Box flex={1} align="right">
                     <Box ml={2} display={{ base: 'inline-block', lg: 'none' }}>
                         <Menu isLazy id="navbar-menu">
@@ -157,7 +180,6 @@ const Navbar = (props: any) => {
                                 <MenuItem as={HambItem} href="company">
                                     Company
                                 </MenuItem>
-                                {/* @ts-ignore */}
                                 <MenuItem as={MenuLink} href="https://forms.gle/HJXsrsk5myVrmEqC6">
                                     Contact
                                 </MenuItem>

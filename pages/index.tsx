@@ -4,7 +4,6 @@ import { GridItem } from 'components/grid-item';
 import Section from 'components/section';
 import Subsection from 'components/subsection';
 import Paragraph from 'components/paragraph';
-import News from 'components/news';
 import NewsHeading from 'components/newsheading';
 import { getNewPosts } from 'lib/posts';
 import TypeNefront from 'components/typeNefront';
@@ -224,19 +223,17 @@ const Home = ({ newPosts }: Props) => {
                     </Heading>
                     <NewsDiv>
                         <PostsList isHome post={newPosts}></PostsList>
-                    </NewsDiv>
-
-                    <NewsHeading
-                            title="茨城県学生ビジネスプランコンテスト2022でサザコーヒー賞と常陽銀行賞を受賞しました"
-                            date="2022年11月27日"
-                            link="https://www.scc.ibaraki.ac.jp/contest2022final/"
-                        ></NewsHeading>
-
                         <NewsHeading
-                            title="技育展2022に登壇しました"
-                            date="2022年9月10日"
+                            title="茨城県学生ビジネスプランコンテスト 2022 でサザコーヒー賞と常陽銀行賞を受賞しました"
+                            date="2022/11/27"
+                            link="https://www.scc.ibaraki.ac.jp/contest2022final/"
+                        />
+                        <NewsHeading
+                            title="技育展 2022 に登壇しました"
+                            date="2022/9/10"
                             link="https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4"
-                        ></NewsHeading>
+                        />
+                    </NewsDiv>
                 </Section>
 
                 <div id="members" />
