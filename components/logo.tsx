@@ -1,6 +1,8 @@
 import { Link } from 'react-scroll';
 import NefrontIcon from './icons/nefront';
 import styled from '@emotion/styled';
+import NextLink from 'next/link';
+import { isRootPage } from './navbar';
 
 const LogoBox = styled.span`
     font-weight: bold;
@@ -16,21 +18,31 @@ const LogoBox = styled.span`
 `;
 
 const Logo = () => {
-    return (
-        <Link
-            activeClass="active"
-            to="top"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-50}
-            style={{ cursor: 'pointer' }}
-        >
-            <LogoBox>
-                <NefrontIcon />
-            </LogoBox>
-        </Link>
-    );
+    if (isRootPage() === true) {
+        return (
+            <Link
+                activeClass="active"
+                to="top"
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-50}
+                style={{ cursor: 'pointer' }}
+            >
+                <LogoBox>
+                    <NefrontIcon />
+                </LogoBox>
+            </Link>
+        );
+    } else {
+        return (
+            <NextLink href={`https://nefront.com`} style={{ cursor: 'pointer' }}>
+                <LogoBox>
+                    <NefrontIcon />
+                </LogoBox>
+            </NextLink>
+        );
+    }
 };
 
 export default Logo;
