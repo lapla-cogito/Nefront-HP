@@ -27,10 +27,10 @@ const isRootPage = () => {
     useEffect(() => {
         if (router.isReady) {
             const currentPath = router.asPath;
-            if (currentPath === '/') {
-                setIsRoot(true);
-            } else {
+            if (currentPath.includes('/news') === true) {
                 setIsRoot(false);
+            } else {
+                setIsRoot(true);
             }
         }
     }, [router.isReady, router.asPath]);
