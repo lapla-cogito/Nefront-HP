@@ -41,12 +41,11 @@ const NewsDiv = styled.ul`
 
 const Home = ({ newPosts }: Props) => {
     return (
-        // @ts-ignore
         <Layout>
             <Container maxW="99999999px">
                 <div id="top" />
                 <div id="parent">
-                    <div id="hoge" />
+                    <Particles />
                     <TypeNefront />
                 </div>
 
@@ -359,7 +358,6 @@ const Home = ({ newPosts }: Props) => {
                         </a>
                     </Box>
                 </Section>
-                <Particles />
             </Container>
         </Layout>
     );

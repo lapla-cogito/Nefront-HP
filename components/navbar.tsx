@@ -20,7 +20,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import NextLink from 'next/link';
 
-const isRootPage = () => {
+export const isRootPage = () => {
     const router = useRouter();
     const [isRoot, setIsRoot] = useState(false);
 
