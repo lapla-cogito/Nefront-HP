@@ -307,17 +307,47 @@ canvas {
     user-select: none;
 }
 
-a:link.sim {
+a:link.sim a:markdown {
     color: #0000ee;
     text-decoration: underline;
 }
 
-a:visited.sim {
+a:visited.sim a:markdown {
     color: #551a8b;
     text-decoration: underline;
 }
 
-a:active.sim {
+a:active.sim a:markdown {
     color: #ff0000;
     text-decoration: underline;
+}
+
+.shr {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ptitle {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.pdate {
+    text-align: center;
+}
+
+.curp {
+    cursor: pointer;
+}
+
+.np {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }

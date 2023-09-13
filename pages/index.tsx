@@ -1,15 +1,18 @@
 import { Container, Heading, Box, SimpleGrid } from '@chakra-ui/react';
-import Layout from '../components/layouts/article';
-import { GridItem } from '../components/grid-item';
-import Section from '../components/section';
-import Subsection from '../components/subsection';
-import Paragraph from '../components/paragraph';
-import News from '../components/news';
-import NewsHeading from '../components/newsheading';
-import TypeNefront from '../components/typeNefront';
+import Layout from 'components/layouts/article';
+import { GridItem } from 'components/grid-item';
+import Section from 'components/section';
+import Subsection from 'components/subsection';
+import Paragraph from 'components/paragraph';
+import NewsHeading from 'components/newsheading';
+import { getNewPosts } from 'lib/posts';
+import TypeNefront from 'components/typeNefront';
 import ReactGA from 'react-ga4';
 import dynamic from 'next/dynamic';
 import React from 'react';
+import styled from '@emotion/styled';
+import PostsList from 'components/plist';
+import { Post } from 'types/posts';
 
 const imamuu = 'https://www.nefront.com/images/imamura.jpg';
 const hemmi = 'https://www.nefront.com/images/hemmi.jpg';
@@ -21,11 +24,22 @@ const dir = '/Nefront-HP';
 ReactGA.initialize('G-FBQ0WYNGEZ');
 ReactGA.send('pageview');
 
-const Particles = dynamic(() => import('../components/particles'), {
+const Particles = dynamic(() => import('components/particles'), {
     ssr: false,
 });
 
-const Home = () => {
+type Props = {
+    newPosts: Post;
+};
+
+const NewsDiv = styled.ul`
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 50px 0;
+`;
+
+const Home = ({ newPosts }: Props) => {
     return (
         // @ts-ignore
         <Layout>
@@ -207,43 +221,19 @@ const Home = () => {
                     <Heading as="h1" variant="section-title">
                         News
                     </Heading>
-                    <News>
+                    <NewsDiv>
+                        <PostsList isHome post={newPosts}></PostsList>
                         <NewsHeading
-                            title="TechBiz2023 支援対象技術に採択されました"
-                            date="2023年8月8日"
-                            link="https://dcaj-techbiz.com/news/selected-technologies-for-techbiz2023"
-                        ></NewsHeading>
-
-                        <NewsHeading
-                            title="令和4年度学生ビジネスプランコンテストでアイデア賞を受賞しました"
-                            date="2022年12月20日"
-                            link="http://www.gakusei-sc.or.jp/pdf/r3bis_4_1.pdf?221223"
-                        ></NewsHeading>
-
-                        <NewsHeading
-                            title="第19回キャンパスベンチャーグランプリ東京大会で日刊工業新聞賞を受賞しました"
-                            date="2022年12月1日"
-                            link="https://cvg.nikkan.co.jp/tokyo_backnumber/2022/"
-                        ></NewsHeading>
-
-                        <NewsHeading
-                            title="総務省主催の2022年度異能vationジェネレーションアワード部門にノミネートされました"
-                            date="2022年11月30日"
-                            link="https://www.inno.go.jp/result/2022/generation/nominate/"
-                        ></NewsHeading>
-
-                        <NewsHeading
-                            title="茨城県学生ビジネスプランコンテスト2022でサザコーヒー賞と常陽銀行賞を受賞しました"
-                            date="2022年11月27日"
+                            title="茨城県学生ビジネスプランコンテスト 2022 でサザコーヒー賞と常陽銀行賞を受賞しました"
+                            date="2022/11/27"
                             link="https://www.scc.ibaraki.ac.jp/contest2022final/"
-                        ></NewsHeading>
-
+                        />
                         <NewsHeading
-                            title="技育展2022に登壇しました"
-                            date="2022年9月10日"
+                            title="技育展 2022 に登壇しました"
+                            date="2022/9/10"
                             link="https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4"
-                        ></NewsHeading>
-                    </News>
+                        />
+                    </NewsDiv>
                 </Section>
 
                 <div id="members" />
@@ -376,3 +366,10 @@ const Home = () => {
 };
 
 export default Home;
+
+export const getStaticProps = async () => {
+    const newPosts = getNewPosts(['title', 'date', 'slug']);
+    return {
+        props: { newPosts },
+    };
+};

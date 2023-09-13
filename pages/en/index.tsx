@@ -11,6 +11,7 @@ import ReactGA from 'react-ga4';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import React from 'react';
+import styled from '@emotion/styled';
 
 const imamuu = 'https://www.nefront.com/images/imamura.jpg';
 const hemmi = 'https://www.nefront.com/images/hemmi.jpg';
@@ -25,6 +26,13 @@ ReactGA.send('pageview');
 const Particles = dynamic(() => import('../../components/particles'), {
     ssr: false,
 });
+
+const NewsDiv = styled.ul`
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 50px 0;
+`;
 
 const Home = () => {
     return (
@@ -225,7 +233,7 @@ const Home = () => {
                     <Heading as="h1" variant="section-title">
                         News
                     </Heading>
-                    <News>
+                    <NewsDiv>
                         <NewsHeading
                             title="Nominated for TechBiz2023"
                             date="2023/8/8"
@@ -261,7 +269,7 @@ const Home = () => {
                             date="2022/9/10"
                             link="https://talent.supporterz.jp/geekten/2022/exhibition.html#theme4"
                         ></NewsHeading>
-                    </News>
+                    </NewsDiv>
                 </Section>
 
                 <div id="members" />
