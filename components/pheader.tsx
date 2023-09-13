@@ -22,14 +22,14 @@ const PostHeader = ({ post }: Props) => {
                     title={post.title}
                     url={urlOrigin + '/news/' + post.slug}
                     via="NefrontInc"
-                    className="mx-2"
+                    className="m2"
                 >
                     <TwitterIcon size={40} round></TwitterIcon>
                 </TwitterShareButton>
                 <LineShareButton
                     title={post.title}
                     url={urlOrigin + '/news/' + post.slug}
-                    className="mx-2"
+                    className="m2"
                 >
                     <LineIcon size={40} round></LineIcon>
                 </LineShareButton>

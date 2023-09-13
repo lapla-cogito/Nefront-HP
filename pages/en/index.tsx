@@ -1,12 +1,11 @@
 import { Container, Heading, Box, SimpleGrid } from '@chakra-ui/react';
-import Layout from '../../components/layouts/article';
-import { GridItem } from '../../components/grid-item';
-import Section from '../../components/section';
-import Subsection from '../../components/subsection';
-import Paragraph from '../../components/paragraph';
-import News from '../../components/news';
-import NewsHeading from '../../components/newsheading';
-import TypeNefront from '../../components/typeNefront';
+import Layout from 'components/layouts/article';
+import { GridItem } from 'components/grid-item';
+import Section from 'components/section';
+import Subsection from 'components/subsection';
+import Paragraph from 'components/paragraph';
+import NewsHeading from 'components/newsheading';
+import TypeNefront from 'components/typeNefront';
 import ReactGA from 'react-ga4';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -36,7 +35,6 @@ const NewsDiv = styled.ul`
 
 const Home = () => {
     return (
-        // @ts-ignore
         <Layout>
             <Head>
                 <meta name="description" content="Nefront Inc. develops indoor AR cloud service" />
@@ -45,7 +43,7 @@ const Home = () => {
             <Container maxW="99999999px">
                 <div id="top" />
                 <div id="parent">
-                    <div id="hoge" />
+                    <Particles />
                     <TypeNefront />
                 </div>
 
@@ -422,7 +420,6 @@ const Home = () => {
                         </a>
                     </Box>
                 </Section>
-                <Particles />
             </Container>
         </Layout>
     );

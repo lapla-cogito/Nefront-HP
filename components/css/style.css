@@ -366,3 +366,8 @@ a:active.sim {
     margin-top: 8px;
     margin-bottom: 8px;
 }
+
+.m2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
