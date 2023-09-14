@@ -1172,6 +1172,9 @@ const Particles = () => {
                     if (pJS.interactivity.events.onclick.enable) {
                         switch (pJS.interactivity.events.onclick.mode) {
                             case 'push':
+                                if (pJS.particles.array.length > 200) {
+                                    break;
+                                }
                                 if (pJS.particles.move.enable) {
                                     pJS.fn.modes.pushParticles(
                                         pJS.interactivity.modes.push.particles_nb,
