@@ -1,8 +1,8 @@
-import Layout from '@/layouts/main';
 import { AnimatePresence } from 'framer-motion';
+import React from 'react';
 import Chakra from '@/chakra';
 import '@/css/style.css';
-import React from 'react';
+import Layout from '@/layouts/main';
 
 if (typeof window !== 'undefined') {
     window.history.scrollRestoration = 'manual';

@@ -1,9 +1,9 @@
-import Layout from '@/layouts/article';
 import { getAllPosts } from 'lib/posts';
 import { Post } from 'types/posts';
-import PostsList from '@/plist';
-import NewsHeading from '@/newsheading';
 import styled from '@emotion/styled';
+import Layout from '@/layouts/article';
+import NewsHeading from '@/newsheading';
+import PostsList from '@/plist';
 
 type Props = {
     allPosts: Post;

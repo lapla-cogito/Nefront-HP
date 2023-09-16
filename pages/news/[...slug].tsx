@@ -1,10 +1,10 @@
-import Layout from '@/layouts/article';
 import { getAllPosts, getPostBySlug } from 'lib/posts';
 import { marked } from 'marked';
 import { PostType } from 'types/posts';
-import PostHeader from '@/pheader';
-import PostBody from '@/pbody';
+import Layout from '@/layouts/article';
 import Meta from '@/meta';
+import PostBody from '@/pbody';
+import PostHeader from '@/pheader';
 
 type Props = {
     post: PostType;
