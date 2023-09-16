@@ -1,8 +1,8 @@
-import Layout from '../../components/layouts/article';
+import Layout from '@/layouts/article';
 import { getAllPosts } from 'lib/posts';
 import { Post } from 'types/posts';
-import PostsList from 'components/plist';
-import NewsHeading from 'components/newsheading';
+import PostsList from '@/plist';
+import NewsHeading from '@/newsheading';
 import styled from '@emotion/styled';
 
 type Props = {

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import PostsList from 'components/plist';
+import PostsList from '@/plist';
 import { Post } from 'types/posts';
 
 const NewsDiv = styled.ul`

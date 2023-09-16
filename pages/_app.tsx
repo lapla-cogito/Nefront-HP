@@ -1,7 +1,7 @@
-import Layout from '../components/layouts/main';
+import Layout from '@/layouts/main';
 import { AnimatePresence } from 'framer-motion';
-import Chakra from '../components/chakra';
-import '../components/css/style.css';
+import Chakra from '@/chakra';
+import '@/css/style.css';
 import React from 'react';
 
 if (typeof window !== 'undefined') {

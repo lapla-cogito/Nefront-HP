@@ -1,7 +1,7 @@
-import Meta from '../meta';
-import NavBar from '../navbar';
+import Meta from '@/meta';
+import NavBar from '@/navbar';
 import { Box, Container } from '@chakra-ui/react';
-import Footer from '../footer';
+import Footer from '@/footer';
 
 type Props = {
     children: any;

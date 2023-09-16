@@ -1,17 +1,17 @@
 import { Container, Heading, Box, SimpleGrid } from '@chakra-ui/react';
-import Layout from 'components/layouts/article';
-import { GridItem } from 'components/grid-item';
-import Section from 'components/section';
-import Subsection from 'components/subsection';
-import Paragraph from 'components/paragraph';
-import NewsHeading from 'components/newsheading';
+import Layout from '@/layouts/article';
+import { GridItem } from '@/grid-item';
+import Section from '@/section';
+import Subsection from '@/subsection';
+import Paragraph from '@/paragraph';
+import NewsHeading from '@/newsheading';
 import { getNewPosts } from 'lib/posts';
-import TypeNefront from 'components/typeNefront';
+import TypeNefront from '@/typeNefront';
 import ReactGA from 'react-ga4';
 import dynamic from 'next/dynamic';
 import React from 'react';
 import styled from '@emotion/styled';
-import PostsList from 'components/plist';
+import PostsList from '@/plist';
 import { Post } from 'types/posts';
 
 const imamuu = 'https://www.nefront.com/images/imamura.jpg';

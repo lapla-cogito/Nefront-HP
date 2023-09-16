@@ -1,11 +1,11 @@
 import { Container, Heading, Box, SimpleGrid } from '@chakra-ui/react';
-import Layout from 'components/layouts/article';
-import { GridItem } from 'components/grid-item';
-import Section from 'components/section';
-import Subsection from 'components/subsection';
-import Paragraph from 'components/paragraph';
-import NewsHeading from 'components/newsheading';
-import TypeNefront from 'components/typeNefront';
+import Layout from '@/layouts/article';
+import { GridItem } from '@/grid-item';
+import Section from '@/section';
+import Subsection from '@/subsection';
+import Paragraph from '@/paragraph';
+import NewsHeading from '@/newsheading';
+import TypeNefront from '@/typeNefront';
 import ReactGA from 'react-ga4';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
