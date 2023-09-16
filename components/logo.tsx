@@ -1,8 +1,8 @@
-import { Link } from 'react-scroll';
-import NefrontIcon from './icons/nefront';
-import styled from '@emotion/styled';
 import NextLink from 'next/link';
-import { isRootPage } from './navbar';
+import { Link } from 'react-scroll';
+import styled from '@emotion/styled';
+import NefrontIcon from '@/icons/nefront';
+import { isRootPage } from '@/navbar';
 
 const LogoBox = styled.span`
     font-weight: bold;

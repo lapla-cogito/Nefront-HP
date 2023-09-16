@@ -1,24 +1,24 @@
 // @ts-nocheck
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import { forwardRef } from 'react';
-import Logo from './logo';
+import React from 'react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
+import { HamburgerIcon } from '@chakra-ui/icons';
 import {
-    Container,
     Box,
-    Stack,
-    Heading,
+    Container,
     Flex,
+    Heading,
+    IconButton,
     Menu,
+    MenuButton,
     MenuItem,
     MenuList,
-    MenuButton,
-    IconButton,
+    Stack,
 } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
-import { Link } from 'react-scroll';
-import React from 'react';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import NextLink from 'next/link';
+import Logo from './logo';
 
 export const isRootPage = () => {
     const router = useRouter();

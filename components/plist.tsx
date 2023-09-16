@@ -1,7 +1,7 @@
+import { firstShowPostsNums, loadNum } from 'lib/constants';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Post } from 'types/posts';
-import { firstShowPostsNums, loadNum } from 'lib/constants';
 
 type Props = {
     isHome: boolean;

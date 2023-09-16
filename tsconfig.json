@@ -15,7 +15,7 @@
         "incremental": true,
         "baseUrl": "./",
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./components/*"]
         },
         "lib": ["dom", "dom.iterable", "esnext"]
     },

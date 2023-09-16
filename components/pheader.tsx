@@ -1,7 +1,7 @@
-import PostTitle from './ptitle';
-import { TwitterShareButton, LineShareButton, TwitterIcon, LineIcon } from 'react-share';
 import { useEffect, useState } from 'react';
+import { LineIcon, LineShareButton, TwitterIcon, TwitterShareButton } from 'react-share';
 import { PostType } from 'types/posts';
+import PostTitle from '@/ptitle';
 
 type Props = {
     post: PostType;

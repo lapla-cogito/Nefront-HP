@@ -1,6 +1,6 @@
-import NextLink from 'next/link';
 import Image from 'next/image';
-import { Box, Text, LinkBox } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { Box, LinkBox, Text } from '@chakra-ui/react';
 import { Global } from '@emotion/react';
 
 type Props = {

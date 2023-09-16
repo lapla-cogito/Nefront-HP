@@ -1,6 +1,6 @@
-import { Box, Center } from '@chakra-ui/react';
 import React from 'react';
 import TypeWriter from 'typewriter-effect';
+import { Box, Center } from '@chakra-ui/react';
 
 function TypeNefront() {
     return (

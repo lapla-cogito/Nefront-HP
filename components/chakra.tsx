@@ -1,5 +1,5 @@
+import theme from 'lib/theme';
 import { ChakraProvider } from '@chakra-ui/react';
-import theme from '../lib/theme';
 
 type Props = {
     children: any;

@@ -1,10 +1,10 @@
-import Layout from '../../components/layouts/article';
 import { getAllPosts, getPostBySlug } from 'lib/posts';
 import { marked } from 'marked';
 import { PostType } from 'types/posts';
-import PostHeader from 'components/pheader';
-import PostBody from 'components/pbody';
-import Meta from 'components/meta';
+import Layout from '@/layouts/article';
+import Meta from '@/meta';
+import PostBody from '@/pbody';
+import PostHeader from '@/pheader';
 
 type Props = {
     post: PostType;
@@ -30,7 +30,7 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-    const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'content', 'icon', 'topics']);
+    const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'content', 'topics']);
     const content = marked(post.content || '');
 
     return {
