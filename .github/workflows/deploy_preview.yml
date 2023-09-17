@@ -25,6 +25,8 @@ jobs:
             - name: Install dependencies
               run: yarn --immutable --immutable-cache
             - run: yarn export
+              env:
+                  URL_PREFIX: ${{ steps.preview_repo.outputs.name }}
             - name: Add nojekyll
               run: touch ./out/.nojekyll
 
