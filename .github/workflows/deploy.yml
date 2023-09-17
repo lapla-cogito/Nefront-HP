@@ -20,7 +20,8 @@ jobs:
               with:
                   node-version: '19'
 
-            - run: yarn --immutable --immutable-cache
+            - name: Install dependencies
+              run: yarn --immutable --immutable-cache
             - run: yarn run format:check
             - run: yarn export
             - name: Add nojekyll and CNAME
