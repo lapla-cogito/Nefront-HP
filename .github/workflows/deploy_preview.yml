@@ -9,7 +9,7 @@ jobs:
         permissions: write-all
         runs-on: ubuntu-latest
         steps:
-            - name: Cehckout files
+            - name: Checkout files
               uses: actions/checkout@v3
               with:
                   submodules: true

@@ -5,7 +5,7 @@ runs:
     steps:
         - name: Set repository owner name
           id: owner
-          run: echo "result=lapla_cogito" >> $GITHUB_OUTPUT
+          run: echo "result=lapla-cogito" >> $GITHUB_OUTPUT
           shell: bash
 
         - name: Set repository name
