@@ -18,7 +18,7 @@ import {
     MenuList,
     Stack,
 } from '@chakra-ui/react';
-import Logo from './logo';
+import Logo from '@/logo';
 
 export const isRootPage = () => {
     const router = useRouter();
@@ -27,7 +27,7 @@ export const isRootPage = () => {
     useEffect(() => {
         if (router.isReady) {
             const currentPath = router.asPath;
-            if (currentPath === '/' || currentPath.includes('/#') || currentPath==='/en') {
+            if (currentPath === '/' || currentPath.includes('/#') || currentPath === '/en') {
                 setIsRoot(true);
             } else {
                 setIsRoot(false);
