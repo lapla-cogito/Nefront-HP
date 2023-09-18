@@ -163,7 +163,11 @@ const Home = ({ newPosts }: Props) => {
 
                         <div className="flexdiv">
                             <Paragraph>
-                                <img src="/images/underground.jpg" alt="都市施設" className="imgs" />
+                                <img
+                                    src="/images/underground.jpg"
+                                    alt="都市施設"
+                                    className="imgs"
+                                />
                                 <Subsection>都市施設</Subsection>
                                 <br />
                                 施設内の誘導やおすすめ情報の提示が可能です。ショップやレストランのクーポン、ARコンテンツによる体験型展示も！
