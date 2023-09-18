@@ -1,3 +1,4 @@
+import { url } from 'lib/img';
 import Head from 'next/head';
 
 const Meta = () => {
@@ -9,12 +10,12 @@ const Meta = () => {
                 content="株式会社Nefrontは屋内ARクラウドサービスIndooARを開発しています。"
             />
             <meta name="author" content="Nefront Inc." />
-            <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
-            <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+            <link rel="shortcut icon" href={url('/favicon.svg')} type="image/svg+xml" />
+            <link rel="apple-touch-icon" href={url('apple-touch-icon.png')} sizes="180x180" />
             <meta property="og:site_name" content="Nefront Inc." />
             <meta name="og:title" content="Nefront Inc." />
             <meta property="og:type" content="website" />
-            <meta property="og:image" content="https://www.nefront.com/images/nefrontlogo.png" />
+            <meta property="og:image" content={url('/nefrontlogo.png')} />
             <title>株式会社Nefront</title>
         </Head>
     );
