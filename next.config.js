@@ -1,18 +1,14 @@
 /** @type {import('next').NextConfig} */
 
-// const prod = process.env.NODE_ENV === "production";
 const urlPrefix = process.env.URL_PREFIX ? '/' + process.env.URL_PREFIX : '';
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-    enabled: process.env.ANALYZE === 'true',
-});
-
-module.exports = withBundleAnalyzer({
+module.exports = {
+    output: 'export',
     staticPageGenerationTimeout: 1000,
     images: {
         loader: 'custom',
         path: '/components',
-        domains: ['laplaciancpp.github.io'],
+        domains: ['lapla-cogito.github.io'],
     },
     reactStrictMode: true,
     swcMinify: true,
@@ -23,6 +19,4 @@ module.exports = withBundleAnalyzer({
     assetPrefix: urlPrefix,
     basePath: urlPrefix,
     trailingSlash: true,
-    // assetPrefix: process.env.NODE_ENV === "production" ? "/Nefront-HP" : "",
-    // "process.env.BACKEND_URL": prod ? "/Nefront-HP" : "",
-});
+};
