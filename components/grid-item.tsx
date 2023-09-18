@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import NextLink from 'next/link';
+import { url } from 'lib/img';
 import { Box, LinkBox, Text } from '@chakra-ui/react';
 import { Global } from '@emotion/react';
 
@@ -13,8 +12,7 @@ type Props = {
 export const GridItem = ({ children, title, nefposition, thumbnail }: Props) => (
     <Box w="100%">
         <LinkBox>
-            {/*@ts-ignore*/}
-            <img src={thumbnail} alt={title} className="grid-item-thumbnail" align="center" />
+            <img src={url(thumbnail)} alt={title} className="grid-item-thumbnail" />
             <Text fontSize={25} textAlign="center">
                 {title}
             </Text>

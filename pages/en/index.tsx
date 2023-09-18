@@ -1,3 +1,4 @@
+import { url } from 'lib/img';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import React from 'react';
@@ -99,7 +100,7 @@ const Home = () => {
                         <div className="flexdiv">
                             <Paragraph>
                                 <img
-                                    src="/images/vps.svg"
+                                    src={url('/images/vps.svg')}
                                     style={{ display: 'block', margin: 'auto' }}
                                     alt="VPS"
                                     className="svgs"
@@ -113,7 +114,7 @@ const Home = () => {
                         <div className="flexdiv">
                             <Paragraph>
                                 <img
-                                    src="/images/reg.svg"
+                                    src={url('/images/reg.svg')}
                                     style={{ display: 'block', margin: 'auto' }}
                                     alt="Register items"
                                     className="svgs"
@@ -129,7 +130,7 @@ const Home = () => {
                         <div className="flexdiv">
                             <Paragraph>
                                 <img
-                                    src="/images/navigate.svg"
+                                    src={url('/images/navigate.svg')}
                                     style={{ display: 'block', margin: 'auto' }}
                                     alt="Navigation"
                                     className="svgs"
@@ -160,7 +161,11 @@ const Home = () => {
                     <div className="flex">
                         <div className="flexdiv">
                             <Paragraph>
-                                <img src="/images/super.jpg" alt="Retail stores" className="imgs" />
+                                <img
+                                    src={url('/images/super.jpg')}
+                                    alt="Retail stores"
+                                    className="imgs"
+                                />
                                 <Subsection>Retail stores</Subsection>
                                 <br />
                                 Guides users to the products they want and displays AR promotions
@@ -172,7 +177,7 @@ const Home = () => {
                         <div className="flexdiv">
                             <Paragraph>
                                 <img
-                                    src="/images/underground.jpg"
+                                    src={url('/images/underground.jpg')}
                                     alt="City Facilities"
                                     className="imgs"
                                 />
@@ -186,7 +191,11 @@ const Home = () => {
 
                         <div className="flexdiv">
                             <Paragraph>
-                                <img src="/images/repos.jpg" alt="Warehouses" className="imgs" />
+                                <img
+                                    src={url('/images/repos.jpg')}
+                                    alt="Warehouses"
+                                    className="imgs"
+                                />
                                 <Subsection>Warehouses</Subsection>
                                 <br />
                                 Picking products and parts can be made more efficient using IndooAR.
@@ -197,7 +206,11 @@ const Home = () => {
 
                         <div className="flexdiv">
                             <Paragraph>
-                                <img src="/images/exhibi.jpg" alt="Exhibitions" className="imgs" />
+                                <img
+                                    src={url('/images/exhibi.jpg')}
+                                    alt="Exhibitions"
+                                    className="imgs"
+                                />
                                 <Subsection>Exhibitions</Subsection>
                                 <br />
                                 It&apos;s easy to get lost in many booths at an exhibition. Identify

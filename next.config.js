@@ -6,8 +6,6 @@ module.exports = {
     output: 'export',
     staticPageGenerationTimeout: 1000,
     images: {
-        loader: 'custom',
-        path: '/components',
         domains: ['lapla-cogito.github.io'],
     },
     reactStrictMode: true,
@@ -19,4 +17,5 @@ module.exports = {
     assetPrefix: urlPrefix,
     basePath: urlPrefix,
     trailingSlash: true,
+    publicRuntimeConfig: { urlPrefix },
 };
