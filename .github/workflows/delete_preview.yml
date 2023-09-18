@@ -8,6 +8,7 @@ jobs:
     delete-preview:
         permissions: write-all
         runs-on: ubuntu-latest
+        timeout-minutes: 10
         steps:
             - name: Checkout files
               uses: actions/checkout@v3
@@ -18,7 +19,7 @@ jobs:
 
             - name: Wait for preview GitHub Pages
               run: >
-                  timeout 60s bash -c '
+                  timeout 300s bash -c '
                     until curl -I -f --no-progress-meter "$URL"; do
                       sleep 10;
                     done

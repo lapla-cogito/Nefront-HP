@@ -4,14 +4,13 @@ on:
     push:
         branches:
             - main
-    pull_request:
-        types: [opened, synchronize, reopened]
 
 jobs:
     deploy:
         runs-on: ubuntu-latest
         concurrency:
             group: ${{ github.workflow }}-${{ github.ref }}
+        timeout-minutes: 10
         steps:
             - uses: actions/checkout@v3
 
@@ -23,7 +22,7 @@ jobs:
             - name: Install dependencies
               run: yarn --immutable --immutable-cache
             - run: yarn run format:check
-            - run: yarn export
+            - run: yarn build
             - name: Add nojekyll and CNAME
               run: |
                   touch ./out/.nojekyll

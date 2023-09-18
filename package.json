@@ -2,34 +2,29 @@
     "name": "nefront-hp",
     "version": "3.2.1",
     "description": "",
-    "main": "index.js",
     "scripts": {
         "dev": "next dev",
-        "start": "next start",
-        "export": "next build && next export",
-        "build": "env NODE_ENV='production' next build",
+        "build": "next build",
         "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,yml,yaml,json,css,scss,md}\"",
-        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,yml,yaml,json,css,scss,md}\"",
-        "analyze": "ANALYZE=true next build"
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,yml,yaml,json,css,scss,md}\""
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/NefrontInc/Nefront-HP.git"
+        "url": "git+https://github.com/lapla-cogito/Nefront-HP.git"
     },
     "keywords": [],
     "author": "",
     "license": "UNLICENSED",
     "bugs": {
-        "url": "https://github.com/NefrontInc/Nefront-HP/issues"
+        "url": "https://github.com/lapla-cogito/Nefront-HP/issues"
     },
-    "homepage": "https://github.com/NefrontInc/Nefront-HP#readme",
+    "homepage": "https://github.com/lapla-cogito/Nefront-HP#readme",
     "dependencies": {
         "@chakra-ui/icons": "^2.0.17",
         "@chakra-ui/react": "^2.5.0",
         "@chakra-ui/system": "^2.6.1",
         "@emotion/react": "^11.10.5",
         "@emotion/styled": "^11.10.5",
-        "@next/bundle-analyzer": "^13.2.4",
         "@types/css-modules": "^1.0.3",
         "@types/node": "^20.6.0",
         "@types/react": "^18.0.28",

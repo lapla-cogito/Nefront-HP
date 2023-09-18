@@ -1,4 +1,3 @@
-// @ts-nocheck
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { forwardRef } from 'react';
@@ -40,7 +39,7 @@ export const isRootPage = () => {
 type Props = {
     href: string;
     path: string;
-    target: string;
+    style?: any;
     children: any;
 };
 
@@ -72,11 +71,13 @@ const ContactLinkItem = ({ href, children }: Props) => {
     );
 };
 
-const MenuLink = forwardRef((props, ref) => (
-    <a href={ref} target="_blank" rel="noreferrer noopener" {...props} />
-));
+const MenuLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement>>(
+    (props, ref) => (
+        <a href={props.href} target="_blank" rel="noreferrer noopener" {...props} ref={ref} />
+    )
+);
 
-const HambItem = ({ href, path, target, children, ...props }: Props) => {
+const HambItem = ({ href, path, children, ...props }: Props) => {
     if (isRootPage() === true) {
         return (
             <Link activeClass="active" to={href} spy={true} smooth={true} duration={500} {...props}>
@@ -106,14 +107,7 @@ const Navbar = (props: any) => {
             zIndex={2}
             {...props}
         >
-            <Container
-                display="flex"
-                p={2}
-                maxW="9999px"
-                wrap="wrap"
-                align="center"
-                justify="space-between"
-            >
+            <Container display="flex" p={2} maxW="9999px">
                 <Flex align="center" mr={5}>
                     <Heading as="h1" size="lg" letterSpacing={'tighter'}>
                         <Logo />
@@ -149,13 +143,13 @@ const Navbar = (props: any) => {
                     </LinkItem>
                     <ContactLinkItem
                         href="https://forms.gle/HJXsrsk5myVrmEqC6"
-                        isExternal={true}
                         path={path}
                         style={{ borderRadius: '10px' }}
                     >
                         Contact
                     </ContactLinkItem>
                 </Stack>
+                {/*@ts-ignore*/}
                 <Box flex={1} align="right">
                     <Box ml={2} display={{ base: 'inline-block', lg: 'none' }}>
                         <Menu isLazy id="navbar-menu">
