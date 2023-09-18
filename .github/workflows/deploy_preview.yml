@@ -16,20 +16,7 @@ jobs:
             - name: Get preview repository name
               uses: ./.github/actions/get_preview_repo
               id: preview_repo
-
-            - name: Setup Node
-              uses: actions/setup-node@v3
-              with:
-                  node-version: '19'
-            - name: Install dependencies
-              run: yarn --immutable --immutable-cache
-            - run: yarn run format:check
-            - run: yarn build
-              env:
-                  URL_PREFIX: ${{ steps.preview_repo.outputs.name }}
-            - name: Add nojekyll
-              run: touch ./out/.nojekyll
-
+            
             - name: Check if new repository is needed
               id: new_repo
               run: echo "result=$new_repo" >> $GITHUB_OUTPUT
@@ -46,6 +33,19 @@ jobs:
                   private: 'true'
               env:
                   GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '19'
+            - name: Install dependencies
+              run: yarn --immutable --immutable-cache
+            - run: yarn run format:check
+            - run: yarn build
+              env:
+                  URL_PREFIX: ${{ steps.preview_repo.outputs.name }}
+            - name: Add nojekyll
+              run: touch ./out/.nojekyll
 
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v3
