@@ -160,11 +160,7 @@ const Home = () => {
                     <div className="flex">
                         <div className="flexdiv">
                             <Paragraph>
-                                <img
-                                    src="https://www.nefront.com/images/super.jpg"
-                                    alt="Retail stores"
-                                    className="imgs"
-                                />
+                                <img src="images/super.jpg" alt="Retail stores" className="imgs" />
                                 <Subsection>Retail stores</Subsection>
                                 <br />
                                 Guides users to the products they want and displays AR promotions
@@ -176,7 +172,7 @@ const Home = () => {
                         <div className="flexdiv">
                             <Paragraph>
                                 <img
-                                    src="https://www.nefront.com/images/underground.jpg"
+                                    src="images/underground.jpg"
                                     alt="City Facilities"
                                     className="imgs"
                                 />
@@ -190,11 +186,7 @@ const Home = () => {
 
                         <div className="flexdiv">
                             <Paragraph>
-                                <img
-                                    src="https://www.nefront.com/images/repos.jpg"
-                                    alt="Warehouses"
-                                    className="imgs"
-                                />
+                                <img src="images/repos.jpg" alt="Warehouses" className="imgs" />
                                 <Subsection>Warehouses</Subsection>
                                 <br />
                                 Picking products and parts can be made more efficient using IndooAR.
@@ -205,11 +197,7 @@ const Home = () => {
 
                         <div className="flexdiv">
                             <Paragraph>
-                                <img
-                                    src="https://www.nefront.com/images/exhibi.jpg"
-                                    alt="Exhibitions"
-                                    className="imgs"
-                                />
+                                <img src="images/exhibi.jpg" alt="Exhibitions" className="imgs" />
                                 <Subsection>Exhibitions</Subsection>
                                 <br />
                                 It&apos;s easy to get lost in many booths at an exhibition. Identify

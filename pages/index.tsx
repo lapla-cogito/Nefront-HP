@@ -153,11 +153,7 @@ const Home = ({ newPosts }: Props) => {
                     <div className="flex">
                         <div className="flexdiv">
                             <Paragraph>
-                                <img
-                                    src="https://www.nefront.com/images/super.jpg"
-                                    alt="小売店"
-                                    className="imgs"
-                                />
+                                <img src="images/super.jpg" alt="小売店" className="imgs" />
                                 <Subsection>小売店</Subsection>
                                 <br />
                                 欲しい商品への誘導や売り場に合わせたARプロモーションを表示。キャラクターと買い物も！？
@@ -167,11 +163,7 @@ const Home = ({ newPosts }: Props) => {
 
                         <div className="flexdiv">
                             <Paragraph>
-                                <img
-                                    src="https://www.nefront.com/images/underground.jpg"
-                                    alt="都市施設"
-                                    className="imgs"
-                                />
+                                <img src="images/underground.jpg" alt="都市施設" className="imgs" />
                                 <Subsection>都市施設</Subsection>
                                 <br />
                                 施設内の誘導やおすすめ情報の提示が可能です。ショップやレストランのクーポン、ARコンテンツによる体験型展示も！
@@ -181,11 +173,7 @@ const Home = ({ newPosts }: Props) => {
 
                         <div className="flexdiv">
                             <Paragraph>
-                                <img
-                                    src="https://www.nefront.com/images/repos.jpg"
-                                    alt="倉庫"
-                                    className="imgs"
-                                />
+                                <img src="images/repos.jpg" alt="倉庫" className="imgs" />
                                 <Subsection>倉庫</Subsection>
                                 <br />
                                 商品や部品の棚入れ、ピッキングを効率化できます。初心者でも作業にかかる時間やミスを削減へ！
@@ -195,11 +183,7 @@ const Home = ({ newPosts }: Props) => {
 
                         <div className="flexdiv">
                             <Paragraph>
-                                <img
-                                    src="https://www.nefront.com/images/exhibi.jpg"
-                                    alt="展示会"
-                                    className="imgs"
-                                />
+                                <img src="images/exhibi.jpg" alt="展示会" className="imgs" />
                                 <Subsection>展示会</Subsection>
                                 <br />
                                 たくさんのブースがあって迷いがちな展示会会場。今いる場所を特定し、目的地までのスムーズな案内を実現します！
