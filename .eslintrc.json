@@ -36,9 +36,9 @@
         "window": true,
         "process": true
     },
-    "settings":{
-        "react":{
-            "version":"detect"
+    "settings": {
+        "react": {
+            "version": "detect"
         }
     }
 }
