@@ -34,26 +34,6 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
-            - name: Setup Node
-              uses: actions/setup-node@v3
-              with:
-                  node-version: '19'
-            - name: Install dependencies
-              run: yarn --immutable --immutable-cache
-            - run: yarn run format:check
-            - run: yarn build
-              env:
-                  URL_PREFIX: ${{ steps.preview_repo.outputs.name }}
-            - name: Add nojekyll
-              run: touch ./out/.nojekyll
-
-            - name: Deploy
-              uses: peaceiris/actions-gh-pages@v3
-              with:
-                  personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-                  external_repository: ${{ steps.preview_repo.outputs.full_name }}
-                  publish_dir: ./out
-
             - name: Enable GitHub Pages
               if: steps.new_repo.outputs.result == 'true'
               uses: octokit/request-action@v2.x
@@ -76,3 +56,23 @@ jobs:
                       "😎 Preview URL: ${{ steps.preview_repo.outputs.gh_page_url }}"
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '19'
+            - name: Install dependencies
+              run: yarn --immutable --immutable-cache
+            - run: yarn run format:check
+            - run: yarn build
+              env:
+                  URL_PREFIX: ${{ steps.preview_repo.outputs.name }}
+            - name: Add nojekyll
+              run: touch ./out/.nojekyll
+
+            - name: Deploy
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+                  external_repository: ${{ steps.preview_repo.outputs.full_name }}
+                  publish_dir: ./out
