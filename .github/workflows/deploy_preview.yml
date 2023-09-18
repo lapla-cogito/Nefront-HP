@@ -16,7 +16,7 @@ jobs:
             - name: Get preview repository name
               uses: ./.github/actions/get_preview_repo
               id: preview_repo
-            
+
             - name: Check if new repository is needed
               id: new_repo
               run: echo "result=$new_repo" >> $GITHUB_OUTPUT
