@@ -12,10 +12,8 @@ jobs:
         steps:
             - name: Checkout files
               uses: actions/checkout@v3
-              with:
-                  submodules: true
 
-            - name: Get preview repo name
+            - name: Get preview repository name
               uses: ./.github/actions/get_preview_repo
               id: preview_repo
 
@@ -25,7 +23,8 @@ jobs:
                   node-version: '19'
             - name: Install dependencies
               run: yarn --immutable --immutable-cache
-            - run: yarn export
+            - run: yarn run format:check
+            - run: yarn build
               env:
                   URL_PREFIX: ${{ steps.preview_repo.outputs.name }}
             - name: Add nojekyll

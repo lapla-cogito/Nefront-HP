@@ -4,8 +4,6 @@ on:
     push:
         branches:
             - main
-    pull_request:
-        types: [opened, synchronize, reopened]
 
 jobs:
     deploy:
@@ -24,7 +22,7 @@ jobs:
             - name: Install dependencies
               run: yarn --immutable --immutable-cache
             - run: yarn run format:check
-            - run: yarn export
+            - run: yarn build
             - name: Add nojekyll and CNAME
               run: |
                   touch ./out/.nojekyll
