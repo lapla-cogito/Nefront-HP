@@ -26,7 +26,7 @@ export const isRootPage = () => {
     useEffect(() => {
         if (router.isReady) {
             const currentPath = router.asPath;
-            if (currentPath === '/' || currentPath.includes('/#') || currentPath === '/en') {
+            if (currentPath === '/' || currentPath.includes('/#') || currentPath.includes('/en')) {
                 setIsRoot(true);
             } else {
                 setIsRoot(false);
