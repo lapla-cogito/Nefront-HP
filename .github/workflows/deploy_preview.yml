@@ -70,7 +70,7 @@ jobs:
             - name: Check if pages is enabled
               id: pages_enabled
               run: |
-                  TOKEN=${{secrets.PERSONAL_ACCESS_TOKEN}}}
+                  TOKEN=${{secrets.PERSONAL_ACCESS_TOKEN}}
                   REPO=${{steps.preview_repo.outputs.full_name}}
                   echo GH_PAGES=$( \
                   curl -L -H "Accept: application/vnd.github+json" \
