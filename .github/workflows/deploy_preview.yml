@@ -6,7 +6,7 @@ on:
 
 jobs:
     deploy-preview:
-        permissions: write-all
+        permissions: read-all|write-all
         runs-on: ubuntu-latest
         timeout-minutes: 10
         steps:
