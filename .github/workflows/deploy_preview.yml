@@ -11,7 +11,7 @@ jobs:
         timeout-minutes: 10
         steps:
             - name: Checkout files
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Get preview repository name
               uses: ./.github/actions/get_preview_repo
