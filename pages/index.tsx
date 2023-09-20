@@ -1,7 +1,6 @@
 import { url } from 'lib/img';
 import { getNewPosts } from 'lib/posts';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 import React from 'react';
 import ReactGA from 'react-ga4';
 import { Post } from 'types/posts';
@@ -14,7 +13,6 @@ import Paragraph from '@/paragraph';
 import PostsList from '@/plist';
 import Section from '@/section';
 import Subsection from '@/subsection';
-import TypeNefront from '@/typeNefront';
 
 const imamuu = '/images/imamura.jpg';
 const hemmi = '/images/hemmi.jpg';
@@ -27,6 +25,7 @@ ReactGA.initialize('G-FBQ0WYNGEZ');
 ReactGA.send('pageview');
 
 const Particles = dynamic(() => import('components/particles'), {
+    loading: () => <div id="hoge" />,
     ssr: false,
 });
 
@@ -48,7 +47,6 @@ const Home = ({ newPosts }: Props) => {
                 <div id="top" />
                 <div id="parent">
                     <Particles />
-                    <TypeNefront />
                 </div>
 
                 <div
