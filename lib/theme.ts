@@ -30,6 +30,7 @@ const components = {
 
 const fonts = {
     heading: "'M PLUS Rounded 1c'",
+    body: "'Noto Sans JP'",
 };
 
 const colors = {
