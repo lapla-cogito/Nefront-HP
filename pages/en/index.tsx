@@ -11,7 +11,6 @@ import NewsHeading from '@/newsheading';
 import Paragraph from '@/paragraph';
 import Section from '@/section';
 import Subsection from '@/subsection';
-import TypeNefront from '@/typeNefront';
 
 const imamuu = '/images/imamura.jpg';
 const hemmi = '/images/hemmi.jpg';
@@ -24,6 +23,7 @@ ReactGA.initialize('G-FBQ0WYNGEZ');
 ReactGA.send('pageview');
 
 const Particles = dynamic(() => import('../../components/particles'), {
+    loading: () => <div id="hoge" />,
     ssr: false,
 });
 
@@ -45,7 +45,6 @@ const Home = () => {
                 <div id="top" />
                 <div id="parent">
                     <Particles />
-                    <TypeNefront />
                 </div>
 
                 <div
