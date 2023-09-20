@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import TypeNefront from '@/typeNefront';
 
 const Particles = () => {
     useEffect(() => {
@@ -1551,7 +1552,12 @@ const Particles = () => {
         xhr.send();
     };
 
-    return <div id="hoge" />;
+    return (
+        <span>
+            <div id="hoge" />
+            <TypeNefront />
+        </span>
+    );
 };
 
 export default Particles;
