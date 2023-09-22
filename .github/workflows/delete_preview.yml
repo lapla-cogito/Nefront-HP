@@ -18,6 +18,7 @@ jobs:
               id: preview_repo
 
             - name: Wait for preview GitHub Pages
+              continue-on-error: true
               run: >
                   timeout 300s bash -c '
                     until curl -I -f --no-progress-meter "$URL"; do
