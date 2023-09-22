@@ -1,3 +1,4 @@
+import { url } from 'lib/img';
 import { useEffect, useState } from 'react';
 import { LineIcon, LineShareButton, TwitterIcon, TwitterShareButton } from 'react-share';
 import { PostType } from 'types/posts';
@@ -16,6 +17,17 @@ const PostHeader = ({ post }: Props) => {
 
     return (
         <section className="mt-14 mb-8">
+            {post.thumbnail !== '' && (
+                <img
+                    src={url(post.thumbnail)}
+                    style={{
+                        display: 'block',
+                        margin: '0 auto',
+                        textAlign: 'center',
+                        verticalAlign: 'middle',
+                    }}
+                />
+            )}
             <PostTitle title={post.title} date={post.date}></PostTitle>
             <div className="shr">
                 <TwitterShareButton
