@@ -5,6 +5,8 @@ export type PostType = {
     slug: string;
     title: string;
     date: string;
+    path: string;
+    thumbnail: string;
     content: string;
 };
 

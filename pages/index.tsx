@@ -358,7 +358,7 @@ const Home = ({ newPosts }: Props) => {
 export default Home;
 
 export const getStaticProps = async () => {
-    const newPosts = getNewPosts(['title', 'date', 'slug']);
+    const newPosts = getNewPosts(['title', 'date', 'slug', 'path']);
     return {
         props: { newPosts },
     };

@@ -34,10 +34,10 @@ const PostsList = ({ isHome, post }: Props) => {
     return (
         <section>
             <div>
-                {showPosts.map(({ date, title, slug }) => (
+                {showPosts.map(({ date, title, slug, path }) => (
                     <div key={slug}>
                         <li className="news_list_item">
-                            <Link as={`/news/${slug}`} href="/news/[...slug]" scroll={false}>
+                            <Link as={`/news/${path}`} href="/news/[...slug]" scroll={false}>
                                 <div className="news_list_date">
                                     <p className="news_item">
                                         <time>{date}</time>

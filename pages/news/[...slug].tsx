@@ -30,7 +30,7 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-    const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'content', 'topics']);
+    const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'path', 'thumbnail','content']);
     const content = marked(post.content || '');
 
     return {
@@ -44,13 +44,13 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-    const posts = getAllPosts(['slug']);
+    const posts = getAllPosts(['slug','path']);
 
     return {
         paths: posts.postArray.map((post) => {
             return {
                 params: {
-                    slug: post.slug.replace(/\.md$/, '').split('/'),
+                    slug: post.path.split('/'),
                 },
             };
         }),
