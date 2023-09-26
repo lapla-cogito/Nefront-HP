@@ -52,9 +52,24 @@ const PostsList = ({ isHome, post }: Props) => {
                 {isHome ? (
                     <>
                         {post.postsLength > 5 && (
-                            <div className="mt-10">
-                                <Link href="/news" className="curp" scroll={false}>
-                                    More
+                            <div style={{ textAlign: 'center' }}>
+                                <Link href="/news" className="more" scroll={false}>
+                                    <svg width="300" height="62">
+                                        <linearGradient id="grad3">
+                                            <stop offset="0%" stopColor="#3054d6" />
+                                            <stop offset="100%" stopColor="#3054d6" />
+                                        </linearGradient>
+                                        <rect
+                                            x="5"
+                                            y="5"
+                                            rx="25"
+                                            fill="none"
+                                            stroke="url(#grad3)"
+                                            width="266"
+                                            height="50"
+                                        ></rect>
+                                    </svg>
+                                    <span> More</span>
                                 </Link>
                             </div>
                         )}
@@ -62,8 +77,8 @@ const PostsList = ({ isHome, post }: Props) => {
                 ) : (
                     <>
                         {!isEnd && (
-                            <button onClick={displayMore} className="curp">
-                                もっとみる
+                            <button onClick={displayMore} className="more">
+                                More
                             </button>
                         )}
                     </>
