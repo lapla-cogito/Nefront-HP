@@ -374,3 +374,36 @@ a:active.sim {
 .ce {
     text-align: center;
 }
+
+.more {
+    margin-top: 60px;
+    position: relative;
+    display: inline-block;
+    width: 277px;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 17px;
+}
+.more svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.more svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+.more:hover svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
+}
