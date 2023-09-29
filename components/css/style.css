@@ -111,6 +111,11 @@ body {
     margin: auto;
 }
 
+.thb {
+    height: 322px;
+    width: auto;
+}
+
 .svgs {
     height: 140px;
     width: auto;
