@@ -6,6 +6,7 @@ export type PostType = {
     title: string;
     date: string;
     content: string;
+    thumbnail: string;
 };
 
 export type Post = {
