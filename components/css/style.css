@@ -112,7 +112,7 @@ body {
 }
 
 .thb {
-    height: 322px;
+    height: min(322px, 50vw);
     width: auto;
 }
 
