@@ -4,7 +4,7 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
     return (
-        <div className="znc my-8 px-6 text-left">
+        <div style={{ width: '75%', margin: '0 auto' }}>
             <div className="markdown" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
     );

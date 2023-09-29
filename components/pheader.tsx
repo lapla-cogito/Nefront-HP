@@ -26,6 +26,7 @@ const PostHeader = ({ post }: Props) => {
                         textAlign: 'center',
                         verticalAlign: 'middle',
                     }}
+                    className="thb"
                 />
             )}
             <PostTitle title={post.title} date={post.date}></PostTitle>
