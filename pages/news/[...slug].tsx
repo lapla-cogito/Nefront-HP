@@ -30,7 +30,7 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-    const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'content', 'topics']);
+    const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'content', 'thumbnail']);
     const content = marked(post.content || '');
 
     return {
