@@ -3594,11 +3594,11 @@ __metadata:
   linkType: hard
 
 "@types/react-scroll@npm:^1.8.7":
-  version: 1.8.7
-  resolution: "@types/react-scroll@npm:1.8.7"
+  version: 1.8.8
+  resolution: "@types/react-scroll@npm:1.8.8"
   dependencies:
     "@types/react": "*"
-  checksum: 1308d2d24bcd9e2e78eaaff3b29ed6df59d903c32d0e0d94536ade4b34f544d09737a18798e38ed1c613d2b8b634f83736a64ef55a072686dacdca1e94f4cc05
+  checksum: 9f99d9518651b021cda8f9bf4f4c00f110914496498cb4780d04662fc5422bd8926ba595675ca04870f6ae6350c5063963923932f8c5a2dbeffcac89801250dc
   languageName: node
   linkType: hard
 
@@ -9298,15 +9298,15 @@ __metadata:
   linkType: hard
 
 "react-scroll@npm:^1.8.9":
-  version: 1.8.9
-  resolution: "react-scroll@npm:1.8.9"
+  version: 1.9.0
+  resolution: "react-scroll@npm:1.9.0"
   dependencies:
     lodash.throttle: ^4.1.1
     prop-types: ^15.7.2
   peerDependencies:
     react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 534ea65713a59ef7ddf623e38058220b654730352b624371cb2250bcf99784806b4564f3fa9295c969980e227e3de15903d95e069f9a3ca520ff0c0c1fb2e362
+  checksum: b84427d090600d9107adb57b93c8c059f9e36dcb4919660cd7d0547a6ce816b179bc54bc2941ff7d2497b2295f1a3e92dd0974c0dcedfde2fa5c93966441271e
   languageName: node
   linkType: hard
 
