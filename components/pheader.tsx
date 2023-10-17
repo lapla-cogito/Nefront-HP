@@ -27,6 +27,7 @@ const PostHeader = ({ post }: Props) => {
                         verticalAlign: 'middle',
                     }}
                     className="thb"
+                    alt="Thumbnail of this article"
                 />
             )}
             <PostTitle title={post.title} date={post.date}></PostTitle>
