@@ -3494,11 +3494,11 @@ __metadata:
   linkType: hard
 
 "@types/react-scroll@npm:^1.8.7":
-  version: 1.8.8
-  resolution: "@types/react-scroll@npm:1.8.8"
+  version: 1.8.10
+  resolution: "@types/react-scroll@npm:1.8.10"
   dependencies:
     "@types/react": "npm:*"
-  checksum: 9f99d9518651b021cda8f9bf4f4c00f110914496498cb4780d04662fc5422bd8926ba595675ca04870f6ae6350c5063963923932f8c5a2dbeffcac89801250dc
+  checksum: 056625e1a4b0572bf0570bf82fc0bf2db756370e8711167ff41e144c684c177673007a1ae7ba56d202f695489e8f5f5212df38a54e73a8d626adf82699cd436d
   languageName: node
   linkType: hard
 
