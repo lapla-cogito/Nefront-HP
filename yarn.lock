@@ -3400,9 +3400,9 @@ __metadata:
   linkType: hard
 
 "@types/css-modules@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@types/css-modules@npm:1.0.3"
-  checksum: 379a005fa11c2cba8452e72873b1a6bef6ee28757bf82d50c6825d8028afb7c8f1f0e3d307982baa794edf659fcafe37ba4b5557e0cd731c639f253f2d324738
+  version: 1.0.5
+  resolution: "@types/css-modules@npm:1.0.5"
+  checksum: c03c110f5af29e2d37594467ceb79e944d61fd22fa84dd057e0f83803bf11e94f6f3d7153695b2baf9a79a99dc6521bda54920d8c06690ed26cf7e1001f88a5c
   languageName: node
   linkType: hard
 
