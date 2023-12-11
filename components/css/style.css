@@ -412,3 +412,10 @@ a:active.sim {
     stroke-dasharray: 196, 543;
     stroke-dashoffset: 437;
 }
+
+.markdown img {
+    display: block;
+    width: max(30vw, 500px);
+    align-content: center;
+    margin: auto;
+}
