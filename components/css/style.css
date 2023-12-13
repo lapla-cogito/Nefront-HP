@@ -341,6 +341,13 @@ a:active.sim {
     text-decoration: underline;
 }
 
+.markdown img {
+    width: min(100%, 30vw);
+    height: auto;
+    margin: auto;
+    padding: 20px;
+}
+
 .shr {
     text-align: center;
     margin-top: 20px;
