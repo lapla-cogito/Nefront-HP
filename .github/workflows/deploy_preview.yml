@@ -91,6 +91,7 @@ jobs:
 
             - name: Enable GitHub Pages
               uses: octokit/request-action@v2.x
+              continue-on-error: true
               if: steps.pages_enabled.outputs.GH_PAGES == '"Not Found"'
               with:
                   route: POST /repos/{repo_name}/pages
