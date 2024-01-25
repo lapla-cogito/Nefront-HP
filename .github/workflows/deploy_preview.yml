@@ -53,7 +53,7 @@ jobs:
                   node-version: '19'
                   cache: yarn
             - name: Use Github Action cache
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               if: ${{ github.actor != 'renovate[bot]' }}
               with:
                   path: ${{ github.workspace }}/.next/cache
