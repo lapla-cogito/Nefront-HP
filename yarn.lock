@@ -9115,14 +9115,14 @@ __metadata:
   linkType: hard
 
 "react-share@npm:^5.0.0":
-  version: 5.0.3
-  resolution: "react-share@npm:5.0.3"
+  version: 5.1.0
+  resolution: "react-share@npm:5.1.0"
   dependencies:
     classnames: "npm:^2.3.2"
     jsonp: "npm:^0.2.1"
   peerDependencies:
     react: ^17 || ^18
-  checksum: 10/9aac01ea619659d9b560418d44c9bea328e3e9ad6b84649e0f481660ea73bd12a747924bab65d1e0774b1c54397e94e36334ad919f0cdc771b044448afdf3852
+  checksum: 10/3dca358288e93ece189143ac7bd3330d89d3d56bdcc45e0cc9f8e33e1da67be6b36009493a3b95f54f816e092ba19ab41cf160c3d37b67e2ec93a9bd319c7a59
   languageName: node
   linkType: hard
 
