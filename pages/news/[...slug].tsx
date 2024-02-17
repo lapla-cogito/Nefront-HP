@@ -1,3 +1,5 @@
+import { JSDOM } from 'jsdom';
+import { url } from 'lib/img';
 import { getAllPosts, getPostBySlug } from 'lib/posts';
 import { marked } from 'marked';
 import { PostType } from 'types/posts';
@@ -33,11 +35,20 @@ export async function getStaticProps({ params }: Params) {
     const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'content', 'thumbnail']);
     const content = marked(post.content || '');
 
+    const dom = new JSDOM(content.toString());
+    const images = dom.window.document.querySelectorAll<HTMLElement>('img');
+    images.forEach((image: any) => {
+        const src = image.getAttribute('src');
+        if (src) {
+            image.setAttribute('src', url(src));
+        }
+    });
+
     return {
         props: {
             post: {
                 ...post,
-                content,
+                content: dom.serialize(),
             },
         },
     };

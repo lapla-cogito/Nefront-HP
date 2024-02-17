@@ -3,6 +3,6 @@ node_modules
 .gitignore
 out
 package.json
-news
+news/*.md
 .yarnrc.yml
 
