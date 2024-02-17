@@ -35,6 +35,7 @@
         "eslint-config-next": "^14.0.0",
         "framer-motion": "^11.0.0",
         "gray-matter": "^4.0.3",
+        "jsdom": "^24.0.0",
         "marked": "^12.0.0",
         "next": "^14.0.0",
         "react": "^18.2.0",
@@ -51,6 +52,7 @@
     },
     "devDependencies": {
         "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+        "@types/jsdom": "^21.1.6",
         "eslint": "^8.34.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-react": "^7.32.2",
