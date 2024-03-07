@@ -276,19 +276,6 @@ const Home = ({ newPosts }: Props) => {
                             </a>
                             <br />
                         </GridItem>
-                        <GridItem
-                            title="渡邉蒼太"
-                            nefposition="執行役員 VP of Engineering"
-                            thumbnail={asuto}
-                        >
-                            <br />
-                            静岡県立富士高校在学中に電子工作を趣味で行いはじめる。
-                            <br />
-                            その後、筑波大学情報科学類へ進学し、スマートフォンアプリのフロントエンド開発やロボットコンテストでソフトウェア開発を担当。
-                            <br />
-                            株式会社Techouseの開発インターンでRailsでのバックエンド開発も務める。
-                            <br />
-                        </GridItem>
                     </SimpleGrid>
                 </Section>
 

@@ -352,24 +352,6 @@ const Home = () => {
                             </a>
                             <br />
                         </GridItem>
-                        <GridItem
-                            title="Sota Watanabe"
-                            nefposition="Executive Officer, VP of Engineering"
-                            thumbnail={asuto}
-                        >
-                            <br />
-                            While a student at Fuji High School in Shizuoka Prefecture, he began
-                            doing electronic work as a hobby.
-                            <br />
-                            He then went on to study at College of Information Science at the
-                            University of Tsukuba, where he was in charge of front-end development
-                            for a smartphone application and software development for a robotics
-                            contest.
-                            <br />
-                            He was also a development intern student as a backend engineer using
-                            Rails in Techhouse Inc.
-                            <br />
-                        </GridItem>
                     </SimpleGrid>
                 </Section>
 
